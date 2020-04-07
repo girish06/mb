@@ -1,0 +1,18 @@
+uuid: 84bcf02e-5fe0-4c30-aef2-1b79d9a705df
+langcode: en
+status: true
+dependencies:
+  module:
+    - serialization
+    - test_restapi
+    - user
+id: get_country_list
+plugin_id: get_country_list
+granularity: resource
+configuration:
+  methods:
+    - GET
+  formats:
+    - json
+  authentication:
+    - cookie

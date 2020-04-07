@@ -1,0 +1,69 @@
+{#
+/**
+ * @file
+ *
+ * Default product template.
+ *
+ * Available variables:
+ * - attributes: HTML attributes for the wrapper.
+ * - product: The rendered product fields.
+ *   Use 'product' to print them all, or print a subset such as
+ *   'product.title'. Use the following code to exclude the
+ *   printing of a given field:
+ *   @code
+ *   {{ product|without('title') }}
+ *   @endcode
+ * - product_entity: The product entity.
+ * - product_url: The product URL.
+ *
+ * @ingroup themeable
+ */
+#}
+
+<div class="padding-unset box-shadow-mp">
+  <ul class="nav nav-tabs disruption-suite-tabs">
+    <li class="col-xs-3 padding-unset active">
+      <a data-toggle="tab" href="#overview">
+        Overview
+      </a>
+    </li>
+  </ul>
+  <div class="tab-content">
+    <div id="overview" class="tab-pane fade in active">
+        <div class="overview-description">
+        {{- product.body -}}
+      </div>
+      <div class="product-pricing">
+        <div class="product-add-to-cart-form-wrapper">
+          <form action="/addtocart" method="GET">
+            <label for="variants" class ="variants">{{- product.title -}}</label>
+            <input type="hidden" id="item_id" name="item_id" value="{{ product_entity.id }}">
+            <div class="row">
+              <ul class="chec-radio">
+                {% for ke,val in product_variation_objs %}
+                  <li class="pz col-sm-3 product-variation-grid">
+                    <div class="product-variation-grid-wrap">
+                      <div class="product-variation-grid-header">
+                        {{ val }}
+                      </div>
+                      <div class="product-variation-grid-summary">
+                        {{ product_variation_objs_des[ke]|raw }}
+                      </div>
+                      <label class="radio-inline">
+                        <input required type="radio" id="pro-chx-residential" name="vid" value="{{ ke }}" class="pro-chx">
+                        <div class="btn-default">Select</div>
+                      </label>
+                    </div>
+                  </li>
+                {% endfor %}
+              </ul>
+            </div>
+            <div class="product-variation-grid-buy-btn">
+              <input class="btn btn-default-grey" type="submit" value="Buy Now" />
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,53 @@
+uuid: 9731b1dc-d512-419a-9707-f23ef67ea6ab
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.contact_us_forms.body
+    - field.field.node.contact_us_forms.field_form_icon
+    - field.field.node.contact_us_forms.field_link_to_a_form
+    - node.type.contact_us_forms
+  module:
+    - image
+    - link
+    - text
+    - user
+id: node.contact_us_forms.default
+targetEntityType: node
+bundle: contact_us_forms
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_form_icon:
+    weight: 102
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_link_to_a_form:
+    weight: 103
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

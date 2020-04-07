@@ -1,0 +1,22 @@
+uuid: 5025b01b-aa38-4922-9390-69147ddcb7a3
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - open_banking_portal
+_core:
+  default_config_hash: iggZSiUKz4mYP1YPJ8SsUfFu79HIgOTt6IDy3Up59aM
+id: open_banking_portal_powered
+theme: open_banking_portal
+region: footer
+weight: -4
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  provider: system
+  label_display: '0'
+visibility: {  }

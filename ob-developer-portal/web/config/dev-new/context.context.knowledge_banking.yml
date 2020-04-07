@@ -1,0 +1,97 @@
+uuid: 3ff7c860-2d5f-4ee9-bbd8-06121d2c9d62
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+name: knowledge_banking
+label: 'Knowledge Banking'
+group: null
+description: ''
+requireAllConditions: true
+disabled: false
+conditions:
+  request_path:
+    id: request_path
+    pages: /knowledge-bank
+    negate: 0
+    uuid: 4e9dbabf-863c-4ccb-a4cc-483419262d67
+    context_mapping: {  }
+  current_theme:
+    id: current_theme
+    theme: open_banking_portal
+    negate: 0
+    uuid: df6d8453-3493-4bb0-a625-e361ecc5cb70
+    context_mapping: {  }
+reactions:
+  blocks:
+    blocks:
+      70a4ae18-f0c1-43d7-ba26-8c5f305c4264:
+        id: 'block_content:c8e7e5cb-16a5-4c05-932a-fb8fce300243'
+        label: 'Knowledge Bank Top Banner'
+        provider: block_content
+        label_display: visible
+        status: true
+        info: ''
+        view_mode: full
+        region: content_header
+        weight: '0'
+        context_mapping: {  }
+        theme: open_banking_portal
+        css_class: ''
+        unique: 0
+        context_id: knowledge_banking
+        uuid: 70a4ae18-f0c1-43d7-ba26-8c5f305c4264
+      e2e334cc-ec42-445b-8efa-5d9b1851c948:
+        id: 'block_content:b699eae7-894d-4bf8-93f8-cfb62d88104c'
+        label: 'Knowledge Bank New Footer Block'
+        provider: block_content
+        label_display: visible
+        status: true
+        info: ''
+        view_mode: full
+        region: content_footer
+        weight: '0'
+        context_mapping: {  }
+        theme: open_banking_portal
+        css_class: ''
+        unique: 0
+        context_id: knowledge_banking
+        uuid: e2e334cc-ec42-445b-8efa-5d9b1851c948
+      60c0e653-e92e-4163-b49b-426813751d60:
+        id: 'block_content:c8e7e5cb-16a5-4c05-932a-fb8fce300243'
+        label: 'Knowledge Bank Top Banner'
+        provider: block_content
+        label_display: 0
+        status: true
+        info: ''
+        view_mode: full
+        region: content_header
+        weight: '0'
+        context_mapping: {  }
+        theme: open_banking_portal_revised
+        css_class: ''
+        unique: 0
+        context_id: knowledge_banking
+        uuid: 60c0e653-e92e-4163-b49b-426813751d60
+      7ab5c4de-8e5e-4b55-9b50-9ff2920e2aa1:
+        id: 'block_content:b699eae7-894d-4bf8-93f8-cfb62d88104c'
+        label: 'Knowledge Bank New Footer Block'
+        provider: block_content
+        label_display: 0
+        status: true
+        info: ''
+        view_mode: full
+        region: content_footer
+        weight: '0'
+        context_mapping: {  }
+        theme: open_banking_portal_revised
+        css_class: ''
+        unique: 0
+        context_id: knowledge_banking
+        uuid: 7ab5c4de-8e5e-4b55-9b50-9ff2920e2aa1
+    id: blocks
+    saved: false
+    uuid: 0c390f23-d56a-4b88-96fb-881bb012a949
+    include_default_blocks: 1
+weight: 0

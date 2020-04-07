@@ -1,0 +1,8 @@
+
+mbmontize.mp_add_to_cart_controller_cart:
+  path: '/addtocart'
+  defaults:
+    _controller: '\Drupal\mbmontize\Controller\MpAddToCartController::addCart'
+    _title: 'addToCart'
+  requirements:
+    _permission: 'access content'

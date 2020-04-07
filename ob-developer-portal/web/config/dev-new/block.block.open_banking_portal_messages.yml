@@ -1,0 +1,22 @@
+uuid: ad698182-4b6d-49e1-8dfa-0404b991365f
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - open_banking_portal
+_core:
+  default_config_hash: 9RnnTUBcn0WRWXfrGOnId2H0Q31uQUeu_F5TnDxl2yg
+id: open_banking_portal_messages
+theme: open_banking_portal
+region: header
+weight: -50
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

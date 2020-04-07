@@ -1,0 +1,39 @@
+uuid: 74c16fcb-854d-4ba5-ae8f-7db1d826b7fc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.api_documentation_content.field_documentation_full_content
+    - field.field.paragraph.api_documentation_content.field_documentation_overview
+    - field.field.paragraph.api_documentation_content.field_documentation_title
+    - paragraphs.paragraphs_type.api_documentation_content
+  module:
+    - text
+id: paragraph.api_documentation_content.default
+targetEntityType: paragraph
+bundle: api_documentation_content
+mode: default
+content:
+  field_documentation_full_content:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_documentation_overview:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_documentation_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

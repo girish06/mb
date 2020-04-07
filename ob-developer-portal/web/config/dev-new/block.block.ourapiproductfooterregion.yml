@@ -1,0 +1,31 @@
+uuid: a7d829d0-f83f-45b7-a7de-3f5ef8cfb00a
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:26635c17-dc21-4afb-bf46-9ea1fb3ebd8a'
+  module:
+    - block_content
+    - system
+  theme:
+    - bartik
+id: ourapiproductfooterregion
+theme: bartik
+region: content
+weight: 0
+provider: null
+plugin: 'block_content:26635c17-dc21-4afb-bf46-9ea1fb3ebd8a'
+settings:
+  id: 'block_content:26635c17-dc21-4afb-bf46-9ea1fb3ebd8a'
+  label: 'Our API Product Footer Region'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /api-product
+    negate: false
+    context_mapping: {  }

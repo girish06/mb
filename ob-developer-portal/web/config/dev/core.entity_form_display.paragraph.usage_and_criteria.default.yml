@@ -1,0 +1,26 @@
+uuid: 02f887f2-8a28-44a1-b064-338c5e0de44c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.usage_and_criteria.field_usage_criteria
+    - paragraphs.paragraphs_type.usage_and_criteria
+  module:
+    - text
+id: paragraph.usage_and_criteria.default
+targetEntityType: paragraph
+bundle: usage_and_criteria
+mode: default
+content:
+  field_usage_criteria:
+    weight: 0
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

@@ -1,0 +1,18 @@
+uuid: 8449540a-2dc3-4182-bd4a-36f4742a82e0
+langcode: en
+status: true
+dependencies:
+  module:
+    - serialization
+    - test_restapi
+    - user
+id: api_details
+plugin_id: api_details
+granularity: resource
+configuration:
+  methods:
+    - GET
+  formats:
+    - json
+  authentication:
+    - cookie

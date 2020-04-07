@@ -1,0 +1,106 @@
+uuid: 0a4d6c3f-89c1-4144-831b-268751eb8f23
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - system
+name: open_data
+label: 'Open Data'
+group: null
+description: ''
+requireAllConditions: true
+disabled: false
+conditions:
+  node_type:
+    id: node_type
+    bundles:
+      api_products: api_products
+    negate: 0
+    uuid: b77358f8-94b8-4459-94ad-357ab16953b7
+    context_mapping:
+      node: '@node.node_route_context:node'
+  request_path:
+    id: request_path
+    pages: "/node/7\r\n/open-data"
+    negate: 0
+    uuid: c70e9b65-e73a-48e4-ab95-21e28b96aad0
+    context_mapping: {  }
+  current_theme:
+    id: current_theme
+    theme: open_banking_portal
+    negate: 0
+    uuid: 7541186f-868b-42bc-8ab0-0c64abd9d821
+    context_mapping: {  }
+reactions:
+  blocks:
+    blocks:
+      2b034a9a-8795-4b37-9926-c0c39833a9d7:
+        id: 'block_content:64211a66-363d-4bf7-804d-92cec1116c2a'
+        label: 'Our Api Detail Footer Block'
+        provider: block_content
+        label_display: visible
+        status: true
+        info: ''
+        view_mode: full
+        region: content_footer
+        weight: '0'
+        context_mapping: {  }
+        theme: open_banking_portal
+        css_class: ''
+        unique: 0
+        context_id: open_data
+        uuid: 2b034a9a-8795-4b37-9926-c0c39833a9d7
+      9a9deb2a-b147-47bc-b78e-c15aba1abab4:
+        id: 'block_content:85b5f292-48b7-4748-8ea6-5c76a67621ad'
+        label: 'Open Data Top Banner'
+        provider: block_content
+        label_display: visible
+        status: true
+        info: ''
+        view_mode: full
+        region: content_header
+        weight: '0'
+        context_mapping: {  }
+        theme: open_banking_portal
+        css_class: ''
+        unique: 0
+        context_id: open_data
+        uuid: 9a9deb2a-b147-47bc-b78e-c15aba1abab4
+      29481c54-8e2e-432f-b613-e2e8a8935d53:
+        id: 'block_content:85b5f292-48b7-4748-8ea6-5c76a67621ad'
+        label: 'Open Data Top Banner'
+        provider: block_content
+        label_display: 0
+        status: true
+        info: ''
+        view_mode: full
+        region: content_header
+        weight: '0'
+        context_mapping: {  }
+        theme: open_banking_portal_revised
+        css_class: ''
+        unique: 0
+        context_id: open_data
+        uuid: 29481c54-8e2e-432f-b613-e2e8a8935d53
+      be650840-2c04-4efe-9ce5-9056c2def648:
+        id: 'block_content:64211a66-363d-4bf7-804d-92cec1116c2a'
+        label: 'Our Api Detail Footer Block'
+        provider: block_content
+        label_display: 0
+        status: true
+        info: ''
+        view_mode: full
+        region: content_footer
+        weight: '0'
+        context_mapping: {  }
+        theme: open_banking_portal_revised
+        css_class: ''
+        unique: 0
+        context_id: open_data
+        uuid: be650840-2c04-4efe-9ce5-9056c2def648
+    id: blocks
+    saved: false
+    uuid: 978977f3-ed25-49ba-9426-db8a8b02bd2f
+    include_default_blocks: 1
+weight: 0

@@ -1,0 +1,22 @@
+uuid: c40900af-5b00-4db2-a05d-994569a602e9
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.product_listing_header_block
+    - field.storage.block_content.body
+  module:
+    - text
+id: block_content.product_listing_header_block.body
+field_name: body
+entity_type: block_content
+bundle: product_listing_header_block
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+field_type: text_with_summary

@@ -1,0 +1,9 @@
+uuid: 8ee4511a-eea1-42e5-b7e9-d251e21b56ec
+langcode: en
+status: true
+dependencies: {  }
+id: api_documentation_content
+label: 'API Documentation Content'
+icon_uuid: null
+description: 'Add content for api documentation of the product.'
+behavior_plugins: {  }

@@ -1,0 +1,20 @@
+uuid: 03d3dacf-782b-420a-ac66-f33e46ca28b0
+langcode: en
+status: false
+dependencies:
+  module:
+    - contact
+    - hal
+    - serialization
+    - user
+id: entity.contact_form
+plugin_id: 'entity:contact_form'
+granularity: resource
+configuration:
+  methods:
+    - GET
+  formats:
+    - hal_json
+    - json
+  authentication:
+    - cookie

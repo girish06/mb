@@ -1,0 +1,21 @@
+uuid: 49d8f6af-3ca6-4d6b-9477-f9e58d5768aa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_error_faqs
+    - paragraphs.paragraphs_type.errors_and_bugs
+  module:
+    - text
+id: paragraph.errors_and_bugs.field_error_faqs
+field_name: field_error_faqs
+entity_type: paragraph
+bundle: errors_and_bugs
+label: 'Error Faqs'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

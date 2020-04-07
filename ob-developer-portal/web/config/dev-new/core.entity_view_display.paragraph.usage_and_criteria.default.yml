@@ -1,0 +1,22 @@
+uuid: 13296686-034a-4500-87ce-f638737d5a8d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.usage_and_criteria.field_usage_criteria
+    - paragraphs.paragraphs_type.usage_and_criteria
+  module:
+    - text
+id: paragraph.usage_and_criteria.default
+targetEntityType: paragraph
+bundle: usage_and_criteria
+mode: default
+content:
+  field_usage_criteria:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden: {  }

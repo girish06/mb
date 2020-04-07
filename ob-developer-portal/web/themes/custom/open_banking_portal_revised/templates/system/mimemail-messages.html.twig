@@ -1,0 +1,83 @@
+<html>
+  <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      {% if css %}
+      <style type="text/css">
+          <!--
+          {{ css }}
+         -->
+      </style>
+      {% endif %}
+
+  </head>
+  <body id="mimemail-body" {% if ( module | length > 0 ) and ( key | length > 0 ) %}  {% set class = 'class="' ~ module ~ '-' ~ key ~ '"' %} {% endif %} style="background-color: #fff;" >
+    <div id="center">
+      <div id="main">
+          <table cellpadding="0" cellspacing="0" border="0" style="padding:0px; margin:0px;width:100%;">
+              <tr><td colspan="3" style="padding:0px;margin:0px;height:20px;" height="20">&nbsp;</td></tr>
+              <tr>
+                  <td style="padding:0px;margin:0px;">&nbsp;</td>
+                  <td bgcolor="#ffffff" style="background-color: #ffffff; padding:0px;margin:0px;" width="640">
+                      <div class="mail-wrap" style="width: 100%; max-width: 640px; margin: 0px auto;">
+
+                          <!-- Mail Header -->
+                          <table cellpadding="0" cellspacing="0" border="0" style="border-bottom: 1px solid #AE285D; padding:0px;margin:0px;width:100%;">
+                              <tr><td style="padding:0px;margin:0px;height:10px;" height="10">&nbsp;</td></tr>
+                              <tr>
+                                  <td style="padding:0px;margin:0px;">
+                                      <div class="mail-header" style="text-align: left;">
+                                          <h2 style="color: #AE285D; margin: 0px;">OpenBanking Developer Portal</h2>
+                                          <p style="margin: 0px; font-size: 14px">For PSD2 and Open Banking</p>
+                                          <p style="margin: 0px; font-size: 11px">Powered by DisruptionSuite</p>
+                                      </div>
+                                  </td>
+
+                                  <td style="padding:0px;margin:0px;">
+                                      <div class="mail-header" style="text-align: right;">
+                                          <img class="logo" width="140" src="{{ theme_path }}/images/digital_api_craft_logo.jpg?itok=dac" alt="Logo" />
+                                          <!--<h4 style="font-size: 12px; color: #000; margin: 5px 0px 0px 0px;">DEVELOPER PORTAL</h4>-->
+                                      </div>
+                                  </td>
+                              </tr>
+                              <tr><td style="padding:0px;margin:0px;height:30px;" height="30">&nbsp;</td></tr>
+                          </table>
+
+                          <!-- Mail Body -->
+                          <table cellpadding="0" cellspacing="0" border="0" style="padding:0px;margin:0px;width:100%;">
+                              <tr>
+
+                                  <td height="300" style="margin:0px; vertical-align: top; background-color: #F8F8F8; padding: 20px; min-height: 500px;">
+                                      <div class="mail-body" style="margin: 0px auto;">
+                                          {{ body|raw }}
+                                      </div>
+                                  </td>
+
+                              </tr>
+                              <tr><td style="padding:0px;margin:0px;height:50px;" height="50">&nbsp;</td></tr>
+                          </table>
+
+
+                          <!-- Mail Footer -->
+                          <table cellpadding="0" cellspacing="0" border="0" style="padding:0px;margin:0px;width:100%;">
+                              <tr><td style="padding:0px;margin:0px;height:5px; background-color: #4e4e4e;" height="5">&nbsp;</td></tr>
+                              <tr>
+                                  <td style="padding:0px;margin:0px;">
+                                      <div class="mail-footer" style="margin: 0px auto; background-color: #4e4e4e; text-align: center;">
+                                          <p style="margin: 0px;color: #fff; font-size: 11px;" class="grey-txt"> &copy; {{ year }} DigitalAPICraft Private Limited.All Rights Reserved</p>
+                                      </div>
+                                  </td>
+                              </tr>
+                              <tr><td style="padding:0px;margin:0px;height:5px; background-color: #4e4e4e;" height="5">&nbsp;</td></tr>
+                          </table>
+
+
+                      </div>
+                  </td>
+                  <td style="padding:0px;margin:0px;">&nbsp;</td>
+              </tr>
+              <tr><td colspan="3" style="padding:0px;margin:0px;height:20px;" height="20">&nbsp;</td></tr>
+          </table>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+uuid: 0b4601d3-e82f-4fd3-9713-846ff49054ac
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_general_faq
+    - paragraphs.paragraphs_type.general_faq
+  module:
+    - text
+id: paragraph.general_faq.field_general_faq
+field_name: field_general_faq
+entity_type: paragraph
+bundle: general_faq
+label: 'General FAQ'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

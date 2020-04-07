@@ -1,0 +1,7 @@
+jws-get-key:
+  version: 1.x
+  js:
+    js/jwt-key.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupalSettings

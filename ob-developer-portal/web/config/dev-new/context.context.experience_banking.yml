@@ -1,0 +1,253 @@
+uuid: 3894a6b7-4a7d-47f8-a62d-db61c85eb18e
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+name: experience_banking
+label: 'Experience Banking'
+group: null
+description: ''
+requireAllConditions: true
+disabled: false
+conditions:
+  request_path:
+    id: request_path
+    pages: /experience-banking
+    negate: 0
+    uuid: 31b9385c-db82-4d21-8959-fcc09ef1b19a
+    context_mapping: {  }
+  current_theme:
+    id: current_theme
+    theme: open_banking_portal
+    negate: 0
+    uuid: 9e43abd2-c0c1-47d9-9509-af5a68553d10
+    context_mapping: {  }
+reactions:
+  blocks:
+    blocks:
+      42ec1318-b703-46ed-bf3a-3f6f54107402:
+        id: 'block_content:d1cb0dde-b9f9-4b05-85d5-7b084a08ae24'
+        label: 'New Experience Top Banner'
+        provider: block_content
+        label_display: visible
+        status: true
+        info: ''
+        view_mode: full
+        region: content_header
+        weight: '0'
+        context_mapping: {  }
+        theme: open_banking_portal
+        css_class: ''
+        unique: 0
+        context_id: experience_banking
+        uuid: 42ec1318-b703-46ed-bf3a-3f6f54107402
+      72e99f8f-9b04-41d3-8708-3b0e972c9c8f:
+        id: 'block_content:f920a29b-2e74-4116-b011-82d3f4a77e1b'
+        label: 'New Experience Banking Footer Region'
+        provider: block_content
+        label_display: visible
+        status: true
+        info: ''
+        view_mode: full
+        region: content_footer
+        weight: '0'
+        context_mapping: {  }
+        theme: open_banking_portal
+        css_class: ''
+        unique: 0
+        context_id: experience_banking
+        uuid: 72e99f8f-9b04-41d3-8708-3b0e972c9c8f
+      08f40568-8e99-495d-a126-f06934f8e45f:
+        id: 'views_block:api_products_experience_banking-block_1'
+        label: ''
+        provider: views
+        label_display: visible
+        views_label: ''
+        items_per_page: none
+        region: content
+        weight: '-2'
+        context_mapping: {  }
+        theme: open_banking_portal
+        css_class: ''
+        unique: 0
+        context_id: experience_banking
+        uuid: 08f40568-8e99-495d-a126-f06934f8e45f
+      c7f05306-2f5e-4028-834f-106206e105fa:
+        id: 'views_block:delight_apps_list_with_videos-block_1'
+        label: ''
+        provider: views
+        label_display: visible
+        views_label: ''
+        items_per_page: none
+        region: content
+        weight: '1'
+        context_mapping: {  }
+        theme: open_banking_portal
+        css_class: ''
+        unique: 0
+        context_id: experience_banking
+        uuid: c7f05306-2f5e-4028-834f-106206e105fa
+      537335bc-99cd-4460-b1f9-1e006d4f035e:
+        id: 'block_content:e4ee901c-c3e3-45db-843a-d4e542248040'
+        label: 'Experience Banking API Block Header'
+        provider: block_content
+        label_display: visible
+        status: true
+        info: ''
+        view_mode: full
+        region: content
+        weight: '-3'
+        context_mapping: {  }
+        theme: open_banking_portal
+        css_class: ''
+        unique: 0
+        context_id: experience_banking
+        uuid: 537335bc-99cd-4460-b1f9-1e006d4f035e
+      26494925-7a6f-4231-bc5d-775ebec4378f:
+        id: 'block_content:97110869-aa71-4b5b-8a1d-149d88b21f0b'
+        label: 'Experience Banking Delight Apps Top Banner'
+        provider: block_content
+        label_display: visible
+        status: true
+        info: ''
+        view_mode: full
+        region: content
+        weight: '-1'
+        context_mapping: {  }
+        theme: open_banking_portal
+        css_class: experinece-banking-orange
+        unique: 0
+        context_id: experience_banking
+        uuid: 26494925-7a6f-4231-bc5d-775ebec4378f
+      539f4a19-4dcb-46a9-b492-08367b292075:
+        id: 'block_content:ab7dd507-15ef-460d-91fb-2954b3f9cffb'
+        label: 'Experience Banking API Listing Block Header'
+        provider: block_content
+        label_display: visible
+        status: true
+        info: ''
+        view_mode: full
+        region: content
+        weight: '0'
+        context_mapping: {  }
+        theme: open_banking_portal
+        css_class: ''
+        unique: 0
+        context_id: experience_banking
+        uuid: 539f4a19-4dcb-46a9-b492-08367b292075
+      2813dbf0-5bf2-4743-838c-97aa5a5b5c88:
+        id: 'block_content:d1cb0dde-b9f9-4b05-85d5-7b084a08ae24'
+        label: 'New Experience Top Banner'
+        provider: block_content
+        label_display: 0
+        status: true
+        info: ''
+        view_mode: full
+        region: content_header
+        weight: '0'
+        context_mapping: {  }
+        theme: open_banking_portal_revised
+        css_class: ''
+        unique: 0
+        context_id: experience_banking
+        uuid: 2813dbf0-5bf2-4743-838c-97aa5a5b5c88
+      47b5b6e8-ca3b-444a-90d7-849f178ecc1b:
+        id: 'block_content:e4ee901c-c3e3-45db-843a-d4e542248040'
+        label: 'Experience Banking API Block Header'
+        provider: block_content
+        label_display: 0
+        status: true
+        info: ''
+        view_mode: full
+        region: content
+        weight: '-3'
+        context_mapping: {  }
+        theme: open_banking_portal_revised
+        css_class: ''
+        unique: 0
+        context_id: experience_banking
+        uuid: 47b5b6e8-ca3b-444a-90d7-849f178ecc1b
+      685af9c8-d843-4a3e-88fe-fbe262d554f6:
+        id: 'views_block:api_products_experience_banking-block_1'
+        label: ''
+        provider: views
+        label_display: 0
+        views_label: ''
+        items_per_page: none
+        region: content
+        weight: '-2'
+        context_mapping: {  }
+        theme: open_banking_portal_revised
+        css_class: ''
+        unique: 0
+        context_id: experience_banking
+        uuid: 685af9c8-d843-4a3e-88fe-fbe262d554f6
+      3f021d36-4152-492f-8788-8d8f47d44f3d:
+        id: 'block_content:97110869-aa71-4b5b-8a1d-149d88b21f0b'
+        label: 'Experience Banking Delight Apps Top Banner'
+        provider: block_content
+        label_display: 0
+        status: true
+        info: ''
+        view_mode: full
+        region: content
+        weight: '-1'
+        context_mapping: {  }
+        theme: open_banking_portal_revised
+        css_class: ''
+        unique: 0
+        context_id: experience_banking
+        uuid: 3f021d36-4152-492f-8788-8d8f47d44f3d
+      df6c9b95-5ccc-4ccc-82c6-29631d8e1098:
+        id: 'block_content:188dbb89-7430-41b6-ad33-b20906859fe5'
+        label: 'Experience Banking Delight Apps Block Header'
+        provider: block_content
+        label_display: 0
+        status: true
+        info: ''
+        view_mode: full
+        region: content
+        weight: '0'
+        context_mapping: {  }
+        theme: open_banking_portal_revised
+        css_class: ''
+        unique: 0
+        context_id: experience_banking
+        uuid: df6c9b95-5ccc-4ccc-82c6-29631d8e1098
+      8c521f8c-5d4b-499b-89b3-4b812dce54ea:
+        id: 'views_block:delight_apps_list_with_videos-block_1'
+        label: ''
+        provider: views
+        label_display: 0
+        views_label: ''
+        items_per_page: none
+        region: content
+        weight: '1'
+        context_mapping: {  }
+        theme: open_banking_portal_revised
+        css_class: ''
+        unique: 0
+        context_id: experience_banking
+        uuid: 8c521f8c-5d4b-499b-89b3-4b812dce54ea
+      ee03852b-664c-400f-8084-9c1078187b05:
+        id: 'block_content:f920a29b-2e74-4116-b011-82d3f4a77e1b'
+        label: 'New Experience Banking Footer Region'
+        provider: block_content
+        label_display: 0
+        status: true
+        info: ''
+        view_mode: full
+        region: content_footer
+        weight: '0'
+        context_mapping: {  }
+        theme: open_banking_portal_revised
+        css_class: ''
+        unique: 0
+        context_id: experience_banking
+        uuid: ee03852b-664c-400f-8084-9c1078187b05
+    id: blocks
+    saved: false
+    uuid: fe6ba122-7e3d-4249-bed2-87b9f5098364
+    include_default_blocks: 1
+weight: 0

@@ -1,0 +1,71 @@
+uuid: da368c6a-660f-4ff4-9a4c-9502cf322a2b
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.top_banner_block
+    - field.field.block_content.top_banner_block.body
+    - field.field.block_content.top_banner_block.field_background
+    - field.field.block_content.top_banner_block.field_banner_image
+    - field.field.block_content.top_banner_block.field_banner_links
+    - field.field.block_content.top_banner_block.field_banner_title
+    - image.style.thumbnail
+  module:
+    - image
+    - link
+    - text
+id: block_content.top_banner_block.default
+targetEntityType: block_content
+bundle: top_banner_block
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 2
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_background:
+    weight: 27
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_banner_image:
+    weight: 26
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_banner_links:
+    weight: 3
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_banner_title:
+    weight: 1
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  info:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

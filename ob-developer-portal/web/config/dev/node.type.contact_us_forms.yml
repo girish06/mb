@@ -1,0 +1,18 @@
+uuid: 223b20ed-23e9-445a-9aec-feb6effc4e7a
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Contact Us Forms'
+type: contact_us_forms
+description: 'Add contact us forms together'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

@@ -1,0 +1,31 @@
+uuid: 6cfa401b-c50b-4c15-9202-24006121697d
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:get_started_block:a4f20898-b978-492f-b643-f771a97f8b49'
+  module:
+    - block_content
+    - system
+  theme:
+    - open_banking_portal_revised
+id: myappgetstarted
+theme: open_banking_portal_revised
+region: content
+weight: -10
+provider: null
+plugin: 'block_content:a4f20898-b978-492f-b643-f771a97f8b49'
+settings:
+  id: 'block_content:a4f20898-b978-492f-b643-f771a97f8b49'
+  label: 'My App Get Started'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /user/myapps
+    negate: false
+    context_mapping: {  }

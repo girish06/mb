@@ -1,0 +1,32 @@
+<?php
+
+/**
+ * @file
+ * Contains jws_signature_creation.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function jws_signature_creation_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the jws_signature_creation module.
+    case 'help.page.jws_signature_creation':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Creating JWS signature for payload') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+/**
+ * Implements hook_page_attachments().
+ */
+function jws_signature_creation_page_attachments(array &$page) {
+  $var1 = \Drupal::config('jws_signature_creation.settings')->get('key_page');
+
+}
+

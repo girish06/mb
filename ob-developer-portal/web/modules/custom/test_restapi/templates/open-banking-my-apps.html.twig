@@ -1,0 +1,155 @@
+{% set apiProductsMap = {} %}
+{% set apiProducts = {} %}
+{% set never = 'Never' %}
+<div class="my-apps-details">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
+                <div class="my-app-add-button">
+                    <div class="btn btn-default">
+                        <a class="use-ajax" data-dialog-type="modal" href="{{ url('entity.developer_app.add_form_for_developer',{'user': user_id}) }}"><label>+</label> Add an App</a>
+                    </div>
+                </div>               
+                {% if my_apps is not empty%}
+                    <div class="my-app-list-details">
+                        <dl class="ckeditor-accordion">
+                            {% for developerApp in my_apps %}
+                                <dt>
+                                    {{developerApp.displayName}}                                    
+                                </dt>
+                                <dd>
+                                    <div class="panel with-nav-tabs panel-info">
+                                        <div class="panel-heading">
+                                            <ul class="nav nav-tabs">
+                                                <li class="active"><a href="#my-app-keys-{{developerApp.name|replace('_','-')}}" data-toggle="tab"><img src="{{url('<front>')}}{{base_path ~ directory }}/images/key.png">Keys</a></li>
+                                                <li><a href="#my-app-api-products-{{developerApp.name|replace('_','-')}}" data-toggle="tab"><img src="{{url('<front>')}}{{base_path ~ directory }}/images/product.png">Products</a></li>
+                                                <li><a href="#my-app-details-{{developerApp.name|replace('_','-')}}" data-toggle="tab"><img src="{{url('<front>')}}{{base_path ~ directory }}/images/details.png">Details</a></li>
+                                                <li><a href="{{ url('test_restapi.my_app_analytics_controller_getMyAppName',{'app': developerApp.name}) }}"><img src="{{url('<front>')}}{{base_path ~ directory }}/images/analytics.png">Analytics</a></li>
+                                                <li><a class="use-ajax" data-dialog-type="modal" href="{{ url('entity.developer_app.edit_form_for_developer',{'user': user_id,'app': developerApp.name}) }}"><img src="{{url('<front>')}}{{base_path ~ directory }}/images/edit.png">Edit</a></li>
+                                                <li><a class="use-ajax" data-dialog-type="modal" href="{{ url('entity.developer_app.delete_form_for_developer',{'user': user_id,'app': developerApp.name}) }}"><img src="{{url('<front>')}}{{base_path ~ directory }}/images/delete.png">Delete</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="panel-body">
+                                            <div class="tab-content">
+                                                <div class="tab-pane fade in active my-app-keys" id="my-app-keys-{{developerApp.name|replace('_','-')}}">
+                                                    {%if developerApp.Credentials is not empty%}
+                                                        {% for credential in developerApp.Credentials %}
+                                                            <div class="my-apps-title"
+                                                                 <span>{{developerApp.displayName}}'s Keys</span>
+                                                            </div>
+                                                            <div class="my-apps-description">
+                                                                <p>Below are keys you can use to access the API products associated with this application (Delta digitalapi). The actual keys need to be approved and approved for an API product to be capable of accessing any of the URIs defined in the API product.</p>
+                                                            </div>
+                                                            <div class="my-apps-keys">
+                                                                <table class="table table-striped">
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <th scope="row">Consumer Key</th>
+                                                                            <td>{{credential.consumerKey}}</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <th scope="row">Consumer Secret</th>
+                                                                            <td>{{credential.consumerSecret}}</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <th scope="row">Key Issued</th>
+                                                                            <td>
+                                                                                {% if credential.issuedAt is not null %}
+                                                                                    {{credential.issuedAt.date|date('M, m/d/Y - h:i')}}
+                                                                                {% else %}
+                                                                                    {{never}}
+                                                                                {% endif %} 
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <th scope="row">Expires</th>
+                                                                            <td>
+                                                                                {% if credential.expiresAt is not null %}
+                                                                                    {{credential.expiresAt.date|date('M, m/d/Y - h:i')}}
+                                                                                {% else %}
+                                                                                    {{never}}
+                                                                                {% endif %}    
+                                                                            </td>
+                                                                        </tr>                                                        
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                            {% if credential.apiProducts is not empty%}
+                                                                {% for apiProduct in credential.apiProducts %}
+                                                                    {% set apiProductsMap = apiProductsMap|merge([[apiProduct.apiproduct,apiProduct.status]]) %}
+                                                                    {% set apiProducts = apiProducts|merge([apiProduct.apiproduct]) %}
+                                                                {% endfor %}
+                                                            {% endif %}
+                                                        {% endfor %}
+                                                    {% endif %}
+                                                </div>
+                                                <div class="tab-pane fade my-app-api-products" id="my-app-api-products-{{developerApp.name|replace('_','-')}}">
+                                                    {% if apiProductsMap is not empty %}
+                                                        <table class="table">
+                                                            <tbody>
+                                                                {% for value in apiProductsMap %}
+                                                                    <tr>
+                                                                        {% if value[0] is defined %}
+                                                                            <td> <span>Status</span>{{value[0]}}</td>
+                                                                        {% endif %}
+                                                                        {% if value[1] is defined %}
+                                                                            <td class="last-right">
+                                                                                <span class="{{value[1]}}">
+                                                                                    {{value[1]}}
+                                                                                </span>
+                                                                            </td>
+                                                                        {% endif %}
+                                                                    </tr>
+                                                                {% endfor %}
+                                                            </tbody>
+                                                        </table>
+                                                    {% endif %}
+                                                </div>
+                                                <div class="tab-pane fade my-app-details" id="my-app-details-{{developerApp.name|replace('_','-')}}">
+                                                    <table class="table table-striped">
+                                                        <tbody>
+                                                            <tr>
+                                                                <th scope="row">{{developerApp.displayName}}'s Details</th>
+                                                                <td></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row">Application Name</th>
+                                                                <td>{{developerApp.displayName}}</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row">API products</th>
+                                                                <td>{{apiProducts|join(", ")}}</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row">Description</th>
+                                                                <td>{{developerApp.description}}</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row">Callback URL</th>
+                                                                <td>{{developerApp.callbackUrl}}</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row">Status</th>
+                                                                <td>
+                                                                    <span class="{{developerApp.status}}">
+                                                                    {{developerApp.status}}
+                                                                    <span class="{{value[1]}}">
+                                                                </td>
+                                                            </tr> 
+                                                        </tbody>
+                                                    </table> 
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </dd>
+                                {% set apiProducts = {} %}
+                                {% set apiProductsMap = {} %}
+                            {% endfor %}
+                        </dl>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>

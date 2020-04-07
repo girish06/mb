@@ -1,0 +1,16 @@
+<div {{ attributes.addClass('home-page-top-bar contact-us-page') }} >
+    {#<div class="row banner-title">#}
+    {{content.field_background}}
+    <div class="top-banner-body">
+        {{content.field_banner_title}}
+        {{content.body}}
+        {% if content.field_banner_links is not empty  %}
+
+            {{content.field_banner_links}}
+
+        {% endif %}
+        {#</div>#}
+    </div>
+
+</div>
+

@@ -1,0 +1,60 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a view of unformatted rows.
+ *
+ * Available variables:
+ * - title: The title of this group of rows. May be empty.
+ * - rows: A list of the view's row items.
+ *   - attributes: The row's HTML attributes.
+ *   - content: The row's content.
+ * - view: The view object.
+ * - default_row_class: A flag indicating whether default classes should be
+ *   used on rows.
+ *
+ * @see template_preprocess_views_view_unformatted()
+ *
+ * @ingroup themeable
+ */
+#}
+{% if title %}
+    <h3>{{ title }}</h3>
+{% endif %}
+<div  class="col-sm-12 padding-top"> 
+    <div class="col-xs-9 padding-reset">   
+        <div class="tab-content">
+            {% for key,row in rows %}
+                {% set row_classes = [
+                    default_row_class ? 'views-row',
+                ] %}
+                {% if key %}
+                    <div id="{{ row.content['#row']._entity.title.value|lower|split(' ')|join('-') }}" class="title-color-{{ key }} tab-pane fade">
+                {% else %}
+                    <div id="{{ row.content['#row']._entity.title.value|lower|split(' ')|join('-') }}"
+                     class="title-color-{{ key }} tab-pane fade in active">
+                {% endif %}
+                {{- row.content -}}
+                    </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="col-xs-3">
+        <ul class="nav nav-tabs nav-stacked tabs-right">
+            {% for key,row in rows %}
+                {% set row_classes = [
+                    default_row_class ? 'views-row',
+                ] %}
+                <li class="padding-unset title-color-{{ key}} {% if not key %} active {% endif %}"><a data-toggle="tab"
+                       href="#{{ row.content['#row']._entity.title.value|lower|split(' ')|join('-') }}">
+                        {# <div class="">
+                            <img src="{{ file_url(row.content['#row']._entity.field_icon.entity.uri.value)}}"/>
+                        </div> #}
+                        <div class="">
+                            <span>{{ row.content['#row']._entity.title.value }}</span>
+                        </div>
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,9 @@
+uuid: 4b090bee-2315-44f7-9feb-31d3564b862e
+langcode: en
+status: true
+dependencies: {  }
+id: general_faq
+label: 'General FAQ'
+icon_uuid: null
+description: 'Knowledge Bank General FAQ'
+behavior_plugins: {  }

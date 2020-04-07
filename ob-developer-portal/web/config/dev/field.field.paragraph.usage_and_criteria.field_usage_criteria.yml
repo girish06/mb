@@ -1,0 +1,21 @@
+uuid: a1b54df5-ad7f-4545-b1ff-3fecb1d3f25a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_usage_criteria
+    - paragraphs.paragraphs_type.usage_and_criteria
+  module:
+    - text
+id: paragraph.usage_and_criteria.field_usage_criteria
+field_name: field_usage_criteria
+entity_type: paragraph
+bundle: usage_and_criteria
+label: 'Usage Criteria'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

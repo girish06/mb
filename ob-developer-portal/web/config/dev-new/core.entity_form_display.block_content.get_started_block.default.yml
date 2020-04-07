@@ -1,0 +1,80 @@
+uuid: 4934744a-453e-44eb-8950-c30041f93b5d
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.get_started_block
+    - field.field.block_content.get_started_block.body
+    - field.field.block_content.get_started_block.field_additional_buttons
+    - field.field.block_content.get_started_block.field_addon_buttons
+    - field.field.block_content.get_started_block.field_block_sub_title
+    - field.field.block_content.get_started_block.field_block_title
+    - field.field.block_content.get_started_block.field_image
+    - image.style.thumbnail
+  module:
+    - image
+    - link
+    - text
+id: block_content.get_started_block.default
+targetEntityType: block_content
+bundle: get_started_block
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 3
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_additional_buttons:
+    weight: 4
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_addon_buttons:
+    weight: 26
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_block_sub_title:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_block_title:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_image:
+    weight: 27
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  info:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

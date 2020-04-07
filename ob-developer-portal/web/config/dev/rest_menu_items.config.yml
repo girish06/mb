@@ -1,0 +1,17 @@
+output_values:
+  title: title
+  description: description
+  uri: uri
+  absolute: absolute
+  relative: relative
+  enabled: enabled
+  key: 0
+  alias: 0
+  external: 0
+  existing: 0
+  weight: 0
+  expanded: 0
+  uuid: 0
+  options: 0
+_core:
+  default_config_hash: Jf4526WHuU7GV95r5Zf107vA07RskjHFmq-9QWKnpbc

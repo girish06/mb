@@ -1,0 +1,20 @@
+uuid: 58bb7310-601c-4d71-b033-b479150e16c4
+langcode: en
+status: true
+dependencies:
+  module:
+    - hal
+    - serialization
+    - test_restapi
+    - user
+id: knowledge_bank_apis
+plugin_id: knowledge_bank_apis
+granularity: resource
+configuration:
+  methods:
+    - GET
+  formats:
+    - hal_json
+    - json
+  authentication:
+    - cookie

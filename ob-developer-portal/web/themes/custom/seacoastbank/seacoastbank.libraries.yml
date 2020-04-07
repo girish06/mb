@@ -1,0 +1,18 @@
+global-styling: 
+  css: 
+    theme: 
+      css/style.css: {}
+
+global-scripts:
+  version: 1.x
+  js: 
+    js/main.js: {}  
+  dependencies:
+    - core/drupal
+    - core/jquery
+    - core/jquery.once
+      
+fonts:
+  css:
+    theme:
+      '//fonts.googleapis.com/css?family=Poppins:400,700': {type: external}     

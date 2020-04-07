@@ -1,0 +1,38 @@
+uuid: d46e3130-875d-4b50-b279-8b12c45736ee
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_api_product_icon
+    - node.type.api_products
+  module:
+    - image
+id: node.api_products.field_api_product_icon
+field_name: field_api_product_icon
+entity_type: node
+bundle: api_products
+label: 'Icon for Landing Page'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

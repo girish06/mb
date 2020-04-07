@@ -1,0 +1,43 @@
+
+<div class="row register-form-popup">
+    <div class="register-title">
+    <h2>Sign up to access our APIs</h2>
+    <p class="sub-title">You’re just a couple of minutes away from access to the full features of our OpenBanking 
+        Dev Portal.</p>
+    </div>
+    <form{{attributes}}>
+      {{element.status_messages_register}}
+        <div class="col-sm-6 register-left-fields">
+            {{element.account.name}}
+            {{element.last_name}}  
+            {{element.field_company_name}}
+        </div>
+        <div class="col-sm-6 register-right-fields">
+            {{element.first_name}}
+            {{element.account.mail}}
+            {{element.field_country}}
+            {{ element.form_build_id }} {# required #}
+            {{ element.form_id }} {# required #}
+        </div>
+        {#<div class="col-sm-12">#}
+           {#{{element.account.pass}}#}
+           {#{{element.terms_condition}}#}
+
+        {#</div>#}
+        {#<div class="col-sm-12">#}
+            {#{{element.captcha}}#}
+
+        {#</div>#}
+        {#<div class="col-sm-12">#}
+            {#{{element.actions.submit}}#}
+
+        {#</div>#}
+        <div class="col-sm-12 pass-condition">
+            {{element.account.pass}}
+            {{element.terms_condition}}
+            {{element.actions.submit}}
+        </div>
+    </form>
+    <p>Already have an account? Go back to <a class="sign-up"  href='login'>Login</a></p>
+
+</div>

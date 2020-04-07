@@ -1,0 +1,51 @@
+<?php
+
+/**
+ * @file
+ * Contains mbmontize.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function mbmontize_help($route_name, RouteMatchInterface $route_match)
+{
+    switch ($route_name) {
+        // Main module help for the mbmontize module.
+        case 'help.page.mbmontize':
+            $output = '';
+            $output .= '<h3>' . t('About') . '</h3>';
+            $output .= '<p>' . t('mobile banking montization') . '</p>';
+            return $output;
+
+        default:
+    }
+}
+
+
+
+
+/*
+ *  Access check for product details.
+ */
+function accessCheck($pid, $user_id, $product_type) {
+    $results = [];
+    if($product_type == 'default') {
+        $query = \Drupal::database()->select('product_details', 'pd');
+        $query->fields('pd', [
+            'app_id',
+            'app_name',
+        ]);
+        $query->condition('pd.commerce_pid', $pid, '=');
+        $query->condition('pd.user_id', $user_id, '=');
+        $query->orderBy('pd.created_time', 'DESC');
+        $product_data = $query->execute()->fetchAll();
+        foreach($product_data as $result) {
+            $results[] = $result;
+            break;
+        }
+    }
+    return $results;
+}

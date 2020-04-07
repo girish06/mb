@@ -1,0 +1,20 @@
+uuid: 7c367bee-6655-466d-9b27-7550ec3bd6c5
+langcode: en
+status: true
+dependencies:
+  module:
+    - hal
+    - serialization
+    - test_restapi
+    - user
+id: contact_us_rest
+plugin_id: contact_us_rest
+granularity: resource
+configuration:
+  methods:
+    - GET
+  formats:
+    - hal_json
+    - json
+  authentication:
+    - cookie

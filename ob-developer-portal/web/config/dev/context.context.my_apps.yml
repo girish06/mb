@@ -1,0 +1,129 @@
+uuid: ea7c40d7-a8e3-42de-a4a8-6bd92557ae08
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+name: my_apps
+label: 'My Apps'
+group: null
+description: ''
+requireAllConditions: true
+disabled: false
+conditions:
+  current_theme:
+    id: current_theme
+    theme: open_banking_portal
+    negate: 0
+    uuid: 2f72b85c-1a1f-417f-b60d-ba877f6036bc
+    context_mapping: {  }
+  request_path:
+    id: request_path
+    pages: /user/myapps
+    negate: 0
+    uuid: 4a6e6824-a9da-4c3c-a50e-c3c4af1925ca
+    context_mapping: {  }
+reactions:
+  blocks:
+    blocks:
+      f9563564-9a55-44de-8344-a04147d133a5:
+        id: 'block_content:51f38717-1f4c-4739-8359-527d57ac1ec0'
+        label: 'My Apps Top Banner'
+        provider: block_content
+        label_display: visible
+        status: true
+        info: ''
+        view_mode: full
+        region: content_header
+        weight: '-10'
+        context_mapping: {  }
+        theme: open_banking_portal
+        css_class: ''
+        unique: 0
+        context_id: my_apps
+        uuid: f9563564-9a55-44de-8344-a04147d133a5
+      aa6ef022-d363-4978-b010-a2a4ce64ce7c:
+        id: 'block_content:9211aa41-5798-4190-ba18-34128d507d46'
+        label: 'My App Footer'
+        provider: block_content
+        label_display: visible
+        status: true
+        info: ''
+        view_mode: full
+        region: content_footer
+        weight: '0'
+        context_mapping: {  }
+        theme: open_banking_portal
+        css_class: ''
+        unique: 0
+        context_id: my_apps
+        uuid: aa6ef022-d363-4978-b010-a2a4ce64ce7c
+      42202c05-5934-4612-9e8a-bf9957960796:
+        id: 'block_content:332d142a-4427-41f4-89fa-87c97324bed1'
+        label: 'My App Get Started'
+        provider: block_content
+        label_display: visible
+        status: true
+        info: ''
+        view_mode: full
+        region: content
+        weight: '-1'
+        context_mapping: {  }
+        theme: open_banking_portal
+        css_class: ''
+        unique: 0
+        context_id: my_apps
+        uuid: 42202c05-5934-4612-9e8a-bf9957960796
+      e6905baf-416f-4f6b-8b04-ac3ad4792def:
+        id: 'block_content:336273c4-6e75-4738-a53d-04d4816418ef'
+        label: 'My Apps Top Banner'
+        provider: block_content
+        label_display: 0
+        status: true
+        info: ''
+        view_mode: full
+        region: content_header
+        weight: '0'
+        context_mapping: {  }
+        theme: open_banking_portal_revised
+        css_class: ''
+        unique: 0
+        context_id: my_apps
+        uuid: e6905baf-416f-4f6b-8b04-ac3ad4792def
+      f70c17e1-35ef-4c46-bce5-ebc93417fd1f:
+        id: 'block_content:a4f20898-b978-492f-b643-f771a97f8b49'
+        label: 'My App Get Started'
+        provider: block_content
+        label_display: 0
+        status: true
+        info: ''
+        view_mode: full
+        region: content
+        weight: '0'
+        context_mapping: {  }
+        theme: open_banking_portal_revised
+        css_class: ''
+        unique: 0
+        context_id: my_apps
+        uuid: f70c17e1-35ef-4c46-bce5-ebc93417fd1f
+      ec0dec27-2988-49ff-9510-40cb59f68fef:
+        id: 'block_content:f28a483d-9b40-485c-8f0a-3e0be1159ff2'
+        label: 'My App Footer'
+        provider: block_content
+        label_display: 0
+        status: true
+        info: ''
+        view_mode: full
+        region: content_footer
+        weight: '0'
+        context_mapping: {  }
+        theme: open_banking_portal_revised
+        css_class: ''
+        unique: 0
+        context_id: my_apps
+        uuid: ec0dec27-2988-49ff-9510-40cb59f68fef
+    id: blocks
+    saved: false
+    uuid: bdc35bb5-06c1-4135-b0c1-5c355166cce8
+    include_default_blocks: 1
+weight: 0

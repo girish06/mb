@@ -1,0 +1,31 @@
+uuid: 74d4bbba-1476-41ba-a10a-594f2d623a51
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:top_banner_block:b5b5c847-f0c9-42bc-8381-a609b7002724'
+  module:
+    - block_content
+    - system
+  theme:
+    - open_banking_portal_revised
+id: revisedourapifooterbannerblock
+theme: open_banking_portal_revised
+region: content_footer
+weight: -8
+provider: null
+plugin: 'block_content:b5b5c847-f0c9-42bc-8381-a609b7002724'
+settings:
+  id: 'block_content:b5b5c847-f0c9-42bc-8381-a609b7002724'
+  label: 'Revised our API footer banner block'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /our-apis
+    negate: false
+    context_mapping: {  }

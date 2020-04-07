@@ -1,0 +1,27 @@
+uuid: 38d3f3c6-da3a-4ea3-860f-c9aaaded0756
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_app_video
+    - node.type.open_banking_apps
+  module:
+    - file
+id: node.open_banking_apps.field_app_video
+field_name: field_app_video
+entity_type: node
+bundle: open_banking_apps
+label: 'App Video'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: 'video/[date:custom:Y]-[date:custom:m]'
+  file_extensions: mp4
+  max_filesize: ''
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

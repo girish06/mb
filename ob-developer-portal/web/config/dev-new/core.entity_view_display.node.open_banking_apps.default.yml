@@ -1,0 +1,38 @@
+uuid: 3d3ab622-3e33-488a-97d8-9ac83cde5e76
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.open_banking_apps.body
+    - field.field.node.open_banking_apps.field_app_video
+    - node.type.open_banking_apps
+  module:
+    - file
+    - text
+    - user
+id: node.open_banking_apps.default
+targetEntityType: node
+bundle: open_banking_apps
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_app_video:
+    weight: 102
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    type: file_default
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

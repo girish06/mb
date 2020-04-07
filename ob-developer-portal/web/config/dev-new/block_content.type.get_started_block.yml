@@ -1,0 +1,8 @@
+uuid: 3173940a-7ff6-4d41-8758-502df353542e
+langcode: en
+status: true
+dependencies: {  }
+id: get_started_block
+label: 'Get Started Block'
+revision: 0
+description: 'Add block for get started section on homepage'

@@ -1,0 +1,15 @@
+test_restapi.my_developer_apps_list_controller_getListMyApps:
+  path: '/user/myapps'
+  defaults:
+    _controller: '\Drupal\test_restapi\Controller\MyDeveloperAppsListController::getListMyApps'
+    _title: 'My Apps'
+  requirements:
+    _permission: 'access content'
+    _user_is_logged_in: 'TRUE'
+test_restapi.my_app_analytics_controller_getMyAppName:
+  path: '/user/myapps/{app}/analytics'
+  defaults:
+    _controller: '\Drupal\test_restapi\Controller\MyAppAnalyticsController::getMyAppAnalytic'
+    _title_callback: '\Drupal\test_restapi\Controller\MyAppAnalyticsController::getMyAppName'
+  requirements:
+    _permission: 'view own developer_app'

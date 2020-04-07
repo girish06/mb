@@ -1,0 +1,22 @@
+uuid: cd0d5581-d755-4920-b3ec-2d1c07ae80c0
+langcode: en
+status: true
+dependencies:
+  module:
+    - hal
+    - serialization
+    - user
+    - webform
+id: entity.webform_submission
+plugin_id: 'entity:webform_submission'
+granularity: resource
+configuration:
+  methods:
+    - GET
+    - POST
+    - DELETE
+  formats:
+    - hal_json
+    - json
+  authentication:
+    - cookie

@@ -1,0 +1,20 @@
+uuid: 7af871f8-db87-41e0-bdc2-0205e4a81802
+langcode: en
+status: true
+dependencies:
+  module:
+    - hal
+    - serialization
+    - user
+    - webform
+id: entity.webform
+plugin_id: 'entity:webform'
+granularity: resource
+configuration:
+  methods:
+    - GET
+  formats:
+    - hal_json
+    - json
+  authentication:
+    - cookie

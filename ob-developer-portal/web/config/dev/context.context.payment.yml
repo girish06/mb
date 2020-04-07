@@ -1,0 +1,74 @@
+uuid: 6d45841d-cf16-4e63-a77d-13767f74d4b7
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - system
+name: payment
+label: Payment
+group: null
+description: ''
+requireAllConditions: true
+disabled: false
+conditions:
+  node_type:
+    id: node_type
+    bundles:
+      api_products: api_products
+    negate: 0
+    uuid: 8b88a441-5587-4b2f-9c31-2056894e62c8
+    context_mapping:
+      node: '@node.node_route_context:node'
+  request_path:
+    id: request_path
+    pages: "/node/6\r\n/payments"
+    negate: 0
+    uuid: 38855dd5-6db0-4455-8d8d-1f09f2a5809d
+    context_mapping: {  }
+  current_theme:
+    id: current_theme
+    theme: open_banking_portal
+    negate: 0
+    uuid: ba6d8dad-61d2-4ea3-b431-620c0c9189e0
+    context_mapping: {  }
+reactions:
+  blocks:
+    blocks:
+      67bf9b81-b8a5-482b-b616-e1206b5aafde:
+        id: 'block_content:64211a66-363d-4bf7-804d-92cec1116c2a'
+        label: 'Our Api Detail Footer Block'
+        provider: block_content
+        label_display: visible
+        status: true
+        info: ''
+        view_mode: full
+        region: content_footer
+        weight: '0'
+        context_mapping: {  }
+        theme: open_banking_portal
+        css_class: ''
+        unique: 0
+        context_id: payment
+        uuid: 67bf9b81-b8a5-482b-b616-e1206b5aafde
+      29ec70dd-eb51-421a-99d3-4a12fead4bf6:
+        id: 'block_content:84b44866-8903-4b15-a48c-1423f8a3ae89'
+        label: 'Payment Top Banner'
+        provider: block_content
+        label_display: visible
+        status: true
+        info: ''
+        view_mode: full
+        region: content_header
+        weight: '0'
+        context_mapping: {  }
+        theme: open_banking_portal
+        css_class: ''
+        unique: 0
+        context_id: payment
+        uuid: 29ec70dd-eb51-421a-99d3-4a12fead4bf6
+    id: blocks
+    saved: false
+    uuid: 94b71fb3-592e-44ac-8238-731a2249e4be
+    include_default_blocks: 1
+weight: 0

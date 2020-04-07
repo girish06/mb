@@ -1,0 +1,24 @@
+uuid: 61339d15-1c8a-4bf7-b1df-36dc9e7b5f17
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.footer-menu-navigation
+  module:
+    - system
+  theme:
+    - open_banking_portal
+id: footermenunavigation
+theme: open_banking_portal
+region: footer
+weight: -5
+provider: null
+plugin: 'system_menu_block:footer-menu-navigation'
+settings:
+  id: 'system_menu_block:footer-menu-navigation'
+  label: 'Footer Menu Navigation'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+visibility: {  }

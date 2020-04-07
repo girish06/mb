@@ -1,0 +1,5 @@
+enabled: true
+selector: 'header#navbar'
+offset: ''
+custom_offset: null
+roles: {  }

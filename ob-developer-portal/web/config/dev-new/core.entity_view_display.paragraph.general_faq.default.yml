@@ -1,0 +1,22 @@
+uuid: 65a5774d-f688-4bbb-912a-33dbf98b0619
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.general_faq.field_general_faq
+    - paragraphs.paragraphs_type.general_faq
+  module:
+    - text
+id: paragraph.general_faq.default
+targetEntityType: paragraph
+bundle: general_faq
+mode: default
+content:
+  field_general_faq:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden: {  }

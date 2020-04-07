@@ -1,0 +1,35 @@
+uuid: 89c5106b-72b1-4aee-a28e-35897d337aa9
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: j5zLMOdJBqC0bMvSdth5UebkprJB8g_2FXHqhfpJzow
+id: anonymous
+label: 'Anonymous user'
+weight: 0
+is_admin: false
+permissions:
+  - 'access comments'
+  - 'access content'
+  - 'access site-wide contact form'
+  - 'access webform overview'
+  - 'restful get api_details'
+  - 'restful get api_product_detail'
+  - 'restful get contact_us_rest'
+  - 'restful get example_get_rest_resource_id'
+  - 'restful get experience_banking_apis'
+  - 'restful get get_country_list'
+  - 'restful get homepage_apis'
+  - 'restful get knowledge_bank_apis'
+  - 'restful get my_apps_apis_list'
+  - 'restful get our_apis_rest'
+  - 'restful get rest_menu_item'
+  - 'restful get webform_rest_elements'
+  - 'restful get webform_rest_fields'
+  - 'restful post lost_password_reset'
+  - 'restful post lost_password_resource'
+  - 'restful post my_apps_details'
+  - 'restful post user_registration'
+  - 'restful post webform_rest_submit'
+  - 'search content'
+  - 'use text format restricted_html'

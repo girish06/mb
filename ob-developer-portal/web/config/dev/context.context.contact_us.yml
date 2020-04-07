@@ -1,0 +1,97 @@
+uuid: 5ce1976d-44af-4ccf-8db6-55c62ac48439
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+name: contact_us
+label: 'Contact us'
+group: null
+description: 'Contact us forms'
+requireAllConditions: true
+disabled: false
+conditions:
+  current_theme:
+    id: current_theme
+    theme: open_banking_portal
+    negate: 0
+    uuid: 2ec3fb63-6361-430d-b0a3-d8f0afb718d7
+    context_mapping: {  }
+  request_path:
+    id: request_path
+    pages: "/contact-us\r\n/report-a-bug\r\n/general-enquiry\r\n/request-new-feature\r\n/business-enquiry"
+    negate: 0
+    uuid: 60a885f6-f4ae-4bab-89c7-2b12f93de62c
+    context_mapping: {  }
+reactions:
+  blocks:
+    blocks:
+      476db631-e6c4-442f-99f7-172398bd9f80:
+        id: 'block_content:3fab3c91-3232-441c-a339-ccbba484f2c7'
+        label: 'Contact Us Form Header Block'
+        provider: block_content
+        label_display: 0
+        status: true
+        info: ''
+        view_mode: full
+        region: content_header
+        weight: '0'
+        context_mapping: {  }
+        theme: open_banking_portal
+        css_class: ''
+        unique: 0
+        context_id: contact_us
+        uuid: 476db631-e6c4-442f-99f7-172398bd9f80
+      2c93942e-7bdf-45e5-9101-8fdc39497ee4:
+        id: 'block_content:5ee5b380-107b-4495-92ba-f810ff6639e5'
+        label: 'Contact Us Footer Banner Block'
+        provider: block_content
+        label_display: 0
+        status: true
+        info: ''
+        view_mode: full
+        region: content_footer
+        weight: '0'
+        context_mapping: {  }
+        theme: open_banking_portal
+        css_class: ''
+        unique: 0
+        context_id: contact_us
+        uuid: 2c93942e-7bdf-45e5-9101-8fdc39497ee4
+      e6177da1-368d-4466-a1aa-1ac8f5a9c192:
+        id: 'block_content:f7520203-3e0a-40c5-87fc-411ba51e410c'
+        label: 'contact us header'
+        provider: block_content
+        label_display: 0
+        status: true
+        info: ''
+        view_mode: full
+        region: content_header
+        weight: '0'
+        context_mapping: {  }
+        theme: open_banking_portal_revised
+        css_class: ''
+        unique: 0
+        context_id: contact_us
+        uuid: e6177da1-368d-4466-a1aa-1ac8f5a9c192
+      8cc71f71-2e2a-408c-9434-e39633310376:
+        id: 'block_content:5ee5b380-107b-4495-92ba-f810ff6639e5'
+        label: 'Contact Us Footer Banner Block'
+        provider: block_content
+        label_display: 0
+        status: true
+        info: ''
+        view_mode: full
+        region: content_footer
+        weight: '0'
+        context_mapping: {  }
+        theme: open_banking_portal_revised
+        css_class: ''
+        unique: 0
+        context_id: contact_us
+        uuid: 8cc71f71-2e2a-408c-9434-e39633310376
+    id: blocks
+    saved: false
+    uuid: 313e0992-41db-4fee-817f-65b2af93d1a2
+    include_default_blocks: 1
+weight: 0

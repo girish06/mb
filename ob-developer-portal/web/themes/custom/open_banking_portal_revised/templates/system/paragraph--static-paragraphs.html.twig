@@ -1,0 +1,16 @@
+{% set imagestyle = {
+    '#theme':      'image_style',
+    '#style_name': 'medium',
+    '#uri':        paragraph.field_paragraph_header_icon.entity.uri.value,
+    '#alt':        paragraph.field_paragraph_header_icon.alt,
+} %}
+
+
+<dt class="accordian-header">
+    {{ imagestyle }}
+    {{ paragraph.field_paragraph_title.value }}
+</dt>
+
+<dd>
+    {{ paragraph.field_paragraph_description.value|raw }}
+</dd>

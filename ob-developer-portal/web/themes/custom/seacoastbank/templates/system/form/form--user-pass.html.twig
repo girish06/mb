@@ -1,0 +1,18 @@
+
+<div class="row login-form-popup">
+    <div class="col-sm-6 login-left-image">
+        <strong>Forgot Password?</strong>
+        <img src="{{base_path ~ directory }}/images/login-img.5d0b4227.png">
+    </div>
+    <div class="col-sm-6 login-right-form">
+        <form{{attributes}}>
+            {{element.name}}
+          
+        
+           {{element.actions.submit}}
+           {{ element.form_build_id }} {# required #}
+            {{ element.form_id }}
+        </form>
+            
+    </div>
+</div>

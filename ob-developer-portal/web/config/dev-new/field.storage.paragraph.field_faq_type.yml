@@ -1,0 +1,30 @@
+uuid: 7fd8a6e5-388b-4e08-a24d-0bc7a5443743
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_faq_type
+field_name: field_faq_type
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: General
+      label: General
+    -
+      value: 'Usage Criteria'
+      label: 'Usage Criteria'
+    -
+      value: 'Errors and Bugs'
+      label: 'Errors and Bugs'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

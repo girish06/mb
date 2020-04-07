@@ -1,0 +1,45 @@
+uuid: 6bdeb3d0-cf01-4e71-9e6b-90ead07ee040
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: dJ0L2DNSj5q6XVZAGsuVDpJTh5UeYkIPwKrUOOpr8YI
+id: authenticated
+label: 'Authenticated user'
+weight: 1
+is_admin: false
+permissions:
+  - 'access comments'
+  - 'access content'
+  - 'access shortcuts'
+  - 'access site-wide contact form'
+  - 'access webform overview'
+  - 'analytics own developer_app'
+  - 'create developer_app'
+  - 'delete own developer_app'
+  - 'post comments'
+  - 'restful delete my_apps_details'
+  - 'restful get api_details'
+  - 'restful get api_product_detail'
+  - 'restful get contact_us_rest'
+  - 'restful get example_get_rest_resource_id'
+  - 'restful get experience_banking_apis'
+  - 'restful get get_country_list'
+  - 'restful get homepage_apis'
+  - 'restful get knowledge_bank_apis'
+  - 'restful get my_apps_apis_list'
+  - 'restful get my_apps_details'
+  - 'restful get my_apps_list'
+  - 'restful get our_apis_rest'
+  - 'restful get rest_menu_item'
+  - 'restful get webform_rest_elements'
+  - 'restful get webform_rest_fields'
+  - 'restful patch my_apps_details'
+  - 'restful post my_apps_details'
+  - 'restful post my_apps_list'
+  - 'restful post webform_rest_submit'
+  - 'search content'
+  - 'skip comment approval'
+  - 'update own developer_app'
+  - 'use text format basic_html'
+  - 'view own developer_app'

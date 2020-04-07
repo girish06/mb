@@ -1,0 +1,7 @@
+<div class="row banner-links button-padding">
+    {% for item in items %}
+
+            <div{{ item.attributes }} class="col-sm-3 btn block-btn" id="{{item.content['#title']|lower|split(' ')|join('-')}}">{{ item.content }}</div>
+
+    {% endfor %}
+</div>

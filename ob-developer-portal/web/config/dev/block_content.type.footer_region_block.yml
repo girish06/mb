@@ -1,0 +1,8 @@
+uuid: ad2552a0-6ff6-45c6-b9f1-eb57fe2703db
+langcode: en
+status: true
+dependencies: {  }
+id: footer_region_block
+label: 'Footer Region Block'
+revision: 0
+description: 'Add block in the footer section of the page'

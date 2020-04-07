@@ -1,0 +1,5 @@
+name: 'MbMontize'
+type: module
+description: 'mobile banking montization'
+core: 8.x
+package: 'MB Package'

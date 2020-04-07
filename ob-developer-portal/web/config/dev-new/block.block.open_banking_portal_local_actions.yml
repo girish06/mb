@@ -1,0 +1,20 @@
+uuid: a09e7558-0557-4c35-b432-e855ab9f07a0
+langcode: en
+status: true
+dependencies:
+  theme:
+    - open_banking_portal
+_core:
+  default_config_hash: ffxthelqQF8xcr4GTG4HlaNNsluiHftN0pujmQpW0bQ
+id: open_banking_portal_local_actions
+theme: open_banking_portal
+region: header
+weight: 20
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

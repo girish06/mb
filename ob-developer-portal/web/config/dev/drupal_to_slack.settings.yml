@@ -1,0 +1,5 @@
+drupal_to_slack_incoming_webhook_url: 'https://hooks.slack.com/services/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'
+drupal_to_slack_channel_for_message: '#openbankproject'
+node_to_notify_on_slack:
+  article: article
+  page: 0

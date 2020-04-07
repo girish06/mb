@@ -1,0 +1,10 @@
+name: openbanking
+type: theme
+description: 'Openbanking theme'
+package: Other
+core: 8.x
+libraries:
+  - openbanking/global-styling
+ 
+base theme: bootstrap
+

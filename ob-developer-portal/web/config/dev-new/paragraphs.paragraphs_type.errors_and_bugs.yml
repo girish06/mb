@@ -1,0 +1,9 @@
+uuid: 5f25db97-e7e8-4661-b6e9-a41c14db0b95
+langcode: en
+status: true
+dependencies: {  }
+id: errors_and_bugs
+label: 'Errors and Bugs'
+icon_uuid: null
+description: 'Error and Bugs of Knowledge Bank'
+behavior_plugins: {  }

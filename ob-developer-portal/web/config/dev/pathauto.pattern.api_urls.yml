@@ -1,0 +1,22 @@
+uuid: 6fee2e78-de3a-44ca-843c-4655a86fe7f3
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: api_urls
+label: 'API URLs'
+type: 'canonical_entities:node'
+pattern: '[node:title]'
+selection_criteria:
+  d2efc6d6-bd2a-4b0c-8ca5-b2c16756c033:
+    id: node_type
+    bundles:
+      api_products: api_products
+    negate: false
+    context_mapping:
+      node: node
+    uuid: d2efc6d6-bd2a-4b0c-8ca5-b2c16756c033
+selection_logic: and
+weight: -5
+relationships: {  }

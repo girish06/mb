@@ -1,0 +1,19 @@
+uuid: a590adf1-139b-4404-a9cb-319de01f4354
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.product_listing_header_block
+    - field.storage.block_content.field_block_title_pdt
+id: block_content.product_listing_header_block.field_block_title_pdt
+field_name: field_block_title_pdt
+entity_type: block_content
+bundle: product_listing_header_block
+label: 'Block title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

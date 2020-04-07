@@ -1,0 +1,19 @@
+uuid: aad740b3-1b03-40c8-ba70-343c07459549
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - text
+id: paragraph.field_documentation_full_content
+field_name: field_documentation_full_content
+entity_type: paragraph
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

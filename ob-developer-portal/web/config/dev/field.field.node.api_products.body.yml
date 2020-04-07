@@ -1,0 +1,22 @@
+uuid: 780c2bb6-dc77-4e75-952a-f67126b7e5e3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.api_products
+  module:
+    - text
+id: node.api_products.body
+field_name: body
+entity_type: node
+bundle: api_products
+label: Description
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

@@ -1,0 +1,19 @@
+uuid: da52d0a3-2df1-497b-93c5-a15dfd7dcaae
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - text
+id: paragraph.field_usage_criteria
+field_name: field_usage_criteria
+entity_type: paragraph
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

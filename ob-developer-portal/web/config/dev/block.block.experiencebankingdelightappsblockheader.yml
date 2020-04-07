@@ -1,0 +1,31 @@
+uuid: 1229d796-a4f1-48cd-b5a0-ccd35c0397e1
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:188dbb89-7430-41b6-ad33-b20906859fe5'
+  module:
+    - block_content
+    - system
+  theme:
+    - bartik
+id: experiencebankingdelightappsblockheader
+theme: bartik
+region: content
+weight: 0
+provider: null
+plugin: 'block_content:188dbb89-7430-41b6-ad33-b20906859fe5'
+settings:
+  id: 'block_content:188dbb89-7430-41b6-ad33-b20906859fe5'
+  label: 'Experience Banking Delight Apps Block Header'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /experience-banking
+    negate: false
+    context_mapping: {  }

@@ -1,0 +1,26 @@
+uuid: a305a298-f6e2-4248-b57b-ad33f9c96286
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.errors_and_bugs.field_error_faqs
+    - paragraphs.paragraphs_type.errors_and_bugs
+  module:
+    - text
+id: paragraph.errors_and_bugs.default
+targetEntityType: paragraph
+bundle: errors_and_bugs
+mode: default
+content:
+  field_error_faqs:
+    weight: 0
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

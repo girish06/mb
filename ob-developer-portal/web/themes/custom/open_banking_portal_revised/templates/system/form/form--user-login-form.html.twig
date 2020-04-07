@@ -1,0 +1,23 @@
+
+<div class="row login-form-popup" id="login-form-popup">
+    <div class="login-right-form">
+        <form{{attributes}}>
+            {{element.status_messages}}
+            {{element.name}}
+            {{element.pass}}
+            <div class="col-sm-6 remember-me">
+                <div id="example1">
+                {{element.persistent_login}}
+                </div>
+            </div>
+            <div class="col-sm-6 forgot-pass-link">
+                <a class="pass-forgot"  href='password?name'>Forgot password?</a>
+            </div>
+        
+           {{element.actions.submit}}
+           {{ element.form_build_id }} {# required #}
+            {{ element.form_id }}
+        </form>
+            <p>Do not have an account? <a class="sign-up"  href='register'> Sign Up Now</a></p>
+    </div>
+</div>

@@ -1,0 +1,191 @@
+uuid: 00f3d1f4-11bf-4b0b-a0b3-4a703cc04e45
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+name: our_api
+label: 'Our API'
+group: null
+description: ''
+requireAllConditions: true
+disabled: false
+conditions:
+  current_theme:
+    id: current_theme
+    theme: open_banking_portal
+    negate: 0
+    uuid: 2ae62ff4-b61e-41a4-b344-7a7699b08a2b
+    context_mapping: {  }
+  request_path:
+    id: request_path
+    pages: /our-apis
+    negate: 0
+    uuid: e12e759c-1bde-4e13-9bfa-0d55365013e4
+    context_mapping: {  }
+reactions:
+  blocks:
+    blocks:
+      097c7f1e-030a-4ab2-94a0-6800c42c0dc8:
+        id: 'block_content:f8e09e43-2715-4cc3-9060-7d4f2971b60f'
+        label: 'New Our Api Top Banner'
+        provider: block_content
+        label_display: visible
+        status: true
+        info: ''
+        view_mode: full
+        region: content_header
+        weight: '-10'
+        context_mapping: {  }
+        theme: open_banking_portal
+        css_class: ''
+        unique: 0
+        context_id: our_api
+        uuid: 097c7f1e-030a-4ab2-94a0-6800c42c0dc8
+      afd477c1-08a1-4fad-996f-8e89bff028e7:
+        id: 'block_content:a7f1294e-89da-40d5-8030-3ce5050a379e'
+        label: 'New Our API Footer Region'
+        provider: block_content
+        label_display: visible
+        status: true
+        info: ''
+        view_mode: full
+        region: content_footer
+        weight: '0'
+        context_mapping: {  }
+        theme: open_banking_portal
+        css_class: ''
+        unique: 0
+        context_id: our_api
+        uuid: afd477c1-08a1-4fad-996f-8e89bff028e7
+      f46cb9b9-cc0b-4562-ad9b-ce4267857e9d:
+        id: 'block_content:13a3d995-e3f6-4a90-a9fc-6442971a362e'
+        label: 'Our APIs Page Product Listing Header Block'
+        provider: block_content
+        label_display: visible
+        status: true
+        info: ''
+        view_mode: full
+        region: content
+        weight: '-1'
+        context_mapping: {  }
+        theme: open_banking_portal
+        css_class: ''
+        unique: 0
+        context_id: our_api
+        uuid: f46cb9b9-cc0b-4562-ad9b-ce4267857e9d
+      ef653b2d-a3ab-4e07-9f97-fc2bee44ac77:
+        id: 'views_block:api_products_homepage-block_1'
+        label: ''
+        provider: views
+        label_display: visible
+        views_label: ''
+        items_per_page: none
+        region: content
+        weight: '0'
+        context_mapping: {  }
+        theme: open_banking_portal
+        css_class: ''
+        unique: 0
+        context_id: our_api
+        uuid: ef653b2d-a3ab-4e07-9f97-fc2bee44ac77
+      6332499a-9ad0-46fd-886d-31a0a5a223de:
+        id: 'block_content:02c69ef9-8cbf-4527-b937-7ccc09efc2d1'
+        label: 'Our API New Sign Up Block'
+        provider: block_content
+        label_display: visible
+        status: true
+        info: ''
+        view_mode: full
+        region: content
+        weight: '0'
+        context_mapping: {  }
+        theme: open_banking_portal
+        css_class: ''
+        unique: 0
+        context_id: our_api
+        uuid: 6332499a-9ad0-46fd-886d-31a0a5a223de
+      ac1ce44f-c48f-4afe-9132-c41e7a841f8e:
+        id: 'block_content:f8e09e43-2715-4cc3-9060-7d4f2971b60f'
+        label: 'New Our Api Top Banner'
+        provider: block_content
+        label_display: 0
+        status: true
+        info: ''
+        view_mode: full
+        region: content_header
+        weight: '0'
+        context_mapping: {  }
+        theme: open_banking_portal_revised
+        css_class: ''
+        unique: 0
+        context_id: our_api
+        uuid: ac1ce44f-c48f-4afe-9132-c41e7a841f8e
+      d9abec6e-3e62-4b80-af8f-4f6ce6d3bdab:
+        id: 'block_content:13a3d995-e3f6-4a90-a9fc-6442971a362e'
+        label: 'Our APIs Page Product Listing Header Block'
+        provider: block_content
+        label_display: 0
+        status: true
+        info: ''
+        view_mode: full
+        region: content
+        weight: '-2'
+        context_mapping: {  }
+        theme: open_banking_portal_revised
+        css_class: ''
+        unique: 0
+        context_id: our_api
+        uuid: d9abec6e-3e62-4b80-af8f-4f6ce6d3bdab
+      22513106-5b38-44c9-aa58-db9393e7ea41:
+        id: 'views_block:api_products_homepage-block_1'
+        label: ''
+        provider: views
+        label_display: 0
+        views_label: ''
+        items_per_page: none
+        region: content
+        weight: '-1'
+        context_mapping: {  }
+        theme: open_banking_portal_revised
+        css_class: ''
+        unique: 0
+        context_id: our_api
+        uuid: 22513106-5b38-44c9-aa58-db9393e7ea41
+      05ef31c1-f788-439c-8a31-3488fc804866:
+        id: 'block_content:02c69ef9-8cbf-4527-b937-7ccc09efc2d1'
+        label: 'Our API New Sign Up Block'
+        provider: block_content
+        label_display: 0
+        status: true
+        info: ''
+        view_mode: full
+        region: content
+        weight: '0'
+        context_mapping: {  }
+        theme: open_banking_portal_revised
+        css_class: ''
+        unique: 0
+        context_id: our_api
+        uuid: 05ef31c1-f788-439c-8a31-3488fc804866
+      410d20e4-7fc4-4624-aaaa-746a2e036646:
+        id: 'block_content:a7f1294e-89da-40d5-8030-3ce5050a379e'
+        label: 'New Our API Footer Region'
+        provider: block_content
+        label_display: 0
+        status: true
+        info: ''
+        view_mode: full
+        region: content_footer
+        weight: '0'
+        context_mapping: {  }
+        theme: open_banking_portal_revised
+        css_class: ''
+        unique: 0
+        context_id: our_api
+        uuid: 410d20e4-7fc4-4624-aaaa-746a2e036646
+    id: blocks
+    saved: false
+    uuid: 362bfa79-ac7f-4c09-8e69-00a2cb435d24
+    include_default_blocks: 1
+weight: 0

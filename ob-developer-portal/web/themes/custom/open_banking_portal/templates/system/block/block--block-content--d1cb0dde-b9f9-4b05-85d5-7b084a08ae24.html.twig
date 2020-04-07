@@ -1,0 +1,17 @@
+{#<div class="container">#}
+  <div class="row banner-title">
+      <div class="col-sm-7 left-banner-content ajax-form"> 
+          {{content.field_banner_title}} 
+          {{content.body}}        
+          {% if content.field_banner_links is not empty  %}   
+              <div class="row banner-links button-padding">
+                  <button class="use-ajax col-sm-3 btn block-btn sign-up-button" data-dialog-type="modal" data-dialog-options="{&quot;width&quot;:800}" href={{ content.field_banner_links.0['#url']}}>{{ content.field_banner_links.0['#title']}}</button>    
+              </div>
+          {% endif %}      
+      </div>
+      <div class="col-sm-5 right-banner-content">
+          {{content.field_banner_image}}
+      </div>
+  </div>
+{#</div>#}
+

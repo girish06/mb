@@ -1,0 +1,13 @@
+
+<div class="row banner-links button-padding">
+  {% for item in items %}
+    {#{{ item.content|render|render }}#}
+    {% if 'get-in-touch' in item.content|render|render %}
+      <button class="use-ajax col-sm-3 btn block-btn get-touch-popup-button sign-up-button" data-dialog-type="modal" href={{item.content['#url']}}>{{item.content['#title']}}</button>
+    {% else %}
+      <div class="col-sm-3 btn block-btn sign-up-button" id="{{item.content['#title']|lower|split(' ')|join('-')}}">{{ item.content }}</div>
+    {% endif%}
+  {% endfor %}
+</div>
+
+

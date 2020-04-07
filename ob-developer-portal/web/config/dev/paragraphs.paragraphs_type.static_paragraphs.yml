@@ -1,0 +1,9 @@
+uuid: 1750a65d-6977-4e3b-86a9-b48cd627ca35
+langcode: en
+status: true
+dependencies: {  }
+id: static_paragraphs
+label: 'Static Paragraphs'
+icon_uuid: null
+description: 'Add static paragraphs with paragraph title, body and image(if available)'
+behavior_plugins: {  }

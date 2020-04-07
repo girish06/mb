@@ -1,0 +1,31 @@
+uuid: f87bb407-b405-467c-a8f7-f8eca3536443
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:footer_region_block:5ee5b380-107b-4495-92ba-f810ff6639e5'
+  module:
+    - block_content
+    - system
+  theme:
+    - open_banking_portal_revised
+id: contactusfooterbannerblock
+theme: open_banking_portal_revised
+region: content_footer
+weight: -9
+provider: null
+plugin: 'block_content:5ee5b380-107b-4495-92ba-f810ff6639e5'
+settings:
+  id: 'block_content:5ee5b380-107b-4495-92ba-f810ff6639e5'
+  label: 'Contact Us Footer Banner Block'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /contact-us
+    negate: false
+    context_mapping: {  }

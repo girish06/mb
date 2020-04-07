@@ -1,0 +1,111 @@
+uuid: 5afc239e-3b99-4f4b-995e-8d8def81cb78
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.api_products.body
+    - field.field.node.api_products.field_api_documentation_content
+    - field.field.node.api_products.field_api_product_icon
+    - field.field.node.api_products.field_banner_text
+    - field.field.node.api_products.field_image
+    - field.field.node.api_products.field_right_side_image
+    - field.field.node.api_products.field_section
+    - field.field.node.api_products.field_swagger_file_upload
+    - field.field.node.api_products.field_webform
+    - node.type.api_products
+  module:
+    - entity_reference_revisions
+    - image
+    - swagger_ui_formatter
+    - text
+    - user
+id: node.api_products.default
+targetEntityType: node
+bundle: api_products
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_api_documentation_content:
+    type: entity_reference_revisions_entity_view
+    weight: 6
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_api_product_icon:
+    weight: 2
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_banner_text:
+    weight: 7
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_image:
+    weight: 8
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_right_side_image:
+    weight: 9
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_section:
+    weight: 5
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_swagger_file_upload:
+    weight: 4
+    label: hidden
+    settings:
+      validator: none
+      validator_url: ''
+      doc_expansion: list
+      supported_submit_methods:
+        get: get
+        put: put
+        post: post
+        delete: delete
+        options: options
+        head: head
+        patch: patch
+      show_top_bar: false
+      sort_tags_by_name: false
+    third_party_settings: {  }
+    type: swagger_ui_file
+    region: content
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_webform: true

@@ -1,0 +1,19 @@
+<?php
+
+
+function test_restapi_theme($existing, $type, $theme, $path) {
+  return [
+    'open_banking_my_apps' => [
+      'variables' => [
+          'my_apps' => NULL,
+          'user_id' => NULL,
+          ],
+    ],
+    'open_banking_my_app_analytics' => [
+        'variables' => [
+            'analytics_form' => NULL,
+            'displayName' => NULL,
+        ],
+    ],
+  ];
+}

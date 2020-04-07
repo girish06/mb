@@ -1,0 +1,9 @@
+uuid: 41c6bf64-627f-46fe-90e0-6af04ad23df6
+langcode: en
+status: true
+dependencies: {  }
+id: usage_and_criteria
+label: 'Usage and Criteria'
+icon_uuid: null
+description: 'Usage and Criteria of Knowledge bank'
+behavior_plugins: {  }

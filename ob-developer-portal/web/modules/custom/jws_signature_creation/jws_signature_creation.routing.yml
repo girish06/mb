@@ -1,0 +1,15 @@
+
+jws_signature_creation.jws_signature:
+  path: '/jws_signature_creation/create'
+  defaults:
+    _form: '\Drupal\jws_signature_creation\Form\JwsSignatureForm'
+    _title: 'JWSSignatureForm'
+  requirements:
+    _access: 'TRUE'
+jws_signature_creation.create:
+  path: '/admin/config/JWS/set-jwtkey'
+  defaults:
+    _form: '\Drupal\jws_signature_creation\Form\JwsKeyForm'
+    _title: 'Get JWT Signature Secret Key'
+  requirements:
+    _access: 'TRUE'

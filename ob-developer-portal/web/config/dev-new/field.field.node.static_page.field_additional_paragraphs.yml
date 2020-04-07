@@ -1,0 +1,31 @@
+uuid: 0d6b5458-8580-4f96-abca-f5c4b8834ec4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_additional_paragraphs
+    - node.type.static_page
+    - paragraphs.paragraphs_type.static_paragraphs
+  module:
+    - entity_reference_revisions
+id: node.static_page.field_additional_paragraphs
+field_name: field_additional_paragraphs
+entity_type: node
+bundle: static_page
+label: 'Additional Paragraphs'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      static_paragraphs: static_paragraphs
+    target_bundles_drag_drop:
+      static_paragraphs:
+        enabled: true
+        weight: 2
+field_type: entity_reference_revisions

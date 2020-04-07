@@ -1,0 +1,21 @@
+uuid: b8d93538-56d5-408b-bbc4-79f0241266e3
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.top_banner_block
+    - field.storage.block_content.field_banner_title
+  module:
+    - text
+id: block_content.top_banner_block.field_banner_title
+field_name: field_banner_title
+entity_type: block_content
+bundle: top_banner_block
+label: 'Banner Title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

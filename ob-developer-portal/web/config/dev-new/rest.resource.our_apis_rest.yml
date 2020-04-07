@@ -1,0 +1,20 @@
+uuid: b0e92346-6667-4c63-ab99-2f4f9515adf3
+langcode: en
+status: true
+dependencies:
+  module:
+    - hal
+    - serialization
+    - test_restapi
+    - user
+id: our_apis_rest
+plugin_id: our_apis_rest
+granularity: resource
+configuration:
+  methods:
+    - GET
+  formats:
+    - hal_json
+    - json
+  authentication:
+    - cookie

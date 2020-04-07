@@ -1,0 +1,8 @@
+uuid: 96b31a50-0412-489d-87df-db51a0e3cac5
+langcode: en
+status: true
+dependencies: {  }
+name: Section
+vid: section
+description: 'Different sections of the portal'
+weight: 0

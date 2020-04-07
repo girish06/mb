@@ -1,0 +1,9 @@
+{% for key,row in rows %}
+    {% if key == 0 or key == 1 or key == 2%}
+        <div class="col-sm-4 padding-unset">
+    {% else %}
+        <div class="col-sm-6 padding-unset">
+    {% endif %}
+        {{ row.content}}
+    </div>            
+{% endfor %}

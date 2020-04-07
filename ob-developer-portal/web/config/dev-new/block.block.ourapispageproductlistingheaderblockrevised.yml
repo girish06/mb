@@ -1,0 +1,31 @@
+uuid: 52fa08b9-ea28-4329-a972-f6318e02407e
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:product_listing_header_block:32437521-a1c3-4875-b65b-681e3fbde793'
+  module:
+    - block_content
+    - system
+  theme:
+    - open_banking_portal_revised
+id: ourapispageproductlistingheaderblockrevised
+theme: open_banking_portal_revised
+region: content
+weight: -12
+provider: null
+plugin: 'block_content:32437521-a1c3-4875-b65b-681e3fbde793'
+settings:
+  id: 'block_content:32437521-a1c3-4875-b65b-681e3fbde793'
+  label: 'Our APIs Page Product Listing Header Block revised'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /our-apis
+    negate: false
+    context_mapping: {  }

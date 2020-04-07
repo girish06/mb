@@ -1,0 +1,15 @@
+uuid: 4e06cf66-dd12-4edd-9c46-01322c6060c7
+name: 'OpenBanking Developer Portal'
+mail: sanket.jain@digitalapicraft.com
+slogan: '<p class="title-slogan">For PSD2 and Open Banking </p><p class="second-title-slogan">Powered by DisruptionSuite</p>'
+page:
+  403: ''
+  404: ''
+  front: /node
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
+_core:
+  default_config_hash: yXadRE77Va-G6dxhd2kPYapAvbnSvTF6hO4oXiOEynI
+mail_notification: ''

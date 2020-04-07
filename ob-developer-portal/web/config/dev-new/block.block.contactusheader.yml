@@ -1,0 +1,31 @@
+uuid: bf32caf8-c766-4634-b389-fbff10c1024f
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:top_banner_block:f7520203-3e0a-40c5-87fc-411ba51e410c'
+  module:
+    - block_content
+    - system
+  theme:
+    - open_banking_portal_revised
+id: contactusheader
+theme: open_banking_portal_revised
+region: content_header
+weight: 0
+provider: null
+plugin: 'block_content:f7520203-3e0a-40c5-87fc-411ba51e410c'
+settings:
+  id: 'block_content:f7520203-3e0a-40c5-87fc-411ba51e410c'
+  label: 'contact us header'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /contact-us
+    negate: false
+    context_mapping: {  }

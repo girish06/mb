@@ -1,0 +1,46 @@
+uuid: ddba2ef8-9dfa-4edf-b0f7-3f9e753bd865
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_usage_and_criteria
+    - node.type.knowledge_bank
+    - paragraphs.paragraphs_type.usage_and_criteria
+  module:
+    - entity_reference_revisions
+id: node.knowledge_bank.field_usage_and_criteria
+field_name: field_usage_and_criteria
+entity_type: node
+bundle: knowledge_bank
+label: 'Usage and Criteria'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      usage_and_criteria: usage_and_criteria
+    target_bundles_drag_drop:
+      api_documentation_content:
+        weight: 7
+        enabled: false
+      errors_and_bugs:
+        weight: 8
+        enabled: false
+      faq_paragraphs:
+        weight: 9
+        enabled: false
+      general_faq:
+        weight: 10
+        enabled: false
+      static_paragraphs:
+        weight: 11
+        enabled: false
+      usage_and_criteria:
+        enabled: true
+        weight: 12
+field_type: entity_reference_revisions

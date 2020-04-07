@@ -1,0 +1,9 @@
+uuid: 401cc19b-c995-4007-9583-7c05abf0174f
+langcode: en
+status: true
+dependencies: {  }
+id: faq_paragraphs
+label: 'Faq Paragraphs'
+icon_uuid: null
+description: 'FAQ paragraph type'
+behavior_plugins: {  }

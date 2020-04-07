@@ -1,0 +1,33 @@
+uuid: 11a422f0-2081-4983-a445-a685336955ea
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.knowledge_bank.body
+    - node.type.knowledge_bank
+  module:
+    - text
+    - user
+id: node.knowledge_bank.teaser
+targetEntityType: node
+bundle: knowledge_bank
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_errors_and_bugs: true
+  field_general: true
+  field_usage_and_criteria: true

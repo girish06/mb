@@ -1,0 +1,23 @@
+uuid: 78af6843-9032-4957-987f-8f7e24c7bb0c
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.footer_region_block
+    - field.storage.block_content.field_additional_buttons
+  module:
+    - link
+id: block_content.footer_region_block.field_additional_buttons
+field_name: field_additional_buttons
+entity_type: block_content
+bundle: footer_region_block
+label: 'Additional Buttons'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

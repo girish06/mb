@@ -1,0 +1,59 @@
+uuid: 2adf7c2b-b230-49bb-9a28-23e50972bf34
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.knowledge_bank.body
+    - field.field.node.knowledge_bank.field_errors_and_bugs
+    - field.field.node.knowledge_bank.field_general
+    - field.field.node.knowledge_bank.field_usage_and_criteria
+    - node.type.knowledge_bank
+  module:
+    - entity_reference_revisions
+    - text
+    - user
+id: node.knowledge_bank.default
+targetEntityType: node
+bundle: knowledge_bank
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_errors_and_bugs:
+    type: entity_reference_revisions_entity_view
+    weight: 104
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_general:
+    type: entity_reference_revisions_entity_view
+    weight: 102
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_usage_and_criteria:
+    type: entity_reference_revisions_entity_view
+    weight: 103
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

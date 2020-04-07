@@ -1,0 +1,8 @@
+uuid: 6d71a23c-273d-4a08-8694-eed297febce7
+langcode: en
+status: true
+dependencies: {  }
+id: footer-menu-navigation
+label: 'Footer Menu Navigation'
+description: 'Add footer menu links'
+locked: false

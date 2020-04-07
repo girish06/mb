@@ -1,0 +1,30 @@
+uuid: 37ea1d8f-ef00-44ef-8c9d-33abc1703ec1
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.api_products_homepage
+  module:
+    - system
+    - views
+  theme:
+    - open_banking_portal_revised
+id: views_block__api_products_homepage_block_1
+theme: open_banking_portal_revised
+region: content
+weight: -11
+provider: null
+plugin: 'views_block:api_products_homepage-block_1'
+settings:
+  id: 'views_block:api_products_homepage-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: "<front>\r\n/our-apis"
+    negate: false
+    context_mapping: {  }

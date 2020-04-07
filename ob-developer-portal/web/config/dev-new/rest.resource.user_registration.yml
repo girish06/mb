@@ -1,0 +1,19 @@
+uuid: 6fcdb2f4-3e78-4893-8c84-c286da6f4213
+langcode: en
+status: true
+dependencies:
+  module:
+    - hal
+    - serialization
+    - user
+id: user_registration
+plugin_id: user_registration
+granularity: resource
+configuration:
+  methods:
+    - POST
+  formats:
+    - hal_json
+    - json
+  authentication:
+    - cookie

@@ -1,0 +1,22 @@
+uuid: 22e341d2-f6c4-4559-bf3c-8504730c9e4a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.knowledge_bank
+  module:
+    - text
+id: node.knowledge_bank.body
+field_name: body
+entity_type: node
+bundle: knowledge_bank
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

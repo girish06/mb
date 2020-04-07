@@ -1,0 +1,22 @@
+uuid: 5faf3e60-53bd-44e7-93ad-bbcecb636840
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.open_banking_apps
+  module:
+    - text
+id: node.open_banking_apps.body
+field_name: body
+entity_type: node
+bundle: open_banking_apps
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

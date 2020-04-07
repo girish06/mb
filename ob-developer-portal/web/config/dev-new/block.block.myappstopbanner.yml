@@ -1,0 +1,31 @@
+uuid: b5fab723-e000-455d-9570-030623467b64
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:top_banner_block:336273c4-6e75-4738-a53d-04d4816418ef'
+  module:
+    - block_content
+    - system
+  theme:
+    - open_banking_portal_revised
+id: myappstopbanner
+theme: open_banking_portal_revised
+region: content_header
+weight: -9
+provider: null
+plugin: 'block_content:336273c4-6e75-4738-a53d-04d4816418ef'
+settings:
+  id: 'block_content:336273c4-6e75-4738-a53d-04d4816418ef'
+  label: 'My Apps Top Banner'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /user/myapps
+    negate: false
+    context_mapping: {  }

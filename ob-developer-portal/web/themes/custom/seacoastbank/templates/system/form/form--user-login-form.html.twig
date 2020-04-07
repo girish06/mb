@@ -1,0 +1,27 @@
+
+<div class="row login-form-popup" id="login-form-popup">
+    <div class="col-sm-6 login-left-image">
+        <strong>Log in to your account</strong>
+        <img src="{{base_path ~ directory }}/images/login-img.5d0b4227.png">
+    </div>
+    <div class="col-sm-6 login-right-form">
+        <form{{attributes}}>
+            {{element.status_messages}}
+            {{element.name}}
+            {{element.pass}}
+            <div class="col-sm-6">
+                <div id="example1">
+                {{element.persistent_login}}
+                </div>
+            </div>
+            <div class="col-sm-6 forgot-pass-link">
+                <a class="use-ajax" data-dialog-type="modal" href='user/password?name'>Forgot password?</a>
+            </div>
+        
+           {{element.actions.submit}}
+           {{ element.form_build_id }} {# required #}
+            {{ element.form_id }}
+        </form>
+            <p>Do not have an account<a class="use-ajax sign-up" data-dialog-type="modal" href='user/register'> Sign Up Now</a></p>
+    </div>
+</div>

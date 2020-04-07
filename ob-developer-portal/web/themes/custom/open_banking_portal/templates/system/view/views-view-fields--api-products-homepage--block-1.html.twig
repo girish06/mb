@@ -1,0 +1,31 @@
+{% if is_front %}
+    <div class="col-sm-1 col-xs-12 image-padding">
+        {{fields.field_api_product_icon.content}}
+    </div>
+    <div class="col-sm-11 col-xs-12 api-details">
+        <h3><strong>{{ fields.title.content }}</strong></h3>
+        <hr class="line"/>
+        {{ fields.body.content }}
+        <div>
+            {{fields.view_node.content}}
+        </div>
+    </div>
+{% else %}
+    <div>
+        {{fields.field_api_product_icon.content}}
+        <h3><strong>{{ fields.title.content }}</strong></h3>
+        <hr class="line-our-api">
+    </div>
+    <div class="api-content">
+        {{ fields.body.content }}
+    </div>
+    <div class="documentation-link">
+        <div class="button-padding">
+            <div class="btn block-btn">
+                {{fields.view_node_1.content}}
+            </div>
+        </div>
+    </div>
+{% endif %}
+
+

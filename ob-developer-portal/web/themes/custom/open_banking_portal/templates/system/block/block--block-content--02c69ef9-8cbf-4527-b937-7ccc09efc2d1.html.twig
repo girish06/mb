@@ -1,0 +1,16 @@
+<section class="our-api-signup-block">    
+    <div class="container-fluid">
+        <div class="row banner-title">
+            <div class="col-sm-7 signup-left-banner-content"> 
+                {{content.field_banner_title}} 
+                {{content.body}}        
+                {% if content.field_banner_links is not empty  %}     
+                    {{content.field_banner_links}}            
+                {% endif %}      
+            </div>
+            <div class="col-sm-5 signup-right-banner-content">
+                {{content.field_banner_image}}
+            </div>
+        </div>
+    </div>
+</section>         

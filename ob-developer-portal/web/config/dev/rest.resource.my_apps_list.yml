@@ -1,0 +1,21 @@
+uuid: b3cdbcbe-5cf8-482c-bcbc-4e6f00caee4c
+langcode: en
+status: true
+dependencies:
+  module:
+    - hal
+    - serialization
+    - test_restapi
+    - user
+id: my_apps_list
+plugin_id: my_apps_list
+granularity: resource
+configuration:
+  methods:
+    - GET
+    - POST
+  formats:
+    - hal_json
+    - json
+  authentication:
+    - cookie

@@ -1,0 +1,7 @@
+uuid: fd5060ec-72ea-446c-9fe1-e0991a736038
+langcode: en
+status: true
+dependencies: {  }
+formId: node_open_banking_apps_form
+captchaType: default
+label: null

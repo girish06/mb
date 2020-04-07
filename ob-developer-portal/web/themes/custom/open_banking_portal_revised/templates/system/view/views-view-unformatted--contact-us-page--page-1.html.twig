@@ -1,0 +1,10 @@
+<div class="contact-us-body">
+    <div class="row ">
+        {% for key,row in rows %} 
+            <div class="col-sm-6 contact-us-page-{{key}} contact-forms">
+                 {{ row.content}}
+            </div>
+                
+        {% endfor %}
+    </div>
+</div>

@@ -1,0 +1,21 @@
+uuid: 61659f77-63cd-4e00-b55d-2d5a2f9a0da8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_banner_text
+    - node.type.api_products
+  module:
+    - text
+id: node.api_products.field_banner_text
+field_name: field_banner_text
+entity_type: node
+bundle: api_products
+label: 'Banner Text'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

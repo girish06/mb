@@ -1,0 +1,21 @@
+uuid: f20a09cf-f63d-471c-8964-458fe9c4525e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_faq_type
+    - paragraphs.paragraphs_type.faq_paragraphs
+  module:
+    - options
+id: paragraph.faq_paragraphs.field_faq_type
+field_name: field_faq_type
+entity_type: paragraph
+bundle: faq_paragraphs
+label: 'Faq Type'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

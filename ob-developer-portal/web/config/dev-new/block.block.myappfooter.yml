@@ -1,0 +1,31 @@
+uuid: d9034ee2-0210-42f1-9acd-89044f131e38
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:footer_region_block:f28a483d-9b40-485c-8f0a-3e0be1159ff2'
+  module:
+    - block_content
+    - system
+  theme:
+    - open_banking_portal_revised
+id: myappfooter
+theme: open_banking_portal_revised
+region: content_footer
+weight: 0
+provider: null
+plugin: 'block_content:f28a483d-9b40-485c-8f0a-3e0be1159ff2'
+settings:
+  id: 'block_content:f28a483d-9b40-485c-8f0a-3e0be1159ff2'
+  label: 'My App Footer'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /user/myapps
+    negate: false
+    context_mapping: {  }

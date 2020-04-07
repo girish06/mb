@@ -1,0 +1,41 @@
+uuid: f58d061b-9acf-42ce-842b-94a6f8851d3b
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.api_products.body
+    - field.field.node.api_products.field_api_documentation_content
+    - field.field.node.api_products.field_api_product_icon
+    - field.field.node.api_products.field_section
+    - field.field.node.api_products.field_swagger_file_upload
+    - node.type.api_products
+  module:
+    - text
+    - user
+id: node.api_products.teaser
+targetEntityType: node
+bundle: api_products
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_api_documentation_content: true
+  field_api_product_icon: true
+  field_banner_text: true
+  field_image: true
+  field_section: true
+  field_swagger_file_upload: true
+  field_webform: true

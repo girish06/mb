@@ -1,0 +1,38 @@
+uuid: d815d5f8-049b-41d4-ad9a-d2001bddf6a8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_right_side_image
+    - node.type.api_products
+  module:
+    - image
+id: node.api_products.field_right_side_image
+field_name: field_right_side_image
+entity_type: node
+bundle: api_products
+label: 'right side image'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

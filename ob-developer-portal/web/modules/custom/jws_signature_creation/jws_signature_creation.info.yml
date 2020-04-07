@@ -1,0 +1,5 @@
+name: 'JWS signature creation'
+type: module
+description: 'Creating JWS signature for payload'
+core: 8.x
+package: 'Custom'

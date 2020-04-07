@@ -1,0 +1,16 @@
+{# empty Twig template #}
+<div class="homepage-api-product-list">
+    <div class="api-product-padding">
+        <ul class="api-product">
+            <li class="api-list">
+                <div class="col-sm-1 image-padding image-padding-get-started">
+                    <image src="{{file_url(paragraph.field_paragraph_image.entity.uri.value)}}"/>
+                </div>
+                <div class="col-sm-11 api-details">
+                    <h2>{{ paragraph.field_paragraph_title.value }}</h2>
+                    {{ paragraph.field_paragraph_description.value|raw }}
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>

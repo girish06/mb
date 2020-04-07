@@ -1,0 +1,23 @@
+uuid: 79a42753-95a3-4a3c-98c6-2b09c1a7f199
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.get_started_block
+    - field.storage.block_content.field_addon_buttons
+  module:
+    - link
+id: block_content.get_started_block.field_addon_buttons
+field_name: field_addon_buttons
+entity_type: block_content
+bundle: get_started_block
+label: 'Addon Buttons'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

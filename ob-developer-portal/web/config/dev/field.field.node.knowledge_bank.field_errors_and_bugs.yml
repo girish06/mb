@@ -1,0 +1,46 @@
+uuid: 5341f30f-4c14-4312-8302-7ade2a762aee
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_errors_and_bugs
+    - node.type.knowledge_bank
+    - paragraphs.paragraphs_type.errors_and_bugs
+  module:
+    - entity_reference_revisions
+id: node.knowledge_bank.field_errors_and_bugs
+field_name: field_errors_and_bugs
+entity_type: node
+bundle: knowledge_bank
+label: 'Errors and Bugs'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      errors_and_bugs: errors_and_bugs
+    target_bundles_drag_drop:
+      api_documentation_content:
+        weight: 7
+        enabled: false
+      errors_and_bugs:
+        enabled: true
+        weight: 8
+      faq_paragraphs:
+        weight: 9
+        enabled: false
+      general_faq:
+        weight: 10
+        enabled: false
+      static_paragraphs:
+        weight: 11
+        enabled: false
+      usage_and_criteria:
+        weight: 12
+        enabled: false
+field_type: entity_reference_revisions

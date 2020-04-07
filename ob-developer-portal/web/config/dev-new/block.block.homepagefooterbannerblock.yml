@@ -1,0 +1,31 @@
+uuid: 08ca818b-9a03-42c2-b7b8-933442bb7e52
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:footer_region_block:91a5d316-0f7c-4415-9047-ab8199cd804f'
+  module:
+    - block_content
+    - system
+  theme:
+    - open_banking_portal_revised
+id: homepagefooterbannerblock
+theme: open_banking_portal_revised
+region: content_footer
+weight: -8
+provider: null
+plugin: 'block_content:91a5d316-0f7c-4415-9047-ab8199cd804f'
+settings:
+  id: 'block_content:91a5d316-0f7c-4415-9047-ab8199cd804f'
+  label: 'Homepage Footer Banner Block'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

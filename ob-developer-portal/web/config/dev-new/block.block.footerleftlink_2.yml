@@ -1,0 +1,25 @@
+uuid: 205e99db-336a-42d4-af87-a40a7c349a21
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:4e16970b-6a42-4ff9-a7e3-5c4334d19236'
+  module:
+    - block_content
+  theme:
+    - open_banking_portal_revised
+id: footerleftlink_2
+theme: open_banking_portal_revised
+region: footer
+weight: -8
+provider: null
+plugin: 'block_content:4e16970b-6a42-4ff9-a7e3-5c4334d19236'
+settings:
+  id: 'block_content:4e16970b-6a42-4ff9-a7e3-5c4334d19236'
+  label: 'Footer left link'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

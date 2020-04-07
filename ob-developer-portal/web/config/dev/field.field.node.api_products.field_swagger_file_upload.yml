@@ -1,0 +1,27 @@
+uuid: 8c4a0480-d7dc-48f1-a901-c0074420c3c8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_swagger_file_upload
+    - node.type.api_products
+  module:
+    - file
+id: node.api_products.field_swagger_file_upload
+field_name: field_swagger_file_upload
+entity_type: node
+bundle: api_products
+label: 'Swagger File Upload'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'txt yml yaml'
+  max_filesize: ''
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

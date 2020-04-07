@@ -1,0 +1,23 @@
+uuid: 2e5ec320-b3ff-4499-8c3d-af3bd683c8d6
+langcode: en
+status: true
+dependencies:
+  module:
+    - file
+    - node
+id: node.field_swagger_file_upload
+field_name: field_swagger_file_upload
+entity_type: node
+type: file
+settings:
+  display_field: false
+  display_default: false
+  uri_scheme: public
+  target_type: file
+module: file
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

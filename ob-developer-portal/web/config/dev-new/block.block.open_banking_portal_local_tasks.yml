@@ -1,0 +1,22 @@
+uuid: 8a6ff829-6dce-4a4f-b425-54f7c3631edc
+langcode: en
+status: true
+dependencies:
+  theme:
+    - open_banking_portal
+_core:
+  default_config_hash: qHdtze2DZ2mFfaJadxjZz6epm92_SN9SAFY4yJGl8Fo
+id: open_banking_portal_local_tasks
+theme: open_banking_portal
+region: header
+weight: 10
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }

@@ -1,0 +1,55 @@
+uuid: a33d948d-25b8-43b9-8e7b-bdfdab86fbe0
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.top_banner_block
+    - field.field.block_content.top_banner_block.body
+    - field.field.block_content.top_banner_block.field_banner_image
+    - field.field.block_content.top_banner_block.field_banner_links
+    - field.field.block_content.top_banner_block.field_banner_title
+  module:
+    - image
+    - link
+    - text
+id: block_content.top_banner_block.default
+targetEntityType: block_content
+bundle: top_banner_block
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_banner_image:
+    weight: 3
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_banner_links:
+    weight: 2
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_banner_title:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden: {  }

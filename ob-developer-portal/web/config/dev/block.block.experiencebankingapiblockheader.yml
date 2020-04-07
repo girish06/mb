@@ -1,0 +1,31 @@
+uuid: b85fec63-bfc8-4850-b3fa-1e4efb6a5651
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:e4ee901c-c3e3-45db-843a-d4e542248040'
+  module:
+    - block_content
+    - system
+  theme:
+    - bartik
+id: experiencebankingapiblockheader
+theme: bartik
+region: content
+weight: -2
+provider: null
+plugin: 'block_content:e4ee901c-c3e3-45db-843a-d4e542248040'
+settings:
+  id: 'block_content:e4ee901c-c3e3-45db-843a-d4e542248040'
+  label: 'Experience Banking API Block Header'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /experience-banking
+    negate: false
+    context_mapping: {  }

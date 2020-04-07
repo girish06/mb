@@ -1,0 +1,52 @@
+uuid: cd770bf4-311b-4417-9248-86fdcef00bae
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.static_paragraphs.field_paragraph_description
+    - field.field.paragraph.static_paragraphs.field_paragraph_header_icon
+    - field.field.paragraph.static_paragraphs.field_paragraph_image
+    - field.field.paragraph.static_paragraphs.field_paragraph_title
+    - paragraphs.paragraphs_type.static_paragraphs
+  module:
+    - image
+    - text
+id: paragraph.static_paragraphs.default
+targetEntityType: paragraph
+bundle: static_paragraphs
+mode: default
+content:
+  field_paragraph_description:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_paragraph_header_icon:
+    weight: 3
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_paragraph_image:
+    weight: 2
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_paragraph_title:
+    weight: 0
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

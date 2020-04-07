@@ -1,0 +1,23 @@
+uuid: 95751cf4-7803-471a-a343-e9abb1d77ee9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_link_to_a_form
+    - node.type.contact_us_forms
+  module:
+    - link
+id: node.contact_us_forms.field_link_to_a_form
+field_name: field_link_to_a_form
+entity_type: node
+bundle: contact_us_forms
+label: 'Link to a form'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

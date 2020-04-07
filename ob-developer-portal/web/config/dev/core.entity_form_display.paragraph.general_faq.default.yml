@@ -1,0 +1,26 @@
+uuid: 72378af2-c995-4e46-b371-ce466985a8a1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.general_faq.field_general_faq
+    - paragraphs.paragraphs_type.general_faq
+  module:
+    - text
+id: paragraph.general_faq.default
+targetEntityType: paragraph
+bundle: general_faq
+mode: default
+content:
+  field_general_faq:
+    weight: 0
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

@@ -1,0 +1,22 @@
+uuid: 7fa2ab6b-ec70-40b1-a773-dec2438f1949
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.open_banking_apps
+id: node.open_banking_apps.promote
+field_name: promote
+entity_type: node
+bundle: open_banking_apps
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

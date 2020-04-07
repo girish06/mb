@@ -1,0 +1,44 @@
+uuid: b7cced29-89d8-4362-af2b-5e697c0ca6a9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.api_documentation_content.field_documentation_full_content
+    - field.field.paragraph.api_documentation_content.field_documentation_overview
+    - field.field.paragraph.api_documentation_content.field_documentation_title
+    - paragraphs.paragraphs_type.api_documentation_content
+  module:
+    - text
+id: paragraph.api_documentation_content.default
+targetEntityType: paragraph
+bundle: api_documentation_content
+mode: default
+content:
+  field_documentation_full_content:
+    weight: 2
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_documentation_overview:
+    weight: 1
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_documentation_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

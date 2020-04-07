@@ -1,0 +1,58 @@
+<?php
+
+/**
+ * @file
+ * Contains details for apigee monitization products.
+ */
+
+use Drupal\Core\Database\Database;
+
+
+/**
+ * Implements hook_schema().
+ */
+function mbmontize_schema() {
+  $schema['product_details'] = [
+    'fields' => [
+      'product_id' => [
+        'type' => 'int',
+        'not null' => TRUE,
+        'description' => 'The primary identifier for a product-commerce order item id.',
+      ],
+      'commerce_pid' => [
+         'type' => 'int',
+         'not null' => TRUE,
+         'description' => 'Commerce product id.',
+      ],
+      'user_id' => [
+        'type' => 'int',
+        'not null' => TRUE,
+        'description' => 'User id.',
+      ],
+      'order_id' => [
+        'type' => 'int',
+        'not null' => TRUE,
+        'description' => 'Commerce order id.',
+      ],
+      'app_id' => [
+        'type' => 'varchar',
+        'length' => 255,
+        'NOT NULL' => TRUE,
+        'description' => 'Apigee app id.',
+      ],
+      'app_name' => [
+        'type' => 'varchar',
+        'length' => 255,
+        'NOT NULL' => TRUE,
+        'description' => 'Apigee app name.',
+      ],
+      'created_time' => [
+         'type' => 'int',
+         'not null' => TRUE,
+         'description' => 'Current timestamp.',
+      ],
+    ],
+    'primary key' => ['product_id'],
+  ];
+  return $schema;
+}

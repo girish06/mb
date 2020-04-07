@@ -1,0 +1,6 @@
+slack_webhook_url: 'https://hooks.slack.com/services/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'
+slack_channel: '#drupal_dac'
+slack_username: 'Open Bank'
+slack_icon_type: none
+slack_icon_emoji: ''
+slack_icon_url: ''

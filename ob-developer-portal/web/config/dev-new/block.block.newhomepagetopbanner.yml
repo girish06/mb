@@ -1,0 +1,31 @@
+uuid: da55002c-491e-44c4-b8c4-c112cf757568
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:top_banner_block:40ecbff7-ae0e-463a-97e3-2065bc936247'
+  module:
+    - block_content
+    - system
+  theme:
+    - open_banking_portal_revised
+id: newhomepagetopbanner
+theme: open_banking_portal_revised
+region: content_header
+weight: -10
+provider: null
+plugin: 'block_content:40ecbff7-ae0e-463a-97e3-2065bc936247'
+settings:
+  id: 'block_content:40ecbff7-ae0e-463a-97e3-2065bc936247'
+  label: 'New Homepage Top Banner'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

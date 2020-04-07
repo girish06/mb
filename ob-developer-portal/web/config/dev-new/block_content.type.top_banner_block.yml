@@ -1,0 +1,8 @@
+uuid: b0ab175e-1c87-4ad2-a97a-5878a381c9c9
+langcode: en
+status: true
+dependencies: {  }
+id: top_banner_block
+label: 'Top Banner Block'
+revision: 0
+description: 'Add blocks for top banner with title, description and links'

@@ -1,0 +1,15 @@
+<div class="swagger-file-api-prod tab-content">
+  {% for key, item in items %}
+    {% if key == 0 %}
+        <div id="swagger-file-upload-{{ key }}" class="tab-pane fade in active">
+            {{ item.content}}
+         </div>
+    {% else %}
+        <div id="swagger-file-upload-{{ key }}" class="tab-pane fade">
+            {{ item.content}}
+        </div>
+    {% endif %}
+  {% endfor %}
+</div>
+
+

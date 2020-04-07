@@ -1,0 +1,159 @@
+uuid: 25f9b3ba-b2ee-4935-85b5-9b30b1f9742e
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+name: homepage
+label: Homepage
+group: null
+description: ''
+requireAllConditions: true
+disabled: false
+conditions:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: 0
+    uuid: 20c2b659-62a8-4b32-ade3-5d1187f64089
+    context_mapping: {  }
+  current_theme:
+    id: current_theme
+    theme: open_banking_portal
+    negate: 0
+    uuid: a662ee2e-2a41-4d67-abcf-8e0965dceeeb
+    context_mapping: {  }
+reactions:
+  blocks:
+    blocks:
+      2d8c6608-153d-48b9-a277-42e4971e4541:
+        id: 'block_content:40ecbff7-ae0e-463a-97e3-2065bc936247'
+        label: 'New Homepage Top Banner'
+        provider: block_content
+        label_display: visible
+        status: true
+        info: ''
+        view_mode: full
+        region: content_header
+        weight: '0'
+        context_mapping: {  }
+        theme: open_banking_portal
+        css_class: ''
+        unique: 0
+        context_id: homepage
+        uuid: 2d8c6608-153d-48b9-a277-42e4971e4541
+      10056aec-7f0d-4bef-978e-8a9adc05fcfb:
+        id: 'block_content:c9ea9b66-08ee-472f-97e4-511558874241'
+        label: 'New Homepage Footer'
+        provider: block_content
+        label_display: visible
+        status: true
+        info: ''
+        view_mode: full
+        region: content_footer
+        weight: '0'
+        context_mapping: {  }
+        theme: open_banking_portal
+        css_class: ''
+        unique: 0
+        context_id: homepage
+        uuid: 10056aec-7f0d-4bef-978e-8a9adc05fcfb
+      a3e4c0f8-d7d3-46bf-92d2-558e4bb2d4e4:
+        id: 'views_block:api_products_homepage-block_1'
+        label: ''
+        provider: views
+        label_display: visible
+        views_label: ''
+        items_per_page: none
+        region: content
+        weight: '0'
+        context_mapping: {  }
+        theme: open_banking_portal
+        css_class: ''
+        unique: 0
+        context_id: homepage
+        uuid: a3e4c0f8-d7d3-46bf-92d2-558e4bb2d4e4
+      25eae491-aea6-46fd-8a84-ed85dc1a0149:
+        id: 'block_content:ffc785ce-ee43-40b3-acc7-50f91ac089f9'
+        label: 'Homepage Get Started Block '
+        provider: block_content
+        label_display: visible
+        status: true
+        info: ''
+        view_mode: full
+        region: content
+        weight: '-1'
+        context_mapping: {  }
+        theme: open_banking_portal
+        css_class: ''
+        unique: 0
+        context_id: homepage
+        uuid: 25eae491-aea6-46fd-8a84-ed85dc1a0149
+      803095cb-2fc4-4603-9438-734c7d0446c1:
+        id: 'block_content:40ecbff7-ae0e-463a-97e3-2065bc936247'
+        label: 'New Homepage Top Banner'
+        provider: block_content
+        label_display: 0
+        status: true
+        info: ''
+        view_mode: full
+        region: content_header
+        weight: '0'
+        context_mapping: {  }
+        theme: open_banking_portal_revised
+        css_class: ''
+        unique: 0
+        context_id: homepage
+        uuid: 803095cb-2fc4-4603-9438-734c7d0446c1
+      26f35be4-733f-4ff9-8185-884ccbf9babd:
+        id: 'block_content:ffc785ce-ee43-40b3-acc7-50f91ac089f9'
+        label: 'Homepage Get Started Block '
+        provider: block_content
+        label_display: 0
+        status: true
+        info: ''
+        view_mode: full
+        region: content
+        weight: '0'
+        context_mapping: {  }
+        theme: open_banking_portal_revised
+        css_class: ''
+        unique: 0
+        context_id: homepage
+        uuid: 26f35be4-733f-4ff9-8185-884ccbf9babd
+      ccf400fc-b845-49f8-87a7-301e83ccc03c:
+        id: 'views_block:api_products_homepage-block_1'
+        label: ''
+        provider: views
+        label_display: 0
+        views_label: ''
+        items_per_page: none
+        region: content
+        weight: '0'
+        context_mapping: {  }
+        theme: open_banking_portal_revised
+        css_class: ''
+        unique: 0
+        context_id: homepage
+        uuid: ccf400fc-b845-49f8-87a7-301e83ccc03c
+      72f719fb-bbcb-48c1-9138-69a05ca01843:
+        id: 'block_content:c9ea9b66-08ee-472f-97e4-511558874241'
+        label: 'New Homepage Footer'
+        provider: block_content
+        label_display: 0
+        status: true
+        info: ''
+        view_mode: full
+        region: content_footer
+        weight: '0'
+        context_mapping: {  }
+        theme: open_banking_portal_revised
+        css_class: ''
+        unique: 0
+        context_id: homepage
+        uuid: 72f719fb-bbcb-48c1-9138-69a05ca01843
+    id: blocks
+    saved: false
+    uuid: 1bf481e4-56f4-4daf-9d33-b041c4b80001
+    include_default_blocks: 1
+weight: 0

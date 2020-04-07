@@ -1,0 +1,157 @@
+uuid: d387305f-bbd7-4f5a-981b-f8c1fedf70ed
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+name: get_started
+label: 'Get Started'
+group: null
+description: ''
+requireAllConditions: true
+disabled: false
+conditions:
+  request_path:
+    id: request_path
+    pages: /get-started
+    negate: 0
+    uuid: 7ea37409-9bca-4332-974c-9e054600cc63
+    context_mapping: {  }
+  current_theme:
+    id: current_theme
+    theme: open_banking_portal
+    negate: 0
+    uuid: 7229d3d0-6767-41f0-b46e-b03604f2fc0c
+    context_mapping: {  }
+reactions:
+  blocks:
+    blocks:
+      8f3f1b02-4951-434c-ba75-76d9ab5695b3:
+        id: 'block_content:4e16ae65-d205-496f-911d-009ac67f6fde'
+        label: 'New Get Started Block'
+        provider: block_content
+        label_display: visible
+        status: true
+        info: ''
+        view_mode: full
+        region: content_header
+        weight: '0'
+        context_mapping: {  }
+        theme: open_banking_portal
+        css_class: ''
+        unique: 0
+        context_id: get_started
+        uuid: 8f3f1b02-4951-434c-ba75-76d9ab5695b3
+      9f0eeffc-d1b5-480d-a294-41a6326b5b85:
+        id: 'block_content:4ea5a665-debb-4de2-badb-86dda2e6e960'
+        label: 'New Get Started Footer Block'
+        provider: block_content
+        label_display: visible
+        status: true
+        info: ''
+        view_mode: full
+        region: content_footer
+        weight: '0'
+        context_mapping: {  }
+        theme: open_banking_portal
+        css_class: ''
+        unique: 0
+        context_id: get_started
+        uuid: 9f0eeffc-d1b5-480d-a294-41a6326b5b85
+      2029408f-f1d0-49d1-bc53-74bc1af82f12:
+        id: 'views_block:new_get_started-block_1'
+        label: ''
+        provider: views
+        label_display: 0
+        views_label: ''
+        items_per_page: none
+        region: content
+        weight: '0'
+        context_mapping: {  }
+        theme: open_banking_portal
+        css_class: ''
+        unique: 0
+        context_id: get_started
+        uuid: 2029408f-f1d0-49d1-bc53-74bc1af82f12
+      9f80dd0c-7916-4881-b7ff-4d74e31f19a4:
+        id: 'views_block:get_started_api_icon_block-block_1'
+        label: ''
+        provider: views
+        label_display: visible
+        views_label: ''
+        items_per_page: none
+        region: content
+        weight: '0'
+        context_mapping: {  }
+        theme: open_banking_portal
+        css_class: ''
+        unique: 0
+        context_id: get_started
+        uuid: 9f80dd0c-7916-4881-b7ff-4d74e31f19a4
+      3e254f68-ad9d-4986-b5f6-c4e425c97e6c:
+        id: 'block_content:4e16ae65-d205-496f-911d-009ac67f6fde'
+        label: 'New Get Started Block'
+        provider: block_content
+        label_display: 0
+        status: true
+        info: ''
+        view_mode: full
+        region: content_header
+        weight: '0'
+        context_mapping: {  }
+        theme: open_banking_portal_revised
+        css_class: ''
+        unique: 0
+        context_id: get_started
+        uuid: 3e254f68-ad9d-4986-b5f6-c4e425c97e6c
+      5b2c9eaf-585b-470a-af62-a96588879716:
+        id: 'views_block:get_started_api_icon_block-block_1'
+        label: ''
+        provider: views
+        label_display: 0
+        views_label: ''
+        items_per_page: none
+        region: content
+        weight: '0'
+        context_mapping: {  }
+        theme: open_banking_portal_revised
+        css_class: ''
+        unique: 0
+        context_id: get_started
+        uuid: 5b2c9eaf-585b-470a-af62-a96588879716
+      44c8aaf1-f500-4102-b642-d34df35632ed:
+        id: 'views_block:new_get_started-block_1'
+        label: ''
+        provider: views
+        label_display: 0
+        views_label: ''
+        items_per_page: none
+        region: content
+        weight: '0'
+        context_mapping: {  }
+        theme: open_banking_portal_revised
+        css_class: ''
+        unique: 0
+        context_id: get_started
+        uuid: 44c8aaf1-f500-4102-b642-d34df35632ed
+      456cecbd-12b4-4fc3-b640-91f05755fd73:
+        id: 'block_content:4ea5a665-debb-4de2-badb-86dda2e6e960'
+        label: 'New Get Started Footer Block'
+        provider: block_content
+        label_display: 0
+        status: true
+        info: ''
+        view_mode: full
+        region: content_footer
+        weight: '0'
+        context_mapping: {  }
+        theme: open_banking_portal_revised
+        css_class: ''
+        unique: 0
+        context_id: get_started
+        uuid: 456cecbd-12b4-4fc3-b640-91f05755fd73
+    id: blocks
+    saved: false
+    uuid: 401899a5-9a72-42da-89a6-36e8ff2ba8cc
+    include_default_blocks: 1
+weight: 0

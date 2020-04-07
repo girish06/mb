@@ -1,0 +1,31 @@
+uuid: 989b7f00-0a52-4d43-a7b0-598fb5c3e4ec
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:basic:1befea4e-13eb-434c-849b-260931f7a2fe'
+  module:
+    - block_content
+    - system
+  theme:
+    - open_banking_portal
+id: getstartedheader
+theme: open_banking_portal
+region: content_header
+weight: 0
+provider: null
+plugin: 'block_content:1befea4e-13eb-434c-849b-260931f7a2fe'
+settings:
+  id: 'block_content:1befea4e-13eb-434c-849b-260931f7a2fe'
+  label: 'Get Started Header'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /get-started
+    negate: false
+    context_mapping: {  }

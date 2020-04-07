@@ -1,0 +1,31 @@
+uuid: 823dfe6b-b902-4a8c-9df7-d3b0ce78fede
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:top_banner_block:c13d72f4-2173-4fa0-9e42-5b6212836df0'
+  module:
+    - block_content
+    - system
+  theme:
+    - bartik
+id: experiencebankingtopbanner
+theme: bartik
+region: content
+weight: -3
+provider: null
+plugin: 'block_content:c13d72f4-2173-4fa0-9e42-5b6212836df0'
+settings:
+  id: 'block_content:c13d72f4-2173-4fa0-9e42-5b6212836df0'
+  label: 'Experience Banking Top Banner'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /experience-banking
+    negate: false
+    context_mapping: {  }

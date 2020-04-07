@@ -1,0 +1,21 @@
+uuid: 8ec64440-bdf6-4fc7-ad8e-b45e21887d5c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_documentation_full_content
+    - paragraphs.paragraphs_type.api_documentation_content
+  module:
+    - text
+id: paragraph.api_documentation_content.field_documentation_full_content
+field_name: field_documentation_full_content
+entity_type: paragraph
+bundle: api_documentation_content
+label: 'Documentation Full Content'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,31 @@
+uuid: c7f65ecd-f1e3-41f5-8543-9301cdba1f56
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:top_banner_block:f8e09e43-2715-4cc3-9060-7d4f2971b60f'
+  module:
+    - block_content
+    - system
+  theme:
+    - open_banking_portal_revised
+id: revisedourapitopbanner
+theme: open_banking_portal_revised
+region: content_header
+weight: -7
+provider: null
+plugin: 'block_content:f8e09e43-2715-4cc3-9060-7d4f2971b60f'
+settings:
+  id: 'block_content:f8e09e43-2715-4cc3-9060-7d4f2971b60f'
+  label: 'Revised Our Api Top Banner'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /our-apis
+    negate: false
+    context_mapping: {  }
