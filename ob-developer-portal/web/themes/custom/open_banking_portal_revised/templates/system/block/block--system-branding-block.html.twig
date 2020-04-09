@@ -1,0 +1,34 @@
+{% extends "block--bare.html.twig" %}
+{#
+/**
+ * @file
+ * Default theme implementation for a branding block.
+ *
+ * Each branding element variable (logo, name, slogan) is only available if
+ * enabled in the block configuration.
+ *
+ * Available variables:
+ * - site_logo: Logo for site as defined in Appearance or theme settings.
+ * - site_name: Name for site as defined in Site information settings.
+ * - site_slogan: Slogan for site as defined in Site information settings.
+ *
+ * @ingroup templates
+ */
+#}
+{% block content %}
+<div class="site-branding-wrap gb-site-slogan">
+  {% if site_logo %}
+    <a class="logo navbar-btn pull-left" href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home">
+      <img src="{{base_path ~ directory }}/images/logo-mb-new@2x.png" alt="{{ 'Home'|t }}">
+    </a>
+  {% endif %}
+  <div class="site-slogan-wrap">
+  {% if site_name %}
+  <span class="site-name"><a class="name navbar-brand" href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home">{{ 'MB Banking Developer Portal'|trans }}</a></span>
+  {% endif %}
+  {% if site_slogan %}
+  <span class="site-slogan">{{ 'Powered by DisruptionSuite'|trans }}</span>
+  {% endif %}
+</div>
+</div>
+{% endblock %}

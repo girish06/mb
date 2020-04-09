@@ -432,7 +432,7 @@ section.open_banking_footer {
   margin-bottom: 0px;
   margin-top: -11px;
   height: 111px;
-    background: #141CD2;
+  background: #fff;
 }
 /*ul.menu.menu--main.nav.navbar-nav {*/
   /*height: 124px;*/
@@ -443,8 +443,9 @@ ul.menu.menu--main.nav.navbar-nav li a {
   padding-right: 20px;
   height: 100px;
   margin-top: 10px;
-  color: #fff;
+  color: #000;
   font-size: 18px;
+  text-shadow: 1px 0 0 #000;
 }
 ul.menu.menu--main.nav.navbar-nav li a:hover, ul.menu.menu--main.nav.navbar-nav li a:focus {
   background-color: #fff;
@@ -455,17 +456,18 @@ ul.menu.menu--account.nav.navbar-nav.navbar-right {
   margin-right: 45px;
 }
 ul.menu.menu--account.nav.navbar-nav.navbar-right a {
-  border: 1px solid #fff;
+  border: 1px solid #000;
   margin-right: 5px;
   padding: 10px 15px;
-  color: #fff;
-  font-size: 17px;
+  color: #000;
+  font-size: 18px;
   border-radius: 6px;
+  text-shadow: 1px 0 0 #000;
 }
 ul.menu.menu--account.nav.navbar-nav.navbar-right a:hover {
   color: #000;
-  border-color: #fff;
-  background-color: #fff;
+  border-color: #000;
+  background-color: #000;
 }
 section.open_banking_content_footer .container-fluid {
   padding-left: 0px !important;
@@ -483,12 +485,20 @@ section.open_banking_content_footer .container-fluid {
 .login-form {
    width: 100%;
    float: left;
-  padding: 65px 0px 0px 0px;
-
  }
 .login-form h2{
   color: #141DD2;
   font-size: 30px;
+  font-weight: 500;
+  text-shadow: 1px 0 0 #141DD2;
+}
+.login-form .site-branding-wrap {
+  padding-bottom: 40px;
+}
+@media only screen and (min-width: 768px) {
+  .login-form {
+    padding: 65px 0px 0px 0px;
+  }
 }
 .our-api-footer-block{
   padding: 0px;
@@ -601,12 +611,18 @@ dl.knowledge-table-bank dd {
 }
 .stickynav-active {
   position: fixed !important;
-  background-color: #141DD2;
+  background-color: #fff;
   top: 0px;
+  left: 0;
   z-index: 1000;
   width: 100%;
   height: 111px;
-    border-radius: 0;
+  border-radius: 0;
+}
+.usr-hd-sec .stickynav-active {
+  padding: 5px 20px;
+  box-shadow: 1px 1px 3px rgba(14, 14, 14, 0.23);
+  height: 60px;
 }
 nav.tabs {
   display: none;
@@ -879,12 +895,6 @@ h5 {
   width: 50%;
   display: inline-block;
 }
-.register-form-popup .form-item-pass-pass2 {
-  width: 49%;
-  display: inline-block;
-  float: right;
-  padding-left: 5px;
-}
 .my-apps-analytics-form .sign-up-button {
   padding: 10px 30px;
   background-color: #141DD2;
@@ -1044,10 +1054,10 @@ div#tpp-auth-btn input, div#user-auth-btn input {
 }
 
 .navbar .logo img {
-    height: 34px;
+    height: 42px;
 }
 .navbar .logo {
-    margin-top: 14px;
+    margin-top: 10px;
 }
 
 /* commerce style  start*/
@@ -1310,4 +1320,93 @@ li.pz .radio-inline {
     -webkit-box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.75);
     box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.75);
+}
+.site-branding-wrap {
+  clear: left;
+  margin-bottom: 20px;
+}
+.site-branding-wrap.mb-hide {
+  display: none;
+}
+.site-branding-wrap .site-logo, 
+.site-branding-wrap .site-slogan-wrap {
+  display: inline-block;
+  vertical-align: middle;
+} 
+.site-slogan-wrap {
+  padding-left: 20px;
+  position: relative;
+}
+.site-slogan-wrap:before {
+ content: '';
+ height: 40px;
+ width: 1px;
+ background: #141ed2;
+ display: block;
+ position: absolute;
+ left: 8px;
+ top: 50%;
+ margin-top: -20px;
+}
+.site-slogan-wrap .site-name{
+  display: block;
+  font-size: 22px;
+  color: #141ed2;
+  font-weight: 600;
+  line-height: normal;
+}
+.site-slogan-wrap .site-slogan {
+  font-size: 11px;
+  color: #0e0e0e;
+  font-weight: 600;
+  position: relative;
+  top: -3px;
+}
+.mb-header .site-slogan-wrap .site-name{
+  font-size: 16px;
+}
+.mb-header.site-branding-wrap {
+  margin-bottom: 0;
+  padding: 7px 0;
+}
+.mb-header {
+  display: none;
+}
+.stickynav-active .mb-header{
+  display: block;
+}
+.gb-site-slogan {
+  margin-bottom: 0;
+  padding: 22px 0 0;
+}
+.gb-site-slogan .site-slogan-wrap .navbar-brand {
+  padding-bottom: 5px !important;
+  height: auto;
+}
+.gb-site-slogan .site-name .navbar-brand {
+  color: #141ed2 !important;
+  font-size: 18px !important;
+}
+.gb-site-slogan .site-slogan-wrap:before {
+  margin-top: -16px;
+}
+
+@media only screen and (max-width: 767px) {
+  .left-side-image img {
+    height: 360px;
+  }
+  .user-register-form .register-right-fields{
+    padding: 0;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .open_banking_header.usr-hd-sec .stickynav-active{
+    display: none;
+  }
+  .site-branding-wrap.mb-hide{ 
+    display: block;
+  }
+  .mb-header {
+    display: none;
+  }
 }

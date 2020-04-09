@@ -624,7 +624,7 @@ div.homepage-api-product-list {
     padding-top: 15px;
 }
 .open_banking_header .navbar-brand{
-    color: #fff !important;
+    color: #0e0e0e !important;
     font-size: 22px !important;
     font-weight: bold !important;
     padding: 15px 0px !important;
@@ -694,7 +694,7 @@ nav#block-open-banking-portal-main-menu {
 }
 .second-title-slogan {
    font-size: 11px;
-   color: #fff;
+   color: #0e0e0e;
     line-height: unset;
     margin-left: 93px;
 }
@@ -872,6 +872,11 @@ div#drupal-modal {
     display: block;
 
 }
+@media only screen and (max-width: 767px) {
+  .login-right-form button, .forgot-pass-mail-link button { 
+    width: 100%;
+  }
+}
 .login-right-form button:hover{
     //box-shadow: 0 14px 26px -12px rgba(156, 39, 176, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(156, 39, 176, 0.2);
     background-color: #141DD2;
@@ -991,11 +996,20 @@ a.sign-up{
     font-size: 2.6rem;
     color: black;
 }
+.user-register-form .form-wrapper .form-item {
+  margin-bottom: 15px;
+}
 .user-register-form label {
-   font-size: 1.7rem;
+   font-size: 18px;
     line-height: 3rem;
     font-weight: unset;
-    color: black;
+    color: #000;
+    font-weight: 600;
+}
+.user-register-form .form-item-terms-condition label{
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    line-height: normal;
 }
 .user-register-form {
     padding-top: 20px;
@@ -1026,6 +1040,11 @@ a.sign-up{
     padding-top: 15px;
     padding-bottom: 15px;
     margin-bottom: 25px;
+}
+@media only screen and (max-width: 640px) {
+  .register-form-popup .form-submit{
+    width: 100%;
+  }
 }
 alert.alert-success.alert-dismissible {
     display: none;
@@ -1589,15 +1608,21 @@ a.contact-us{
 .form-item.js-form-item.form-type-password.js-form-type-password.form-item-pass-pass1.js-form-item-pass-pass1.form-group.password-parent {
     width: 50%;
 }
-.register-form-popup .form-item-pass-pass1{
+.register-form-popup .form-item-pass-pass1,
+.register-form-popup .form-item-pass-pass2 {
+  width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+  .register-form-popup .form-item-pass-pass1{
     width: 50%;
     display: inline-block;
-    /*float: left;*/
-}
-.register-form-popup .form-item-pass-pass2 {
+  }
+  .register-form-popup .form-item-pass-pass2 {
     width: 49%;
     display: inline-block;
     float: right;
+  }
 }
 .form-item-pass-pass2 {
     /*width: 48%;*/
@@ -1920,7 +1945,12 @@ messages__wrapper {
         text-align: center;
     }
     .form-item-pass-pass1 .password-field, .form-item-pass-pass1 .password-strength {
+      width: 100%;
+    }
+    @media only screen and (min-width: 768px) {
+      .form-item-pass-pass1 .password-field, .form-item-pass-pass1 .password-strength {
         width: 229px;
+      }
     }
     .form-item-pass-pass2 {
         width: 104%;

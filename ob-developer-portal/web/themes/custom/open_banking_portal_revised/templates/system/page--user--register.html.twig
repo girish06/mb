@@ -3,26 +3,24 @@
 </div>
 
 <div class="col-sm-7 right-side-form">
-  <section class="open_banking_header">
+  <section class="open_banking_header usr-hd-sec">
     <header{{ navbar_attributes.addClass(navbar_classes) }} id="navbar" role="banner">
-      {% if not navbar_attributes.hasClass(container) %}
-      <div class="{{ container }}">
-        {% endif %}
-        <div class="navbar-header">
-          {{ page.navigation }}
-          {# .btn-navbar is used as the toggle for collapsed navbar content #}
-          {% if page.navigation_collapsible %}
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
-              <span class="sr-only">{{ 'Toggle navigation'|t }}</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-          {% endif %}
+      <div class="site-branding-wrap mb-header">
+        <div class="site-logo"><img src="{{base_path ~ directory }}/images/logo-mb-new.png"></div>
+        <div class="site-slogan-wrap">
+          <span class="site-name">MB Banking Developer Portal</span>
+          <span class="site-slogan">Powered by DisruptionSuite</span>
         </div>
-      </div>
+       </div>
     </header>
   </section>
+  <div class="site-branding-wrap mb-hide">
+    <div class="site-logo"><img src="{{base_path ~ directory }}/images/logo-mb-new.png"></div>
+    <div class="site-slogan-wrap">
+      <span class="site-name">MB Banking Developer Portal</span>
+      <span class="site-slogan">Powered by DisruptionSuite</span>
+    </div>
+   </div>
   <div class="login-form register-form">
     {# Header #}
     {% if page.header %}
