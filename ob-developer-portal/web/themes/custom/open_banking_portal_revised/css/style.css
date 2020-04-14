@@ -97,6 +97,7 @@ div.content_footer, div.content_header{
 }
 .right-banner-content-footer .button-padding .block-btn a {
     color: #141DD2 !important;
+    text-shadow: 1px 0 0 #141DD2;
 }
 .right-banner-content-footer .button-padding .block-btn:hover {
     background: white !important;
@@ -127,7 +128,7 @@ div.content_footer, div.content_header{
 .left-banner-content .button-padding .btn a, .right-banner-content-footer .button-padding .btn a {
     color: white;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 18px;
 }
 blockquote.orange {
     padding: 0px;
@@ -242,6 +243,9 @@ section.experience-banking-api-header, section.our-api-signup-block {
     font-size: 19px;
     text-decoration: none;
 }
+.get-started-buttons .button-padding .block-btn:hover {
+    border: 2px solid #141CD2;
+}
 
 section.block-views-blockapi-products-homepage-block-1 h2.block-title, section.block-views-blockapi-products-experience-banking-block-1 h2.block-title, section.block-views-blockdelight-apps-list-with-videos-block-1 h2.block-title {
     display:none;
@@ -256,7 +260,7 @@ div.homepage-api-product-list {
     word-wrap: break-word;
     font-size: .875rem;
     /*margin-top: 95px;*/
-    background: #F7FBFF;
+    background: #fff;
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
     transition: all 300ms linear;
     margin-bottom: 30px;
@@ -325,6 +329,7 @@ div.homepage-api-product-list {
     text-transform: capitalize;
     color: #141DD2;
     padding-left: 58px;
+    text-shadow: 1px 0 0 #141DD2;
 }
 .api-details a:hover {
     color: #141DD2;
@@ -624,10 +629,11 @@ div.homepage-api-product-list {
     padding-top: 15px;
 }
 .open_banking_header .navbar-brand{
-    color: #0e0e0e !important;
-    font-size: 22px !important;
+    color: #141ed2 !important;
+    font-size: 18px !important;
     font-weight: bold !important;
-    padding: 15px 0px !important;
+    padding: 23px 0px !important;
+    
 }
 .title-slogan {
     color: #fff;
@@ -697,6 +703,9 @@ nav#block-open-banking-portal-main-menu {
    color: #0e0e0e;
     line-height: unset;
     margin-left: 93px;
+    position: relative;
+    top: -15px;
+    text-shadow: 1px 0 0 #000;
 }
 .region.region-navigation:hover {
    cursor: pointer;
@@ -851,6 +860,11 @@ div#drupal-modal {
     text-align: right;
     /*margin-top: 30px;*/
     padding-top: 5px;
+}
+@media only screen and (max-width: 767px) {
+    .forgot-pass-link {
+        text-align: left;
+    }
 }
 .login-right-form p {
     padding-top: 10px;
