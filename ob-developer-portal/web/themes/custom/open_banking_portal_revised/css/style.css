@@ -712,13 +712,12 @@ nav#block-open-banking-portal-main-menu {
   margin-left: 93px;
   position: relative;
   top: -15px;
-  text-shadow: 1px 0 0 #000;
 }
 @media only screen and (max-width: 767px) {
   .second-title-slogan {
     font-size: 10px;
     margin-left: 79px;
-    top: -21px;
+    top: -21px !important;
     clear: left;
   }
 }
@@ -2066,7 +2065,7 @@ and (-webkit-min-device-pixel-ratio: 1.5) {
         margin-top: -50px !important;
     }
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 991px) {
   .container-fluid {
     padding-right: 15px !important;
     padding-left: 15px !important;

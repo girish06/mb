@@ -344,7 +344,7 @@ section#block-views-block-new-get-started-block-1 {
   height: 100%;
   background: rgba(255, 255, 255, 0.65);
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 991px) {
   .home-page-top-bar {
     position: relative;
     min-height: 460px;
@@ -1071,11 +1071,11 @@ div#tpp-auth-btn input, div#user-auth-btn input {
 .mb-footer{
     list-style-type: none;
     margin-top: 0px;
+    padding: 0 10px;
 }
 
 .mb-footer li {
     float: left;
-    border-right: 1px solid #fafafa;
     padding: 0 10px;
 }
 
@@ -1110,7 +1110,7 @@ div#tpp-auth-btn input, div#user-auth-btn input {
 }
 @media only screen and (max-width: 767px) {
   .navbar .logo img {
-    height: 34px;
+    height: 34px !important;
   }
   .navbar .logo:after {
     height: 30px;
@@ -1453,7 +1453,82 @@ li.pz .radio-inline {
 .gb-site-slogan .site-slogan-wrap:before {
   margin-top: -16px;
 }
-@media only screen and (max-width: 767px) {
+
+@media only screen and (max-width: 1100px) {
+  .container-fluid {
+    padding: 0 20px !important;
+  }
+  ul.menu.menu--main.nav.navbar-nav li a {
+    padding-right: 10px;
+    font-size: 16px;
+  }
+  ul.menu.menu--account.nav.navbar-nav.navbar-right a {
+    font-size: 14px;
+  }
+  ul.menu.menu--main.nav.navbar-nav {
+    padding-left: 0;
+  }
+  .top-banner-body {
+    top: 0;
+  }
+
+}
+@media only screen and (max-width: 1023px) {
+  .navbar .logo img {
+    height: 40px;
+  }
+  .open_banking_header .navbar-brand {
+    padding: 12px 0px 0!important;
+    height: auto;
+  }
+  .second-title-slogan { 
+    top: -9px;
+  }
+  .navbar {
+    height: 78px;
+  }
+  .collapse {
+    display: none;
+  }
+  .navbar-toggle {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 25px;
+    margin-top: 0;
+  }
+  .navbar-collapse.collapse {
+    display: none !important;
+  }
+  .navbar-collapse.collapse.in {
+    position: fixed;
+    background: #ffff;
+    right: 0;
+    top: 100px;
+    z-index: 99;
+    width: 320px;
+    padding: 0 20px;
+    display: block !important;
+  }
+  nav#block-open-banking-portal-revised-main-menu {
+    margin-left: 0;
+  }
+  ul.menu.menu--main.nav.navbar-nav {
+    float: none;
+  }
+  ul.menu.menu--main.nav.navbar-nav li {
+    float: none;
+  }
+  ul.menu.menu--main.nav.navbar-nav li a {
+    padding: 0;
+    height: auto;
+  }
+  ul.menu.menu--account.nav.navbar-nav.navbar-right {
+    float: none;
+  }
+  
+}
+@media only screen and (max-width: 991px) {
   body.js--padding-fix {
     padding-top: 62px !important;
   }
@@ -1528,6 +1603,29 @@ li.pz .radio-inline {
     padding: 0;
   }
 }
+@media only screen and (max-width: 767px) {
+  .navbar-toggle {
+    margin-top: 0;
+    right: 0;
+    top: 22px;
+  }
+  .navbar-collapse.collapse.in {
+    top: 59px;
+  }
+  ul.menu.menu--main.nav.navbar-nav {
+    margin: 0;
+  }
+  ul.menu.menu--account.nav.navbar-nav.navbar-right {
+    padding:15px 15px 15px 0;
+    margin: 0;
+  }
+  ul.menu.menu--account.nav.navbar-nav.navbar-right li {
+    margin-bottom: 10px;
+  }
+  ul.menu.menu--account.nav.navbar-nav.navbar-right li:last-child {
+    margin-bottom: 0;
+  }
+}
 @media only screen and (max-width: 991px) {
   .left-side-image img {
     height: 360px;
@@ -1546,8 +1644,16 @@ li.pz .radio-inline {
   .mb-header {
     display: none;
   }
+}
+@media only screen and (min-width: 992px) {
   .main-container {
     min-height: 390px;
+  }
+ 
+}
+@media only screen and (min-width: 1024px) {
+  .mb-footer li {
+    border-right: 1px solid #fafafa;
   }
 }
 @media only screen and (min-width: 1600px) {
