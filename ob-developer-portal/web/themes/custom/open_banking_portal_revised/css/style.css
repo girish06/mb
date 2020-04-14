@@ -635,6 +635,13 @@ div.homepage-api-product-list {
     padding: 23px 0px !important;
     
 }
+@media only screen and (max-width: 767px) {
+  .open_banking_header .navbar-brand{
+    font-size: 14px !important;
+    padding: 12px 0px 0 !important;
+    height: auto;
+  }
+}
 .title-slogan {
     color: #fff;
     font-size: 14px;
@@ -699,13 +706,21 @@ nav#block-open-banking-portal-main-menu {
     margin-right: 45px;
 }
 .second-title-slogan {
-   font-size: 11px;
-   color: #0e0e0e;
-    line-height: unset;
-    margin-left: 93px;
-    position: relative;
-    top: -15px;
-    text-shadow: 1px 0 0 #000;
+  font-size: 11px;
+  color: #0e0e0e;
+  line-height: unset;
+  margin-left: 93px;
+  position: relative;
+  top: -15px;
+  text-shadow: 1px 0 0 #000;
+}
+@media only screen and (max-width: 767px) {
+  .second-title-slogan {
+    font-size: 10px;
+    margin-left: 79px;
+    top: -21px;
+    clear: left;
+  }
 }
 .region.region-navigation:hover {
    cursor: pointer;
@@ -1866,15 +1881,14 @@ messages__wrapper {
     .numberCircle li::before{
         width: 0px;
     }
-    .title-slogan {
+    /* .title-slogan {
         padding-top: 63px;
-    }
+    } */
     .left-banner-content h5{
         padding-top: 50px;
     }
     .navbar-toggle {
-        margin-top: -60px;
-        margin-right: -11px;
+        margin-top: -66px;
     }
     nav#block-open-banking-portal-main-menu{
         margin-left: 0px;
@@ -2051,6 +2065,12 @@ and (-webkit-min-device-pixel-ratio: 1.5) {
     .Top-menu-account {
         margin-top: -50px !important;
     }
+}
+@media only screen and (max-width: 767px) {
+  .container-fluid {
+    padding-right: 15px !important;
+    padding-left: 15px !important;
+  }
 }
 @media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait) {
 

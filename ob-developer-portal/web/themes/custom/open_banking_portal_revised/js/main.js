@@ -7,7 +7,10 @@
 (function ($, Drupal) {
   $(document).ready(function () {
 
-
+    $(".home-page-top-bar img").each(function() {
+      var imageUrl = $(this).attr("src");
+      $(this).closest(".home-page-top-bar").css("background-image", "url(" + imageUrl + ")")
+  });
     var url = $(".delightvideo").attr('src');
     var vid = document.getElementById('myvideo');
 

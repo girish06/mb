@@ -344,6 +344,21 @@ section#block-views-block-new-get-started-block-1 {
   height: 100%;
   background: rgba(255, 255, 255, 0.65);
 }
+@media only screen and (max-width: 767px) {
+  .home-page-top-bar {
+    position: relative;
+    min-height: 460px;
+    background-size: cover;
+    margin: 0 -15px;
+  }
+  .home-page-top-bar img{
+    visibility: hidden;
+    opacity: 0;
+  }
+  .home-page-top-bar:after { 
+    background: rgba(255, 255, 255, 0.85);
+  }
+}
 .our-apis-page-top-bar{
   position: relative;
   color: #ffff;
@@ -365,6 +380,7 @@ section#block-views-block-new-get-started-block-1 {
   z-index: 1;
   padding: 0px 60px;
 }
+
 .our-apis-top-banner-body, .my-apps-top-banner-body{
   position: absolute;
   top: 150px;
@@ -445,6 +461,12 @@ section.open_banking_footer {
   margin-top: -11px;
   height: 111px;
   background: #fff;
+}
+@media only screen and (max-width: 767px) {
+  .navbar {
+    height: 70px;
+    box-shadow: 1px 3px 5px #dedada;
+  }
 }
 /*ul.menu.menu--main.nav.navbar-nav {*/
   /*height: 124px;*/
@@ -631,6 +653,11 @@ dl.knowledge-table-bank dd {
   height: 111px;
   border-radius: 0;
 }
+@media only screen and (max-width: 767px) {
+  .stickynav-active {
+    height: 70px;
+  }
+}
 .usr-hd-sec .stickynav-active {
   padding: 5px 20px;
   box-shadow: 1px 1px 3px rgba(14, 14, 14, 0.23);
@@ -667,9 +694,6 @@ nav.tabs {
   top: 30%;
   padding-left: 30px;
   padding-right: 30px;
-}
-.main-container {
-  min-height: 390px;
 }
 .view-id-contact_us_page{
   padding-left: 60px;
@@ -1084,7 +1108,16 @@ div#tpp-auth-btn input, div#user-auth-btn input {
   margin-top: -17px;
   right: 8px;
 }
-
+@media only screen and (max-width: 767px) {
+  .navbar .logo img {
+    height: 34px;
+  }
+  .navbar .logo:after {
+    height: 30px;
+    margin-top: -13px;
+    right: 3px;
+  }
+}
 /* commerce style  start*/
 .cart-form {
     position: relative;
@@ -1420,7 +1453,81 @@ li.pz .radio-inline {
 .gb-site-slogan .site-slogan-wrap:before {
   margin-top: -16px;
 }
-
+@media only screen and (max-width: 767px) {
+  body.js--padding-fix {
+    padding-top: 62px !important;
+  }
+  .navbar .logo {
+    padding: 0;
+    margin-right: 0;
+  }
+  .top-banner-body {
+    top: 0;
+    padding: 30px;
+  }
+  .top-banner-body h1 {
+    font-size: 42px !important;
+  }
+  .top-banner-body h3 {
+    font-size: 26px;
+  }
+  .top-banner-body .banner-links.button-padding {
+    padding-left: 0;
+  }
+  section#block-views-block-api-products-homepage-block-1 .our-api-explore-right-banner-content {
+    padding: 20px 40px 10px 40px;
+  }
+  .our-api-explore-right-banner-content h1 {
+    font-size: 32px;
+  }
+  section#block-views-block-api-products-homepage-block-1 .view-header p {
+    font-size: 14px;
+    line-height: normal;
+  }
+  .get-started-right-body .field.field--name-field-block-title {
+    font-size: 28px;
+  }
+  .get-started-right-body .field--name-field-block-sub-title {
+    font-size: 22px;
+  }
+  .get-started-inner-part {
+    margin-top: 20px;
+  }
+  .api-details h2 {
+    font-size: 24px;
+  }
+  .first-half-body {
+    padding: 20px 20px 0px 20px;
+  }
+  .button-left-side {
+    margin-top: 20px;
+  }
+  .api-details a {
+    font-size: 16px;
+    padding-left: 21px;
+  }
+  .api-product-section-0, .api-product-section-2 {
+    padding-right: 0 !important;
+  }
+  .get-started-right-body.footer-part .field.field--name-field-block-title {
+    font-size: 28px;
+  }
+  .get-started-right-body {
+    padding: 0 15px;
+  }
+  .get-started-right-body, .get-started-left-image img {
+    min-height: auto;
+  }
+  .get-started-right-body {
+    min-height: 480px;
+  }
+  .content_footer .get-started-right-body, .content_footer .get-started-left-image img {
+    min-height: auto;
+  }
+  .footer-part .get-started-inner-part {
+    padding: 0;
+  }
+}
 @media only screen and (max-width: 991px) {
   .left-side-image img {
     height: 360px;
@@ -1438,5 +1545,13 @@ li.pz .radio-inline {
   }
   .mb-header {
     display: none;
+  }
+  .main-container {
+    min-height: 390px;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  .left-side-image img {
+    height: 800px;
   }
 }
