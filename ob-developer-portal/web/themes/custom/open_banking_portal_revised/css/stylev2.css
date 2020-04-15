@@ -1661,3 +1661,8 @@ li.pz .radio-inline {
     height: 820px;
   }
 }
+@media only screen and (min-width: 1900px) {
+  .left-side-image img {
+    height: 850px;
+  }
+}
