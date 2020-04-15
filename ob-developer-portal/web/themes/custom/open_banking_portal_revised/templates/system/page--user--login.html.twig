@@ -7,7 +7,7 @@
 <section class="open_banking_header usr-hd-sec">
   <header{{ navbar_attributes.addClass(navbar_classes) }} id="navbar" role="banner">
     <div class="site-branding-wrap mb-header">
-      <div class="site-logo"><img src="{{base_path ~ directory }}/images/logo-mb-new.png"></div>
+      <div class="site-logo"><a href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home" class="site-logo"><img src="{{base_path ~ directory }}/images/logo-mb-new.png"></a></div>
       <div class="site-slogan-wrap">
         <span class="site-name">MB Banking Developer Portal</span>
         <span class="site-slogan">Powered by DisruptionSuite</span>
@@ -18,7 +18,7 @@
 
   <div class="login-form">
     <div class="site-branding-wrap mb-hide">
-      <div class="site-logo"><img src="{{base_path ~ directory }}/images/logo-mb-new.png"></div>
+      <div class="site-logo"><a href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home" class="site-logo"><img src="{{base_path ~ directory }}/images/logo-mb-new.png"></a></div>
       <div class="site-slogan-wrap">
         <span class="site-name">MB Banking Developer Portal</span>
         <span class="site-slogan">Powered by DisruptionSuite</span>
