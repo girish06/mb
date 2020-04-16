@@ -564,8 +564,14 @@ section.open_banking_content_footer .container-fluid {
 .right-side-form {
   padding: 30px;
 }
+.left-side-image {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center right;
+}
 .left-side-image img{
-  height: 755px;
+  visibility: hidden;
+  opacity: 0;
   width: 100%;
 }
 .right-side-form {
@@ -1627,9 +1633,12 @@ li.pz .radio-inline {
   }
 }
 @media only screen and (max-width: 991px) {
-  .left-side-image img {
+  .left-side-image {
     height: 360px;
   }
+  /* .left-side-image img {
+    height: 360px;
+  } */
   .user-register-form .register-right-fields{
     padding: 0;
   }
@@ -1654,15 +1663,5 @@ li.pz .radio-inline {
 @media only screen and (min-width: 1024px) {
   .mb-footer li {
     border-right: 1px solid #fafafa;
-  }
-}
-@media only screen and (min-width: 1600px) {
-  .left-side-image img {
-    height: 820px;
-  }
-}
-@media only screen and (min-width: 1900px) {
-  .left-side-image img {
-    height: 850px;
   }
 }

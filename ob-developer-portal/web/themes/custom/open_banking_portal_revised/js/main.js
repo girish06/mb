@@ -10,7 +10,20 @@
     $(".home-page-top-bar img").each(function() {
       var imageUrl = $(this).attr("src");
       $(this).closest(".home-page-top-bar").css("background-image", "url(" + imageUrl + ")")
-  });
+    });
+
+    $(".left-side-image img").each(function(){
+      var imageUrl = $(this).attr("src");
+      $(this).closest(".left-side-image").css("background-image", "url(" + imageUrl + ")")
+    });
+    
+    if ($(window).width() > 992) {
+      $('.left-side-image') .css({'height': (($(window).height()) + 160)+'px'});
+      $(window).resize(function() {
+        $('.left-side-image') .css({'height': (($(window).height()) + 160)+'px'});
+      });
+    }
+
     var url = $(".delightvideo").attr('src');
     var vid = document.getElementById('myvideo');
 
