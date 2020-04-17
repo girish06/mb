@@ -7,9 +7,7 @@ and open the template in the editor.
     Created on : 6 Dec, 2018, 9:28:34 AM
     Author     : kiranchaitanya
 */
-.main-container {
-    min-height: 500px;
-}
+
 body {
     margin-top: 0px;
     font-family: 'Montserrat', sans-serif !important;
@@ -1541,8 +1539,8 @@ iframe#popupvid {
     height: 320px;
 }
 .container-fluid {
-    padding-right: 60px;
-    padding-left: 60px;
+    padding-right: 20px;
+    padding-left: 20px;
 }
 .modal-body div#modal_delete_app {
     padding: 10px 40px;
@@ -2168,10 +2166,13 @@ and (-webkit-min-device-pixel-ratio: 1.5) {
 
 /*// Extra large devices (large desktops, 1200px and up)*/
 @media (min-width: 1200px) {
-/*    .footer-block-menu .menu-footer-margin{
-        padding-left: 370px;
-    }*/
-
+  .main-container {
+    min-height: 500px;
+  }
+  .container-fluid {
+    padding-right: 50px;
+    padding-left: 50px;
+}
 }
 
 @media (min-width: 768px) {
