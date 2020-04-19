@@ -23,3 +23,14 @@ fonts:
   css:
     theme:
       '//fonts.googleapis.com/css?family=Montserrat': {type: external}     
+
+fontawesome:
+  version: 4.6.3
+  remote: //maxcdn.bootstrapcdn.com/font-awesome/4.6.3/
+  css:
+    theme:
+      //cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css: {}
+  license:
+    name: MIT
+    url: //opensource.org/licenses/mit-license.html
+    gpl-compatible: true

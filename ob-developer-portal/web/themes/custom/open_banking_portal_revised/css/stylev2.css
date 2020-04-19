@@ -72,6 +72,20 @@ section#block-views-block-api-products-homepage-block-1 .api-product-padding {
   float: left;
   text-decoration: none;
   background-color: #141DD2;
+  position: relative;
+  padding-right: 40px;
+}
+.contact-forms a img {
+  display: none;
+}
+.contact-forms a:after {
+  content: '\f138';
+  font: normal normal normal 18px/1 FontAwesome;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  margin-top: -8px;
+  right: 15px;
 }
 section#block-views-block-delight-apps-list-with-videos-block-1 .view-header .line {
     width: 40px;
@@ -270,7 +284,7 @@ section#block-views-block-delight-apps-list-with-videos-block-1 {
 }
 
 section#block-views-block-new-get-started-block-1 {
-  padding: 0px 60px 60px 60px;
+  padding: 0px 20px 30px 20px;
 }
 
 #block-views-block-new-get-started-block-1 .ckeditor-accordion-container > dl {
@@ -319,7 +333,7 @@ section#block-views-block-new-get-started-block-1 {
 }
 
 #block-views-block-new-get-started-block-1 .ckeditor-accordion-container > dl dd {
-    padding: 10px 100px;
+    padding: 10px 30pxs;
 }
 
 #block-views-block-new-get-started-block-1 .ckeditor-accordion-container > dl dd > ul {
@@ -384,7 +398,7 @@ section#block-views-block-new-get-started-block-1 {
 }
 .top-banner-body {
   position: absolute;
-  top: 185px;
+  top: 80px;
   display: block;
   z-index: 1;
   padding: 0px 60px;
@@ -702,7 +716,7 @@ nav.tabs {
   border-color: #141DD2;
 }
 .contact-us-page .top-banner-body{
-  top: 60px;
+  /* top: 60px; */
   color: #ffffff;
 }
 .contact-us-page hr.line{
@@ -715,9 +729,12 @@ nav.tabs {
   padding-left: 30px;
   padding-right: 30px;
 }
+.contact-us-inner-part h2 {
+  text-shadow: 1px 0 0 #000;
+}
 .view-id-contact_us_page{
-  padding-left: 60px;
-  padding-right: 60px;
+  padding-left: 20px;
+  padding-right: 20px;
 
 }
 .contact-forms {
@@ -737,7 +754,7 @@ nav.tabs {
   z-index: 1;
   top: calc(21% - 1px);
   left: unset;
-  right: 30px;
+  right: 10px;
   box-sizing: border-box;
   border: 1px solid #d3d3d3;
   background: #141DD2;
@@ -821,32 +838,39 @@ input:checked + .slider:before {
   text-align: justify;
 }
 .contact-us-bg img{
-  height: 496px;
+  height: 426px;
 }
 .form-required:after {
   content: '*';
+  color: #ff0000;
+  background: transparent;
 }
 .contact-us-forms {
-  padding-left: 60px;
-  padding-right: 60px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.contact-us-forms h2 {
+  text-shadow: 1px 0 0 #000;
 }
 .contact-form {
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
   padding: 40px;
-  margin-top: 40px;
   margin-bottom: 40px;
-  background-color: #F7FBFF;
+  background-color: #fff;
 }
 .webform-submission-report-a-bug-add-form .form-control, form#webform-submission-business-enquiry-add-form .form-control, form#webform-submission-general-enquiry-add-form .form-control, form#webform-submission-request-new-feature-add-form .form-control{
-  background-color: #F7FBFF;
+  background-color: #fff;
   border-bottom: 1px solid #C9BDBD !important;
 }
 input.webform-counter-warning, input.form-text.webform-counter-warning, textarea.webform-counter-warning, textarea.form-textarea.webform-counter-warning{
-  background-color: #F7FBFF;
+  background-color: #fff;
+}
+.path-webform .main-container {
+  background: #f2f2f2;
 }
 .contact-us-form-top {
-  border-bottom: 1px solid #F5F5F5;
-  padding-bottom: 25px;
+  padding-bottom: 10px;
+  position: relative;
 }
 .webform-submission-get-in-touch-form input{
   border-top: unset;
@@ -1552,7 +1576,9 @@ li.pz .radio-inline {
   ul.menu.menu--account.nav.navbar-nav.navbar-right {
     float: none;
   }
-  
+  .contact-forms {
+    margin: 0;
+  }
 }
 @media only screen and (max-width: 991px) {
   body.js--padding-fix {
@@ -1576,7 +1602,7 @@ li.pz .radio-inline {
     padding-left: 0;
   }
   section#block-views-block-api-products-homepage-block-1 .our-api-explore-right-banner-content {
-    padding: 20px 40px 10px 40px;
+    padding: 20px 20px 10px 20px;
   }
   .our-api-explore-right-banner-content h1 {
     font-size: 32px;
@@ -1612,6 +1638,7 @@ li.pz .radio-inline {
   }
   .get-started-right-body.footer-part .field.field--name-field-block-title {
     font-size: 28px;
+    padding-top: 20px;
   }
   .get-started-right-body {
     padding: 0 15px;
@@ -1621,6 +1648,9 @@ li.pz .radio-inline {
   }
   .get-started-right-body {
     min-height: 480px;
+  }
+  .path-webform .get-started-right-body {
+    min-height: auto;
   }
   .content_footer .get-started-right-body, .content_footer .get-started-left-image img {
     min-height: auto;
@@ -1651,6 +1681,19 @@ li.pz .radio-inline {
   ul.menu.menu--account.nav.navbar-nav.navbar-right li:last-child {
     margin-bottom: 0;
   }
+  .request-new-feature button#edit-submit, .business-enquiry button#edit-submit, .form-report button#edit-submit, .general-enquiry button#edit-submit {
+    float: none;
+    margin-top: 20px;
+  }
+  .top-banner-body h2 {
+    margin-top: 0;
+    font-size: 28px;
+    line-height: 1;
+  }
+  .contact-us-forms h2 {
+    font-size: 24px;
+    margin-top: 50px;
+  }
 }
 @media only screen and (max-width: 991px) {
   .left-side-image {
@@ -1673,10 +1716,27 @@ li.pz .radio-inline {
   .mb-header {
     display: none;
   }
+  section#block-views-block-new-get-started-block-1 {
+    padding: 0px 60px 60px 60px;
+  }
+  #block-views-block-new-get-started-block-1 .ckeditor-accordion-container > dl dd {
+    padding: 10px 100px;
+  }
+  .ckeditor-accordion-container > dl dt > .ckeditor-accordion-toggle {
+    right: 30px;
+  }
+  .contact-us-forms {
+    padding: 0 60px;
+  }
+  .contact-form {
+    margin-top: 40px;
+  }
+ 
 }
 @media only screen and (min-width: 992px) {
-  
- 
+  .experience-banking-api-block .right-banner-content-footer {
+    padding: 80px 10px;
+  }
 }
 @media only screen and (min-width: 1024px) {
   .mb-footer li {
@@ -1692,5 +1752,8 @@ li.pz .radio-inline {
   }
   .our-apis-footer-top-banner-body{
     top: 80px;
+  }
+  .view-id-contact_us_page {
+    padding: 0 60px;
   }
 }

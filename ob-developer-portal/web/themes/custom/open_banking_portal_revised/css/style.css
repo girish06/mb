@@ -387,9 +387,6 @@ div.homepage-api-product-list {
     text-decoration: none !important;
     color: #337ab7;
 }
-.experience-banking-api-block .right-banner-content-footer {
-    padding: 80px 10px
-}
 .experience-banking-api-header .experience-banking-api-block {
     padding: 30px 80px;
     margin-top: -7%;
@@ -1169,33 +1166,37 @@ h4.opblock-tag {
 }
 .ckeditor-accordion-container > dl {
     position: relative;
-    border: 1px solid #d3d3d3;
+		border: 1px solid #d3d3d3;
+		background-color: #fafafa;
 }
-.ckeditor-accordion-container > dl dt > a:hover {
-    text-decoration: none;
+.ckeditor-accordion-container > dl dd {
+	background: #fff;
 }
 .ckeditor-accordion-container > dl dt > a {
     display: block;
-    padding: 10px 15px 10px 50px;
-    background-color: #fafafa;
+    padding: 10px;
     color: #141DD2;
     cursor: pointer;
-    font-size: 2.4rem;
+    font-size: 2.2rem;
     -webkit-transition: background-color 300ms;
     transition: background-color 300ms;
-    border-bottom: 1px solid #d3d3d3;
+		border-bottom: 1px solid #d3d3d3;
+		font-weight: 500;
+		position: relative;
+		z-index: 9;
+		background: transparent;
+		text-decoration: none;
 }
 .ckeditor-accordion-container > dl dt.active > a {
-    background-color: #fafafa;
+    background-color: transparent;
 }
 .ckeditor-accordion-container > dl dt > a:hover {
-    background-color: #fafafa;
+    background-color: transparent;
 }
 .knowledge-bank {
     padding: 30px 0px;
 }
 .ckeditor-accordion-container > dl dd > p{
-    padding-left: 33px;
     padding-top: 30px;
     font-size: 18px;
     color: #4E4E4E;
@@ -1203,7 +1204,6 @@ h4.opblock-tag {
     line-height: 1.5;
 }
 .ckeditor-accordion-container > dl dd > ul {
-    padding-left: 58px;
     padding-bottom: 15px;
     line-height: 1.8em;
     font-size: 16px;
@@ -1257,7 +1257,7 @@ h4.opblock-tag {
     z-index: 1;
     top: calc(21% - 1px);
     left: unset;
-    right: 30px;
+    right: 10px;
     box-sizing: border-box;
     border: 1px solid #d3d3d3;
     background: #ff724a;
@@ -1464,13 +1464,30 @@ h4.opblock-tag {
 
 }
 .contact-us--back-btn {
-    float: right;
+    padding-left: 30px;
+    background: transparent;
+    position: absolute;
+    top: -40px;
+    left: 0;
+    box-shadow: none;
     border: none;
-    min-height: 64px;
 }
 .contact-us--back-btn img{
     height: 20px;
     transform: scaleX(-1);
+    display: none;
+}
+.contact-us--back-btn a {
+    text-shadow: 1px 0 0 #000;
+}
+.contact-us--back-btn:after {
+    content: '\f190';
+    font: normal normal normal 24px/1 FontAwesome;
+    color: #141ed2;
+    position: absolute;
+    top: 50%;
+    margin-top: -12px;
+    left: 5px;
 }
 .contact-us--back-btn a {
    text-decoration: none;
@@ -1479,6 +1496,9 @@ h4.opblock-tag {
 .contact-us--back-btn a:hover{
    text-decoration: none;
    color: black;
+}
+.form-type-webform-terms-of-service  label {
+    font-weight: 500;
 }
 .form-title{
     padding-left: unset !important;
@@ -1836,6 +1856,9 @@ messages__wrapper {
 }
 /*// Extra small devices (portrait phones, less than 576px)*/
 @media (max-width: 575.98px) {
+    .contact-us-bg img {
+        height: 360px;
+    }
     .content_header .left-banner-content h2 strong:before {
         content: "\A";
     }
@@ -1945,7 +1968,7 @@ messages__wrapper {
     }
     .contact-body {
         font-size: 15px;
-        min-height: 120px;
+        min-height: 140px;
     }
     .contact-forms a{
         margin-top: -41px;
@@ -2050,6 +2073,9 @@ messages__wrapper {
         margin-right: 50px;
         margin-bottom: 50px;
         margin-top: 50px;
+    }
+    .contact-us-header h3 {
+        font-size: 34px;
     }
 }
 /* ----------- iPad Pro ----------- */
@@ -2181,4 +2207,21 @@ and (-webkit-min-device-pixel-ratio: 1.5) {
         width: 100%;
         vertical-align: middle;
     }
+    .ckeditor-accordion-container > dl dt > a {
+        padding: 10px 15px 10px 50px;
+    }
+    .ckeditor-accordion-container > dl dt > .ckeditor-accordion-toggle {
+        right: 30px;
+		}
+		.contact-us--back-btn {
+			top: 30px;
+			left: auto;
+			right: 0;
+		}
+		.ckeditor-accordion-container > dl dd > p {
+			padding-left: 33px;
+		}
+		.ckeditor-accordion-container > dl dd > ul {
+			padding-left: 58px;
+		}
 }
