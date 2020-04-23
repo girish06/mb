@@ -7,10 +7,50 @@ and open the template in the editor.
     Created on : 6 Dec, 2018, 9:28:34 AM
     Author     : kiranchaitanya
 */
+@font-face {
+	font-family: 'AvertaStdCY-Regular';
+	src: url('../fonts/AvertaStdCY-Regular/AvertaStdCY-Regular.eot');
+	src: local('☺'), url('../fonts/AvertaStdCY-Regular/AvertaStdCY-Regular.woff') format('woff'), url('../fonts/AvertaStdCY-Regular/AvertaStdCY-Regular.ttf') format('truetype'), url('../fonts/AvertaStdCY-Regular/AvertaStdCY-Regular.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'AvertaStdCY-Light';
+	src: url('../fonts/AvertaStdCY-Light/AvertaStdCY-Light.eot');
+	src: local('☺'), url('../fonts/AvertaStdCY-Light/AvertaStdCY-Light.woff') format('woff'), url('../fonts/AvertaStdCY-Light/AvertaStdCY-Light.ttf') format('truetype'), url('../fonts/AvertaStdCY-Light/AvertaStdCY-Light.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'AvertaStdCY-Thin';
+	src: url('../fonts/AvertaStdCY-Thin/AvertaStdCY-Thin.eot');
+	src: local('☺'), url('../fonts/AvertaStdCY-Thin/AvertaStdCY-Thin.woff') format('woff'), url('../fonts/AvertaStdCY-Thin/AvertaStdCY-Thin.ttf') format('truetype'), url('../fonts/AvertaStdCY-Thin/AvertaStdCY-Thin.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'AvertaStdCY-Bold';
+	src: url('../fonts/AvertaStdCY-Bold/AvertaStdCY-Bold.eot');
+	src: local('☺'), url('../fonts/AvertaStdCY-Bold/AvertaStdCY-Bold.woff') format('woff'), url('../fonts/AvertaStdCY-Bold/AvertaStdCY-Bold.ttf') format('truetype'), url('../fonts/AvertaStdCY-Bold/AvertaStdCY-Bold.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'AvertaStdCY-Semibold';
+	src: url('../fonts/AvertaStdCY-Semibold/AvertaStdCY-Semibold.eot');
+	src: local('☺'), url('../fonts/AvertaStdCY-Semibold/AvertaStdCY-Semibold.woff') format('woff'), url('../fonts/AvertaStdCY-Semibold/AvertaStdCY-Semibold.ttf') format('truetype'), url('../fonts/AvertaStdCY-Semibold/AvertaStdCY-Semibold.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+
+
+
 
 body {
     margin-top: 0px;
-    font-family: 'Montserrat', sans-serif !important;
+    font-family: 'AvertaStdCY-Regular', sans-serif !important;
     font-style: normal;
     font-stretch: normal;
     padding-top: unset !important;
@@ -70,7 +110,7 @@ div.content_footer, div.content_header{
     padding: 31px 0px;
 }
 .left-banner-content .button-padding .block-btn, .ajax-form .sign-up-button,.sign-up-button {
-    font-size: 1.8rem;
+    font-size: 20px;
     width: auto;
     padding: 11px 23px;
     margin-right: 7px;
@@ -78,11 +118,12 @@ div.content_footer, div.content_header{
     border-width: 0.5px;
     border-style: solid;
     border-color: #141DD2;
-    border-radius: 4px;
+    border-radius: 24px;
+    line-height: normal;
 
 }
 .right-banner-content-footer .button-padding .block-btn{
-    font-size: 1.8rem;
+    font-size: 20px;
     width: auto;
     padding: 11px 23px;
     margin-right: 7px;
@@ -90,12 +131,12 @@ div.content_footer, div.content_header{
     border-width: 0.5px;
     border-style: solid;
     border-color: #141DD2;
-    border-radius: 4px;
+    border-radius: 24px;
+    line-height: normal;
 
 }
 .right-banner-content-footer .button-padding .block-btn a {
     color: #141DD2 !important;
-    text-shadow: 1px 0 0 #141DD2;
 }
 .right-banner-content-footer .button-padding .block-btn:hover {
     background: white !important;
@@ -126,7 +167,9 @@ div.content_footer, div.content_header{
 .left-banner-content .button-padding .btn a, .right-banner-content-footer .button-padding .btn a {
     color: white;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 20px;
+    line-height: normal;
+    font-weight: normal;
 }
 blockquote.orange {
     padding: 0px;
@@ -203,11 +246,12 @@ section.experience-banking-api-header, section.our-api-signup-block {
     margin: 0px;
 }
 .path-frontpage .get-started-body p {
-    font-size: 18px;
-    line-height: 1.8;
+    font-size: 20px;
+    line-height: 32px;
     padding: 0px;
-    color: #000;
+    color: #333;
     margin-top: 20px;
+    letter-spacing: 0.9px;
 }
 .get-started-buttons .button-padding {
     padding: 83px 0px 0px 0px;
@@ -220,16 +264,14 @@ section.experience-banking-api-header, section.our-api-signup-block {
     padding: 10px 20px;
     position: relative;
     min-width: auto;
-    font-size: 22px;
+    font-size: 20px;
     min-height: auto;
-    //box-shadow: 0 2px 2px 0 rgba(156, 39, 176, 0.14), 0 3px 1px -2px rgba(156, 39, 176, 0.2), 0 1px 5px 0 rgba(156, 39, 176, 0.12);
     background-color: #141CD2;
-/*    background-color: #0e7b86;*/
+    border-radius: 24px;
+    line-height: normal;
 }
 .get-started-buttons .button-padding .block-btn:hover{
-    //box-shadow: 0 14px 26px -12px rgba(156, 39, 176, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(156, 39, 176, 0.2);
     background-color: #fff;
-/*    background-color: #0e7b86;*/
     color: #000;
 }
 .get-started-buttons .button-padding .block-btn:hover a {
@@ -264,6 +306,7 @@ div.homepage-api-product-list {
     margin-bottom: 30px;
     border-radius: 6px;
     flex-direction: column;
+    min-height: 580px;
 }
 .api-product-padding {
     flex: 1 1 auto;
@@ -310,13 +353,13 @@ div.homepage-api-product-list {
 .api-details h2{
     padding-bottom: 15px;
     color: #4e4e4e;
-    font-size: 32px;
-    font-weight: 900;
+    font-size: 36px;
+    font-weight: normal;
 }
 .api-details p {
     color: #4e4e4e;
-    font-size: 18px;
-    line-height: 1.8;
+    font-size: 20px;
+    line-height: 32px;
     padding-top: 30px;
     text-align: justify;
 }
@@ -327,7 +370,6 @@ div.homepage-api-product-list {
     text-transform: capitalize;
     color: #141DD2;
     padding-left: 58px;
-    text-shadow: 1px 0 0 #141DD2;
 }
 .api-details a:hover {
     color: #141DD2;
@@ -625,8 +667,8 @@ div.homepage-api-product-list {
 }
 .open_banking_header .navbar-brand{
     color: #141ed2 !important;
-    font-size: 18px !important;
-    font-weight: bold !important;
+    font-size: 20px !important;
+    font-weight: 700 !important;
     padding: 23px 0px !important;
     
 }
@@ -701,9 +743,9 @@ nav#block-open-banking-portal-main-menu {
     margin-right: 45px;
 }
 .second-title-slogan {
-  font-size: 11px;
+  font-size: 12px;
   color: #0e0e0e;
-  line-height: unset;
+  line-height: normal;
   margin-left: 93px;
   position: relative;
   top: -15px;
@@ -887,21 +929,30 @@ div#drupal-modal {
     background-color: #141DD2;
     padding-top: 15px;
     padding-bottom: 15px;
-    font-size: 1.7rem;
-    width: 52%;
+    font-size: 19px;
+    width: 40%;
     border-color: #141DD2;
     margin-left: auto;
     margin-right: auto;
     display: block;
+    border-radius: 28px;
+    font-weight: normal;
 
 }
+.btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary,
+.btn-primary:active:hover, .btn-primary.active:hover, .open > .dropdown-toggle.btn-primary:hover, .btn-primary:active:focus, .btn-primary.active:focus, .open > .dropdown-toggle.btn-primary:focus, .btn-primary:active.focus, .btn-primary.active.focus, .open > .dropdown-toggle.btn-primary.focus {
+    color: #fff;
+    background-color: #141DD2;
+    background-image: none;
+    border-color: #141DD2;
+}
+
 @media only screen and (max-width: 767px) {
   .login-right-form button, .forgot-pass-mail-link button { 
     width: 100%;
   }
 }
 .login-right-form button:hover{
-    //box-shadow: 0 14px 26px -12px rgba(156, 39, 176, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(156, 39, 176, 0.2);
     background-color: #141DD2;
     color: white;
     border-color: #141DD2;
@@ -969,12 +1020,9 @@ video#popupvid {
 }
 
 .user-login-form .form-item-persistent-login label .form-checkbox:checked:before ,.user-register-form .form-checkbox:checked:before, .form-checkbox:checked:before{
-/*    content: "✔";*/
     content: "\2713\0020";
     background-color: #141DD2;
     border-color: #141DD2;
-/*     content: "\2713";*/
-/*content: "L";*/
 }
 
 .user-login-form  .form-item--error-message.alert.alert-danger.alert-sm, .user-register-form .form-item--error-message.alert.alert-danger.alert-sm  {
@@ -1003,7 +1051,7 @@ a.sign-up{
 }
 .forgot-pass-link a {
     color: black;
-    font-size: 1.7rem;
+    font-size: 18px;
 }
 .forgot-pass-link a:hover{
   text-decoration: none;
@@ -1027,7 +1075,7 @@ a.sign-up{
     line-height: 3rem;
     font-weight: unset;
     color: #000;
-    font-weight: 600;
+    font-weight: normal;
 }
 .user-register-form .form-item-terms-condition label{
     font-size: 16px;
@@ -1063,6 +1111,7 @@ a.sign-up{
     padding-top: 15px;
     padding-bottom: 15px;
     margin-bottom: 25px;
+    border-radius: 24px;
 }
 @media only screen and (max-width: 640px) {
   .register-form-popup .form-submit{
@@ -1477,9 +1526,7 @@ h4.opblock-tag {
     transform: scaleX(-1);
     display: none;
 }
-.contact-us--back-btn a {
-    text-shadow: 1px 0 0 #000;
-}
+
 .contact-us--back-btn:after {
     content: '\f190';
     font: normal normal normal 24px/1 FontAwesome;
