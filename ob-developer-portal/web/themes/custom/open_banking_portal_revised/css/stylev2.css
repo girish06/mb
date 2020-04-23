@@ -211,7 +211,7 @@ section#block-views-block-new-get-started-block-1 .view-content {
     border-top: 1px solid #d6d2d2;
 }
 .our-apis-footer-top-banner-body h2 {
-    font-size: 36px;
+    font-size: 37px;
     margin-bottom: 30px;
 }
 .our-apis-footer-top-banner-body p {
@@ -234,7 +234,6 @@ section#block-views-block-api-products-homepage-block-1 .view-header .line {
 }
 section#block-views-block-api-products-homepage-block-1 .view-header p {
   margin-top: 15px;
-  text-shadow: 1px 0 0 #333;
 }
 section#block-views-block-api-products-homepage-block-1 {
   background-color: #f1f1f1;
@@ -437,7 +436,7 @@ nav#block-open-banking-portal-revised-main-menu {
   font-size: 1.8rem;
 }
 section.open_banking_footer {
-  background-color: #1d1f21;
+  background-color: #fff;
 }
 .container-fluid.main-container {
   padding-right: 0px;
@@ -472,7 +471,7 @@ section.open_banking_footer {
 }
 .first-half-body {
     min-height: 290px;
-    padding: 40px 40px 0px 40px;
+    padding: 20px;
 }
 .button-left-side{
   margin-top: 150px;
@@ -496,13 +495,12 @@ section.open_banking_footer {
   /*margin-top: -12px;*/
 /*}*/
 ul.menu.menu--main.nav.navbar-nav li a {
-  padding-top: 40px;
+  padding-top: 35px;
   padding-right: 20px;
   height: 100px;
   margin-top: 10px;
   color: #000;
-  font-size: 18px;
-  text-shadow: 1px 0 0 #000;
+  font-size: 20px;
 }
 ul.menu.menu--main.nav.navbar-nav li a:hover, ul.menu.menu--main.nav.navbar-nav li a:focus {
   background-color: #fff;
@@ -517,18 +515,18 @@ ul.menu.menu--account.nav.navbar-nav.navbar-right {
   margin-right: 45px;
 }
 ul.menu.menu--account.nav.navbar-nav.navbar-right a {
-  border: 1px solid #000;
-  margin-right: 5px;
-  padding: 10px 15px;
-  color: #000;
-  font-size: 18px;
-  border-radius: 6px;
-  text-shadow: 1px 0 0 #000;
+  border: 1px solid #141ed2;
+  margin-right: 10px;
+  padding: 8px 20px;
+  color: #141ed2;
+  font-size: 20px;
+  border-radius: 24px;
+  line-height: normal;
 }
 ul.menu.menu--account.nav.navbar-nav.navbar-right a:hover {
   color: #fff;
-  border-color: #000;
-  background-color: #000;
+  border-color: #141ed2;
+  background-color: #141ed2;
 }
 section.open_banking_content_footer .container-fluid {
   padding-left: 0px !important;
@@ -549,9 +547,8 @@ section.open_banking_content_footer .container-fluid {
  }
 .login-form h2{
   color: #141DD2;
-  font-size: 30px;
-  font-weight: 500;
-  text-shadow: 1px 0 0 #141DD2;
+  font-size: 32px;
+  font-weight: normal;
 }
 .login-form .site-branding-wrap {
   padding-bottom: 40px;
@@ -584,10 +581,10 @@ section.open_banking_content_footer .container-fluid {
   float: right;
   padding: 0px;
 }
-.get-started-buttons .button-padding .block-btn a:after, .api-details a:after {
+/* .get-started-buttons .button-padding .block-btn a:after, .api-details a:after {
   content: '\003E';
   margin-left: 10px;
-}
+} */
 .right-side-form {
   padding: 30px;
 }
@@ -610,10 +607,13 @@ section.open_banking_content_footer .container-fluid {
 }
 .user-login-form label, .user-forgot-pass label {
   color: #000000;
-  font-size: 1.7rem;
+  font-size: 20px;
   font-weight: normal !important;
-  /*padding-top: 30px;*/
-  /*padding-bottom: 30px;*/
+}
+.user-login-form .form-type-checkbox label {
+  font-size: 18px;
+  font-weight: normal;
+  color: #000;
 }
 .btn .glyphicon.icon-before, .btn.icon-before .glyphicon{
   display: none;
@@ -627,6 +627,9 @@ section.open_banking_content_footer .container-fluid {
 .btn-primary:focus, .btn-primary.focus{
   background-color: #141DD2;
   border-color: #141DD2;
+  border-radius: 24px;
+  font-size: 19px;
+  font-weight: normal;
 }
 .footer-title{
   font-weight: 300;
@@ -636,9 +639,10 @@ section.open_banking_content_footer .container-fluid {
   top: 45px;
 }
 .our-api-explore-right-banner-content{
-  font-family: Montserrat;
-  padding: 40px;
-  padding-top: 80px;
+  padding: 0 40px 0;
+}
+.block-views-blockapi-products-homepage-block-2 {
+  background: #f2f2f2;
 }
 .our-api-left-banner-content {
   padding: unset;
@@ -729,9 +733,7 @@ nav.tabs {
   padding-left: 30px;
   padding-right: 30px;
 }
-.contact-us-inner-part h2 {
-  text-shadow: 1px 0 0 #000;
-}
+
 .view-id-contact_us_page{
   padding-left: 20px;
   padding-right: 20px;
@@ -849,9 +851,7 @@ input:checked + .slider:before {
   padding-left: 20px;
   padding-right: 20px;
 }
-.contact-us-forms h2 {
-  text-shadow: 1px 0 0 #000;
-}
+
 .contact-form {
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
   padding: 40px;
@@ -935,7 +935,11 @@ h5 {
 .api-product-section{
   padding: 0px;
 }
-.api-product-section-0, .api-product-section-2 {
+.api-product-homepage .api-product-section:nth-child(2) {
+  padding-left: 15px !important;
+  padding-right: 0 !important;
+}
+.api-product-homepage .api-product-section:nth-child(n+2) {
   padding-right: 15px !important;
 }
 .api-product-section-0, .api-product-section-1 {
@@ -947,7 +951,9 @@ h5 {
   padding-bottom: 40px;
 }
 .get-started-right-body.footer-part .field.field--name-field-block-title {
-  font-size: 36px;
+  font-size: 38px;
+  letter-spacing: 0.4px;
+  line-height: 46px;
 }
 .footer-part .get-started-inner-part {
   margin-top: 0px;
@@ -1005,12 +1011,26 @@ ul.menu.menu--main.nav.navbar-nav {
   font-size: 62px !important;
 }
 .our-api-explore-right-banner-content h1 {
-  font-size: 40px;
-  text-shadow: 1px 0 0 #333;
+  font-size: 44px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #4e4e4e;
+}
+.our-api-explore-right-banner-content hr.line {
+  border-bottom: 5px solid #141ed2;
+  width: 4%;
+  margin-top: 5px;
+}
+.our-api-explore-right-banner-content p {
+  margin-top: 30px;
 }
 div#block-footerleftlink-2 p {
-  font-size: 16px !important;
+  font-size: 18px !important;
     margin-top: 10px;
+    color: #000;
 }
 .login-page {
   overflow: hidden;
@@ -1123,12 +1143,12 @@ div#tpp-auth-btn input, div#user-auth-btn input {
 
 .mb-footer li {
     float: left;
-    padding: 0 10px;
+    padding: 0 20px;
 }
 
 .mb-footer li a {
-    font-size: 16px;
-    color: white;
+    font-size: 18px;
+    color: #000;
     margin: 0;
     padding: 0;
 }
@@ -1146,14 +1166,14 @@ div#tpp-auth-btn input, div#user-auth-btn input {
 }
 .navbar .logo:after {
   content: '';
-  width: 1px;
-  height: 40px;
+  width: 2px;
+  height: 50px;
   display: block;
   background: #141ed2;
   position: absolute;
   top: 50%;
-  margin-top: -17px;
-  right: 8px;
+  margin-top: -20px;
+  right:11px;
 }
 @media only screen and (max-width: 767px) {
   .navbar .logo img {
@@ -1455,17 +1475,18 @@ li.pz .radio-inline {
 }
 .site-slogan-wrap .site-name{
   display: block;
-  font-size: 22px;
+  font-size: 24px;
   color: #141ed2;
   font-weight: 600;
   line-height: normal;
+  font-family: 'AvertaStdCY-Semibold';
 }
 .site-slogan-wrap .site-slogan {
-  font-size: 11px;
+  font-size: 12px;
   color: #0e0e0e;
-  font-weight: 600;
   position: relative;
   top: -3px;
+  font-weight: normal;
 }
 .mb-header .site-slogan-wrap .site-name{
   font-size: 16px;
@@ -1735,12 +1756,15 @@ li.pz .radio-inline {
 }
 @media only screen and (min-width: 992px) {
   .experience-banking-api-block .right-banner-content-footer {
-    padding: 80px 10px;
+    padding: 10px;
+  }
+  #block-ourapinewblock {
+    padding-top: 80px;
   }
 }
 @media only screen and (min-width: 1024px) {
   .mb-footer li {
-    border-right: 1px solid #fafafa;
+    border-right: 1px solid #000;
   }
 }
 @media only screen and (min-width: 1200px) {
