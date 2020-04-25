@@ -6,7 +6,13 @@
 
 (function ($, Drupal) {
   $(document).ready(function () {
-
+    $('.navbar-toggle').click(function (e) {
+      if($('body').hasClass('mn-active')) {
+        $('body').removeClass('mn-active')
+      }else {
+        $('body').addClass('mn-active');
+      }
+    });
     $(".home-page-top-bar img").each(function() {
       var imageUrl = $(this).attr("src");
       $(this).closest(".home-page-top-bar").css("background-image", "url(" + imageUrl + ")")

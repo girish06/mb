@@ -1558,9 +1558,9 @@ li.pz .radio-inline {
   .navbar {
     height: 78px;
   }
-  .collapse {
+  /* .collapse {
     display: none;
-  }
+  } */
   .navbar-toggle {
     display: block;
     position: absolute;
@@ -1568,18 +1568,19 @@ li.pz .radio-inline {
     top: 25px;
     margin-top: 0;
   }
-  .navbar-collapse.collapse {
-    display: none !important;
-  }
-  .navbar-collapse.collapse.in {
+  .navbar-collapse {
     position: fixed;
     background: #ffff;
-    right: 0;
-    top: 100px;
+    right: -320px;
+    top: 66px;
     z-index: 99;
     width: 320px;
-    padding: 0 20px;
-    display: block !important;
+    padding: 0 20px 20px;
+    display: block;
+    transition: right 0.3s ease-in-out;
+  }
+  .mn-active .navbar-collapse{
+    right: 0;
   }
   nav#block-open-banking-portal-revised-main-menu {
     margin-left: 0;
@@ -1688,7 +1689,7 @@ li.pz .radio-inline {
     top: 22px;
   }
   .navbar-collapse.collapse.in {
-    top: 59px;
+    top: 66px;
   }
   ul.menu.menu--main.nav.navbar-nav {
     margin: 0;
@@ -1716,6 +1717,16 @@ li.pz .radio-inline {
     font-size: 24px;
     margin-top: 50px;
   }
+  .mb-header.site-branding-wrap {
+    position: fixed;
+    display: block;
+    top: 0;
+    background: #ffff;
+    width: 100%;
+    left: 0;
+    right: 0;
+    padding: 7px 10px;
+  }
 }
 @media only screen and (max-width: 991px) {
   .left-side-image {
@@ -1740,6 +1751,7 @@ li.pz .radio-inline {
 @media (min-width: 768px) and (max-width: 992px) {
   .navbar .logo:after {
     right: 6px;
+    margin-top: -24px;
   }
 }
 @media only screen and (min-width: 768px) {
