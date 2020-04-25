@@ -12,6 +12,9 @@ section#block-views-block-api-products-homepage-block-1 .api-product-padding {
 .api-product-padding {
   padding: 20px;
 }
+.block-views-blockapi-products-homepage-block-2 .api-product-padding {
+  padding: 20px 0 0 20px;
+}
 #block-accountnew {
     padding-top: 30px;
     padding-bottom: 30px;
@@ -473,6 +476,11 @@ section.open_banking_footer {
     min-height: 290px;
     padding: 20px;
 }
+.block-views-blockapi-products-homepage-block-2 .api-product-section:nth-child(4) .first-half-body,
+.block-views-blockapi-products-homepage-block-2 .api-product-section:nth-child(8) .first-half-body {
+  min-height: 302px;
+}
+
 .button-left-side{
   margin-top: 150px;
   padding: 0px;
@@ -914,9 +922,9 @@ h1{
 h5 {
   font-size: 22px;
 }
-.content-header-margin {
+/* .content-header-margin {
   padding-top: 20px;
-}
+} */
 .content-header-margin h5 {
   padding: 0px 0px 0px 26px;
   font-size: 19px;
@@ -935,20 +943,16 @@ h5 {
 .api-product-section{
   padding: 0px;
 }
-.api-product-homepage .api-product-section:nth-child(2) {
-  padding-left: 15px !important;
-  padding-right: 0 !important;
-}
-.api-product-homepage .api-product-section:nth-child(n+2) {
-  padding-right: 15px !important;
-}
+
 .api-product-section-0, .api-product-section-1 {
   padding: 0px;
   margin-top: 60px;
 }
+.api-product-homepage .api-product-section img {
+  width: 100%;
+}
 .api-product-section-2, .api-product-section-3 {
   padding-top: 0px !important;
-  padding-bottom: 40px;
 }
 .get-started-right-body.footer-part .field.field--name-field-block-title {
   font-size: 38px;
@@ -1143,7 +1147,7 @@ div#tpp-auth-btn input, div#user-auth-btn input {
 
 .mb-footer li {
     float: left;
-    padding: 0 20px;
+    padding: 0 8px;
 }
 
 .mb-footer li a {
@@ -1537,12 +1541,11 @@ li.pz .radio-inline {
     font-size: 14px;
   }
   ul.menu.menu--main.nav.navbar-nav {
-    padding-left: 0;
+    padding-left: 10px;
   }
   .top-banner-body {
     top: 0;
   }
-  
 }
 @media only screen and (max-width: 1023px) {
   .navbar .logo img {
@@ -1552,15 +1555,12 @@ li.pz .radio-inline {
     padding: 12px 0px 0!important;
     height: auto;
   }
-  .second-title-slogan { 
-    top: -9px;
-  }
   .navbar {
     height: 78px;
   }
-  .collapse {
+  /* .collapse {
     display: none;
-  }
+  } */
   .navbar-toggle {
     display: block;
     position: absolute;
@@ -1568,18 +1568,19 @@ li.pz .radio-inline {
     top: 25px;
     margin-top: 0;
   }
-  .navbar-collapse.collapse {
-    display: none !important;
-  }
-  .navbar-collapse.collapse.in {
+  .navbar-collapse {
     position: fixed;
     background: #ffff;
-    right: 0;
-    top: 100px;
+    right: -320px;
+    top: 66px;
     z-index: 99;
     width: 320px;
-    padding: 0 20px;
-    display: block !important;
+    padding: 0 20px 20px;
+    display: block;
+    transition: right 0.3s ease-in-out;
+  }
+  .mn-active .navbar-collapse{
+    right: 0;
   }
   nav#block-open-banking-portal-revised-main-menu {
     margin-left: 0;
@@ -1654,6 +1655,7 @@ li.pz .radio-inline {
     font-size: 16px;
     padding-left: 21px;
   }
+
   .api-product-section-0, .api-product-section-2 {
     padding-right: 0 !important;
   }
@@ -1668,7 +1670,7 @@ li.pz .radio-inline {
     min-height: auto;
   }
   .get-started-right-body {
-    min-height: 480px;
+    min-height: 510px;
   }
   .path-webform .get-started-right-body {
     min-height: auto;
@@ -1687,7 +1689,7 @@ li.pz .radio-inline {
     top: 22px;
   }
   .navbar-collapse.collapse.in {
-    top: 59px;
+    top: 66px;
   }
   ul.menu.menu--main.nav.navbar-nav {
     margin: 0;
@@ -1715,6 +1717,16 @@ li.pz .radio-inline {
     font-size: 24px;
     margin-top: 50px;
   }
+  .mb-header.site-branding-wrap {
+    position: fixed;
+    display: block;
+    top: 0;
+    background: #ffff;
+    width: 100%;
+    left: 0;
+    right: 0;
+    padding: 7px 10px;
+  }
 }
 @media only screen and (max-width: 991px) {
   .left-side-image {
@@ -1725,6 +1737,21 @@ li.pz .radio-inline {
   } */
   .user-register-form .register-right-fields{
     padding: 0;
+  }
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+  .block-views-blockapi-products-homepage-block-2 .api-product-section .first-half-body {
+    min-height: 358px !important;
+  }
+  .block-views-blockapi-products-homepage-block-2 .api-product-section:nth-child(4) .first-half-body,
+  .block-views-blockapi-products-homepage-block-2 .api-product-section:nth-child(8) .first-half-body {
+    margin-bottom: 8px;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  .navbar .logo:after {
+    right: 6px;
+    margin-top: -24px;
   }
 }
 @media only screen and (min-width: 768px) {
@@ -1761,11 +1788,26 @@ li.pz .radio-inline {
   #block-ourapinewblock {
     padding-top: 80px;
   }
+  .api-product-homepage .api-product-section:first-child {
+    padding-right: 15px !important;
+  }
+  .api-product-homepage .api-product-section:nth-child(2) {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  .api-product-homepage .api-product-section:nth-child(n+2) {
+    padding-right: 15px !important;
+  }
+  .api-product-section-2, .api-product-section-3 {
+    padding-top: 0px !important;
+    padding-bottom: 40px;
+  }
 }
 @media only screen and (min-width: 1024px) {
   .mb-footer li {
     border-right: 1px solid #000;
   }
+  
 }
 @media only screen and (min-width: 1200px) {
   .contact-us-page .top-banner-body {
@@ -1779,5 +1821,8 @@ li.pz .radio-inline {
   }
   .view-id-contact_us_page {
     padding: 0 60px;
+  }
+  .mb-footer li {
+    padding: 0 20px;
   }
 }
