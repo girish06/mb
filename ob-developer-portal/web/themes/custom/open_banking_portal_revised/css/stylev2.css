@@ -1,3 +1,6 @@
+a, a:hover, a:focus {
+    color: #141ed2;
+}
 section#block-views-block-api-products-homepage-block-1 .api-details{
     padding: unset;
 }
