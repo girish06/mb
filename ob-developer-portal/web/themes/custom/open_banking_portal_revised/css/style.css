@@ -306,6 +306,25 @@ div.homepage-api-product-list {
     border-radius: 6px;
     flex-direction: column;
 }
+.our-api-landing-page div.homepage-api-product-list {
+    background: #F7FBFF;
+}
+.our-api-landing-page .swagger-ui .model-box {
+    background: transparent;
+    display: block;
+}
+.our-api-landing-page .swagger-ui section.models .model-container{
+    border: 1px solid #ccc;
+    background: transparent;
+}
+.swagger-ui section.models .model-container:last-of-type {
+    margin-top: 15px;
+}
+.our-api-landing-page .swagger-ui .model-toggle {
+    position: absolute;
+    right: 0;
+    top: 21px;
+}
 .api-product-padding {
     flex: 1 1 auto;
     /*padding: 2.9375rem 1.875rem;*/
