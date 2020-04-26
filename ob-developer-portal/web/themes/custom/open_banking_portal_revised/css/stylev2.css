@@ -1,3 +1,4 @@
+
 a, a:hover, a:focus {
     color: #141ed2;
 }
@@ -169,6 +170,9 @@ section#block-views-block-new-get-started-block-1 .view-content ul li{
     padding-top: 40px;
     margin: unset;
 }
+#block-fundsdetailedblock {
+  background: #fff;
+}
 .our-api-explore-block .our-api-explore-right-banner-content p {
     color: #4e4e4e;
     font-size: 18px;
@@ -216,6 +220,7 @@ section#block-views-block-new-get-started-block-1 .view-content {
 .our-apis-page-footer-top-bar img{
     opacity: .4;
     border-top: 1px solid #d6d2d2;
+    height: 420px;
 }
 .our-apis-footer-top-banner-body h2 {
     font-size: 37px;
@@ -424,7 +429,7 @@ section#block-views-block-new-get-started-block-1 {
   display: block;
   z-index: 1;
   color: #000000;
-  padding: 0px 60px;
+  padding: 0px 20px;
 }
 .my-apps-details .my-app-add-button .btn-default {
   background-color: #141DD2;
@@ -1658,6 +1663,7 @@ li.pz .radio-inline {
   .api-details a {
     font-size: 16px;
     padding-left: 21px;
+    padding-bottom: 20px;
   }
 
   .api-product-section-0, .api-product-section-2 {
@@ -1730,6 +1736,18 @@ li.pz .radio-inline {
     left: 0;
     right: 0;
     padding: 7px 10px;
+  }
+  .image-right-side {
+    float: none;
+  }
+  .api-product-padding {
+    padding: 10px;
+  }
+  .swagger-ui .wrapper {
+    padding: 0;
+  }
+  .swagger-ui .scheme-container {
+    padding: 30px 15px;
   }
 }
 @media only screen and (max-width: 991px) {
@@ -1811,7 +1829,9 @@ li.pz .radio-inline {
   .mb-footer li {
     border-right: 1px solid #000;
   }
-  
+  .our-apis-footer-top-banner-body {
+    padding: 0 60px;
+  }
 }
 @media only screen and (min-width: 1200px) {
   .contact-us-page .top-banner-body {
