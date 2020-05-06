@@ -1373,7 +1373,8 @@ h4.opblock-tag {
 .my-apps-details .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
     color: black;
     cursor: default;
-    font-weight: 600;
+    font-weight: 500;
+    font-size: 16px;
     background-color: unset;
     border: none;
     border-bottom-color: unset;
@@ -1383,19 +1384,18 @@ h4.opblock-tag {
     font-weight: 400;
 }
 .my-apps-details .nav-tabs {
-    background-color: #F7FBFF;
+    background-color: #fff;
 }
 .my-apps-details .ckeditor-accordion-container > dl dd .panel-info .panel-body {
     padding: unset;
 }
 .my-apps-details .my-apps-title {
     border-bottom: 1px solid #d3d3d3;
-    font-size: 1.8rem;
+    font-size:20px;
     padding: 10px 20px;
-    font-weight: 600;
+    font-weight: 500;
 }
 .my-apps-details .my-apps-description {
-    color: #8b8b8b;
     padding: 10px 20px;
     border-bottom: 1px solid #d3d3d3;
 }
@@ -1403,9 +1403,12 @@ h4.opblock-tag {
     border-top: none;
     width: 20%;
     padding-left: 20px;
+    font-weight: 500;
+    color: #000;
+    font-size: 14px;
 }
 .my-app-keys table tbody tr td {
-    color: #848484;
+    color: #9c9d9f;
     border-top: none;
     word-break: break-word;
 }
@@ -1680,21 +1683,37 @@ iframe#popupvid {
     display: none;
 }
 #modal_app_create_form {
-    padding: 10px 40px;
+    padding: 0 40px;
 }
 h2.create-add-form {
     padding-bottom: 20px;
 }
 #modal_app_create_form label {
     font-weight: 500;
-    font-size: 1.5rem;
+    font-size: 16px;
+    color: #000;
 }
 #modal_app_create_form .apigee-edge--form .fieldset-legend {
     font-weight: 500;
     font-size: 1.5rem;
 }
 #modal_app_edit_form {
-    padding: 10px 40px;
+    padding: 10px;
+}
+#modal_app_edit_form .panel-default > .panel-heading{
+    background: transparent;
+    padding: 0 15px;
+}
+#modal_app_edit_form .fieldgroup {
+    padding: 0 15px;
+}
+.form-control {
+    padding: 5px 10px;
+}
+@media only screen and (min-width: 768px) {
+    #modal_app_edit_form {
+        padding: 10px 40px;
+    }
 }
 h2.edit-add-form {
     padding-bottom: 20px;
@@ -2052,7 +2071,10 @@ messages__wrapper {
     }
     div#drupal-modal--content {
         width: 100% !important;
-        margin: 10% 16%;
+    }
+    button.close.ui-dialog-titlebar-close {
+        top: -32px;
+        right: 9px;
     }
     .login-right-form button{
         padding-right: 100px;
