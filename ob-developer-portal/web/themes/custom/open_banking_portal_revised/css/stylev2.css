@@ -256,9 +256,7 @@ section#block-views-block-api-products-homepage-block-1 .our-api-explore-right-b
     padding-top: 30px;
     padding-bottom: 30px;
 }
-.form-control {
-    padding-left: 0px;
-}
+
 p {
   font-size: 18px;
   line-height: 1.7;
@@ -431,6 +429,9 @@ section#block-views-block-new-get-started-block-1 {
 }
 .my-apps-details .my-app-add-button .btn-default {
   background-color: #141DD2;
+  border-radius: 24px;
+  padding: 5px 20px;
+  margin-top: 20px;
 }
 /*.container-fluid.main-container {*/
   /*padding-left: 0px;*/
@@ -679,8 +680,14 @@ div#drupal-modal--content .modal-footer .modal-buttons button {
   width: 70%;
   font-size: 1.9rem;
   border-color: #141DD2;
+  border-radius: 24px;
+  padding: 8px 15px;
+  color: #fff;
+  margin-bottom: 5px;
 }
-
+#modal_app_create_form h2.create-add-form{
+  margin: 0;
+}
 dl.knowledge-table-bank {
     border: 1px solid #f4f4f4;
 }
@@ -1076,8 +1083,12 @@ body.js--padding-fix {
   padding-top: 100px !important;
 }
 .my-apps-description p {
-          font-size: 18px;
-          line-height: 1.5;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #9c9d9f;
+}
+.my-app-list-details .table-striped > tbody > tr:nth-of-type(odd) {
+  background: #f9f9f9;
 }
 .user-logged-in div#sign-up {
   display: none;
@@ -1501,6 +1512,26 @@ li.pz .radio-inline {
 }
 .mb-header .site-slogan-wrap .site-name{
   font-size: 16px;
+}
+.my-apps-details {
+  background: #f2f2f2;
+}
+.my-app-list-details .ckeditor-accordion-container > dl {
+  background: #fff;
+}
+.my-app-list-details .ckeditor-accordion-container > dl {
+  background: transparent !important;
+}
+.my-app-list-details .ckeditor-accordion-container > dl > dt > a {
+  background-color: transparent;
+  font-weight: 400;
+  font-size: 20px;
+  z-index: 10;
+  position: relative;
+  text-decoration: none;
+}
+.my-app-list-details .ckeditor-accordion-container > dl > dt {
+  background: #fff;
 }
 @media only screen and (max-width: 370px) {
   .mb-header .site-slogan-wrap .site-name{
