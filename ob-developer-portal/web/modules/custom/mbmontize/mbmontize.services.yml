@@ -1,6 +1,0 @@
-services:
-  mbmontize.order_submit_subscriber:
-    class: Drupal\mbmontize\EventSubscriber\OrderSubmitSubscriber
-    arguments: []
-    tags:
-      - { name: event_subscriber }

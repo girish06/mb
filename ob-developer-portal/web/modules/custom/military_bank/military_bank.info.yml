@@ -1,0 +1,5 @@
+name: 'Military Bank'
+type: module
+description: 'Mb Customizations for vietnamese language'
+core: 8.x
+package: 'Custom'

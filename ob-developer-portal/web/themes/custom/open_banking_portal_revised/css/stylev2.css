@@ -1092,7 +1092,7 @@ body.js--padding-fix {
 .my-app-list-details .table-striped > tbody > tr:nth-of-type(odd) {
   background: #f9f9f9;
 }
-.user-logged-in div#sign-up {
+.user-logged-in div#đăng-ký {
   display: none;
 }
 .dontdisplay {

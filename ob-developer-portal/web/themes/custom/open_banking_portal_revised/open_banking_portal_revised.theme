@@ -197,31 +197,37 @@ function open_banking_portal_revised_form_alter(&$form, FormStateInterface $form
  //Adding custom validation for the welcome page type field.
     if ($form_id == 'user_login_form') {
 
-        $form['name']['#attributes']['placeholder'] = t( 'Enter your User name or Email address' );
+        $form['name']['#attributes']['placeholder'] = t( 'Nhập tên đăng nhập' );
         $form['pass']['#attributes']['placeholder'] = t( '******' );
-        $form['name']['#title'] = t('User name or email address');
+        $form['name']['#title'] = t('Tên đăng nhập');
+        $form['pass']['#title'] = t('Mật khẩu');
+        $form['actions']['submit']['#value'] = t('Đăng nhập');
         $form['persistent_login']['#prefix'] = '<span class="remember-me"></span>';
-//        $form['#suffix'] = '';
     }
     elseif ($form_id == 'user_register_form') {
         $form['terms_condition'] = [
                     '#type'  => 'checkbox',
-                    '#title' => t('I accept the Terms of Use and I have read the Privacy Policy.'),
+                     '#title' => t('Tôi đồng ý với Điều khoản sử dụng và tôi đã đọc Chính sách bảo mật'),
                     '#required' => TRUE,
                     '#default_value' => TRUE,
                     '#weight' => 20,
                 ];
 
-          $form['account']['name']['#attributes']['placeholder'] = t( 'Enter your User name or Email address' );
-          $form['account']['mail']['#attributes']['placeholder'] = t( 'Enter your email id' );
-          $form['pass1']['#attributes']['placeholder'] = t( '******' );
-          $form['pass2']['#attributes']['placeholder'] = t( '******' );
+        $form['account']['name']['#title'] = t( 'Tên đăng nhập' );
+        $form['account']['name']['#attributes']['placeholder'] = t( 'Nhập tên đăng nhập' );
+        $form['account']['mail']['#title'] = t( 'Địa chỉ email' );
+        $form['account']['mail']['#attributes']['placeholder'] = t( 'Nhập địa chỉ email' );
+        $form['account']['first_name']['#title'] = t('Họ');
+        $form['pass1']['#attributes']['placeholder'] = t( '******' );
+        $form['pass2']['#attributes']['placeholder'] = t( '******' );
+        $form['actions']['submit']['#value'] = t('Tạo tài khoản mới');
 
         
     }
     elseif ($form_id == 'user_pass') {
-         $form['name']['#attributes']['placeholder'] = t( 'Enter your User name or Email address' );
-         $form['name']['#title'] = t('User name or email address');
+         $form['name']['#attributes']['placeholder'] = t( 'Nhập tên đăng nhập hoặc địa chỉ email' );
+         $form['name']['#title'] = t('Tên đăng nhập hoặc địa chỉ email');
+        $form['actions']['submit']['#value'] = t('Xác nhận');
     }
     elseif ($form_id == 'user_form') {
       $form['actions']['submit']['#value'] = 'Change Password';
@@ -371,8 +377,10 @@ function open_banking_portal_revised_form_user_register_form_alter(&$form, FormS
 
 function open_banking_portal_revised_form_user_register_form_process_pass(&$element, FormStateInterface $form_state, &$complete_form) {
   $element = \Drupal\Core\Render\Element\PasswordConfirm::processPasswordConfirm($element, $form_state, $complete_form);
-  $element['pass1']['#placeholder'] = t('*****');
-  $element['pass2']['#placeholder'] = t('*****');
+    $element['pass1']['#title'] = t('Mật khẩu');
+    $element['pass1']['#placeholder'] = t('*****');
+    $element['pass2']['#title'] = t('Xác nhận mật khẩu');
+    $element['pass2']['#placeholder'] = t('*****');
 
   return $element;
 }
