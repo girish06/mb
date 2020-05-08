@@ -34,3 +34,11 @@ function military_bank_entity_base_field_info_alter(&$fields, EntityTypeInterfac
         $fields['last_name']->setLabel(t('Tên'));
     }
 }
+
+
+/**
+ * Implements hook_menu_links_discovered_alter().
+ */
+function military_bank_menu_links_discovered_alter(&$links) {
+    $links['user.logout']['class'] = 'Drupal\military_bank\Plugin\Menu\MyLoginLogoutMenuLink';
+}

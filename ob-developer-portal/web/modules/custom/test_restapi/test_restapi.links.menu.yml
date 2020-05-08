@@ -1,5 +1,5 @@
 test_restapi.my_apps:
-  title: My Apps
+  title: Ứng dụng của tôi
   route_name: test_restapi.my_developer_apps_list_controller_getListMyApps
   menu_name: main
   weight: -30
