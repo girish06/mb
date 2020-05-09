@@ -279,7 +279,7 @@ function open_banking_portal_revised_form_alter(&$form, FormStateInterface $form
         $form['api_products']['#title'] = 'Products';
         $form['actions']['submit'] = [
             '#type' => 'submit',
-            '#value' => 'Save',
+            '#value' => 'Lưu',
             '#attributes' => [
                 'class' => [
                     'use-ajax',
@@ -293,17 +293,21 @@ function open_banking_portal_revised_form_alter(&$form, FormStateInterface $form
         ];
     }
     if (strpos('developer_app_add_for_developer_form', $form_id) !== false) {
-        $form['#prefix'] = '<div id="modal_app_create_form"><h2 class="create-add-form"><strong> Add app</strong></h2>';
+        $form['#prefix'] = '<div id="modal_app_create_form"><h2 class="create-add-form"><strong> Thêm ứng dụng</strong></h2>';
         $form['#suffix'] = '</div>';
         $form['status_messages_register'] = [
             '#type' => 'status_messages',
             '#weight' => -10,
         ];
         $form['api_products']['#title'] = 'Products';
+        $form['displayName']['widget'][0]['value']['#title'] = 'Tên ứng dụng';
+        $form['callbackUrl']['widget'][0]['value']['#title'] = 'Gọi lại URL';
+        $form['description']['widget'][0]['value']['#title'] = 'Mô tả';
+
         $form['displayname_wrapper']['#attributes']['placeholder'] = t('Enter your application name');
         $form['actions']['submit'] = [
             '#type' => 'submit',
-            '#value' => 'Create App',
+            '#value' => 'Tạo ứng dụng',
             '#attributes' => [
                 'class' => [
                     'use-ajax',
@@ -349,7 +353,7 @@ function open_banking_portal_revised_form_alter(&$form, FormStateInterface $form
         ];
         $form['actions']['submit'] = [
             '#type' => 'submit',
-            '#value' => 'Delete',
+            '#value' => 'Xoá',
             '#attributes' => [
                 'class' => [
                     'use-ajax',
