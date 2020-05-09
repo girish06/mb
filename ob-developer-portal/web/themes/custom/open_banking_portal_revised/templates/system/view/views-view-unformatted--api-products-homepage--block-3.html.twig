@@ -1,0 +1,19 @@
+<div class="container-fluid api-home-page-content">
+    <div class="row api-product-homepage">
+      <div class="product-wrap">
+        {% for key,row in rows %}
+              <div class="col-md-6 api-product-section api-product-section-{{ key }}">
+                <div class="homepage-api-product-list">
+                    <div class="api-product-padding">
+                        <ul class="api-product">
+                            <li class="api-list">
+                                {{ row.content}}
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+              </div>
+        {% endfor %}
+      </div>
+  </div>
+</div>
