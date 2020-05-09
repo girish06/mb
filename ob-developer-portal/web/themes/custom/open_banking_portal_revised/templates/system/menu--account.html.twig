@@ -1,5 +1,7 @@
 <ul class="menu menu--account nav navbar-nav navbar-right">
 {% for key,item in items %}
-    <li class="Top-menu-accounts {{item.title}}"> <a class="account-menu" href={{item.url}}>{{item.title}}</a></li>
+    <li class="Top-menu-accounts {{item.title}}">
+        <div class="user-info">{{uname}}</div>
+        <a class="account-menu" href={{item.url}}>{{item.title}}</a></li>
 {% endfor %}
 </ul>
