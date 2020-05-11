@@ -530,7 +530,17 @@ ul.menu.menu--main.nav.navbar-nav li.active-trail a {
 }
 ul.menu.menu--account.nav.navbar-nav.navbar-right {
   margin-top: 40px;
-  margin-right: 45px;
+}
+
+.user-info {
+    font-size: 20px;
+    color: #000;
+    padding-bottom: 5px;
+    text-align: center;
+}
+
+.Top-menu-accounts {
+    top: -20px;
 }
 ul.menu.menu--account.nav.navbar-nav.navbar-right a {
   border: 1px solid #141ed2;
@@ -1857,12 +1867,17 @@ li.pz .radio-inline {
   }
 }
 @media only screen and (min-width: 1024px) {
+  .mb-footer {
+      margin-top: 52px;
+      margin-bottom: 0px;
+  }
   .mb-footer li {
     border-right: 1px solid #000;
   }
   .our-apis-footer-top-banner-body {
     padding: 0 60px;
   }
+
 }
 @media only screen and (min-width: 1200px) {
   .contact-us-page .top-banner-body {

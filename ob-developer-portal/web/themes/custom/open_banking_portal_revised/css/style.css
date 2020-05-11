@@ -392,6 +392,37 @@ div.homepage-api-product-list {
     color: #141DD2;
     text-decoration: none;
 }
+
+.public-api a {
+    float: left;
+    font-size: 22px;
+    font-weight: 500;
+    text-transform: capitalize;
+    color: #141DD2;
+}
+.public-api .line {
+    width: 35px;
+    margin: -8px auto;
+    position: absolute;
+    border-bottom: 3px solid #141DD2;
+}
+.public-api h2 {
+    padding-bottom: 15px;
+    color: #4e4e4e;
+    font-size: 26px;
+    font-weight: normal;
+}
+
+
+
+@media only screen and (min-width: 768px) {
+    .pub-cont {
+      margin-top: 40px;
+        padding: 25px 35px;
+    }
+}
+
+
 @-moz-document url-prefix() {
   img.playimage {
     margin-top: -82% !important;
@@ -1696,6 +1727,9 @@ h2.create-add-form {
 #modal_app_create_form .apigee-edge--form .fieldset-legend {
     font-weight: 500;
     font-size: 1.5rem;
+}
+.apigee-edge--form .form-checkboxes .form-item{
+    width: 100%;
 }
 #modal_app_edit_form {
     padding: 10px;
