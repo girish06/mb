@@ -556,6 +556,7 @@ ul.menu.menu--account.nav.navbar-nav.navbar-right a {
   border-radius: 24px;
   line-height: normal;
     margin-left: 10px;
+    text-align: center;
 }
 ul.menu.menu--account.nav.navbar-nav.navbar-right a:hover {
   color: #fff;
