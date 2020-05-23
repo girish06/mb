@@ -24,12 +24,6 @@ class MyDeveloperAppsListController extends ControllerBase {
       $query = $storageDeveloperApp->getQuery()->condition('developerId',$developerId);
       $entityIds = $query->execute();
       $developerApps = $storageDeveloperApp->loadMultiple($entityIds);
-      $formBuilder = \Drupal::formBuilder();
-      $analyticsFrom = 'Drupal\apigee_edge\Form\DeveloperAppAnalyticsFormForDeveloper';
-//    return [
-//      '#type' => 'markup',
-//      '#markup' => $this->t('Implement method: getListMyApps with parameter(s):'. $entityIds),
-//    ];
     return [
       '#theme' => 'open_banking_my_apps',
       '#my_apps' => $developerApps,
