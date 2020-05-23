@@ -67,6 +67,11 @@ section.open_banking_content_footer, section.open_banking_header {
     background-color: #ffffff;
 
 }
+
+
+section.open_banking_header {
+    background-color: #f2f2f2;
+}
 section.open_banking_footer {
     color: white;
     opacity: 0.9;
@@ -115,7 +120,7 @@ div.content_footer, div.content_header{
     padding: 11px 23px;
     margin-right: 7px;
     color: #ffffff;
-    border-width: 0.5px;
+    border-width: 1px;
     border-style: solid;
     border-color: #141DD2;
     border-radius: 24px;
@@ -128,29 +133,31 @@ div.content_footer, div.content_header{
     padding: 11px 23px;
     margin-right: 7px;
     color: #141DD2;
-    border-width: 0.5px;
+    border-width: 1px;
     border-style: solid;
     border-color: #141DD2;
     border-radius: 24px;
     line-height: normal;
 
 }
-.right-banner-content-footer .button-padding .block-btn a {
-    color: #141DD2 !important;
-}
-.right-banner-content-footer .button-padding .block-btn:hover {
-    background: white !important;
-}
-.right-banner-content-footer .button-padding .block-btn:hover a{
-    color: #141DD2;
 
+.right-banner-content-footer .button-padding .block-btn:hover {
+    background-color: #141DD2;
+}
+/*.right-banner-content-footer .button-padding .block-btn a {*/
+/*    color: #141DD2 !important;*/
+/*}*/
+
+.right-banner-content-footer .button-padding .block-btn:hover a{
+    color: #ffffff;
 }
 .ajax-form .sign-up-button{
     background-color: transparent;
 }
-.left-banner-content .button-padding .btn:hover,.right-banner-content-footer .button-padding .btn:hover ,.ajax-form .sign-up-button:hover, .sign-up-button:hover{
+.left-banner-content .button-padding .btn:hover,.ajax-form .sign-up-button:hover, .sign-up-button:hover{
     background: #fff;
     color: #141DD2;
+    border-color: #fff;
 }
 .sign-up-button a{
     color: #141DD2;
@@ -170,6 +177,10 @@ div.content_footer, div.content_header{
     font-size: 20px;
     line-height: normal;
     font-weight: normal;
+}
+
+.right-banner-content-footer .button-padding .btn a {
+    color: #141DD2;
 }
 blockquote.orange {
     padding: 0px;
@@ -271,10 +282,10 @@ section.experience-banking-api-header, section.our-api-signup-block {
 }
 .get-started-buttons .button-padding .block-btn:hover{
     background-color: #fff;
-    color: #000;
+    color: #141ed2;
 }
 .get-started-buttons .button-padding .block-btn:hover a {
-    color: #000;
+    color: #141ed2;
 }
 .get-started-buttons .button-padding .block-btn a {
     text-transform: uppercase;
@@ -715,7 +726,7 @@ div.homepage-api-product-list {
 }
 .open_banking_header .navbar-brand{
     color: #141ed2 !important;
-    font-size: 20px !important;
+    font-size: 18px !important;
     font-weight: 700 !important;
     padding: 23px 0px !important;
     
