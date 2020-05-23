@@ -53,7 +53,7 @@ function open_banking_portal_revised_page_attachments_alter(array &$page)
  */
 function open_banking_portal_revised_preprocess_page(array &$variables)
 {
-    \Drupal::service('page_cache_kill_switch')->trigger();
+    //\Drupal::service('page_cache_kill_switch')->trigger();
     $variables['logopath'] = file_url_transform_relative(file_create_url(theme_get_setting('logo.svg')));
 
 }
@@ -195,7 +195,6 @@ function open_banking_portal_revised_theme_suggestions_alter(array &$suggestions
 function open_banking_portal_revised_form_user_form_alter(&$form, FormStateInterface $form_state, $form_id)
 {
     $form['account']['pass']['#process'][] = 'open_banking_portal_revised_process_password_confirm';
-//  $form['actions']['submit']['#value'] = t('Change Password');
 
 }
 
@@ -381,7 +380,7 @@ function open_banking_portal_revised_custom_validation($form, $form_state)
     if (!empty($errors['name'])) {
         $string_error = $errors['name']->__tostring();
         if (strpos($string_error, 'Unrecognized username or password') !== FALSE) {
-            $name_value = $form_state->getValue('name');
+            //$name_value = $form_state->getValue('name');
             $form_state->clearErrors();
             $form_state->setErrorByName('name', t('<a class="use-ajax" data-dialog-type="modal" href="user/password?name">Forgot your password?</a>'
             ));
@@ -416,7 +415,6 @@ function submitModalFormAjax(array $form, FormStateInterface $form_state)
         // Remember the previous id ? Here it is
         $response->addCommand(new ReplaceCommand('#modal_example_form', $form));
     } else {
-        //$response->addCommand(new OpenModalDialogCommand("Success!", 'The modal form has been submitted.', ['width' => 800]));
         $url = Url::fromRoute('<front>');
         $command = new RedirectCommand($url->toString());
         $response->addCommand($command);
@@ -431,11 +429,8 @@ function submitModalFormAjax2(array $form, FormStateInterface $form_state)
     $response = new AjaxResponse();
     // If there are any form errors, re-display the form.
     if ($form_state->hasAnyErrors()) {
-        //$response->addCommand(new OpenModalDialogCommand("Success!", 'The modal form has been submitted.', ['width' => 800]));
-        // Remember the previous id ? Here it is
         $response->addCommand(new ReplaceCommand('#modal_example_form_register', $form));
     } else {
-        // $response->addCommand(new OpenModalDialogCommand("Success!", 'The modal form has been submitted.', ['width' => 800]));
         $url = Url::fromRoute('<front>');
         $command = new RedirectCommand($url->toString());
         $response->addCommand($command);
@@ -450,17 +445,11 @@ function submitModalFormAjaxpass(array $form, FormStateInterface $form_state)
     $response = new AjaxResponse();
     // If there are any form errors, re-display the form.
     if ($form_state->hasAnyErrors()) {
-        //$response->addCommand(new OpenModalDialogCommand("Success!", 'The modal form has been submitted.', ['width' => 800]));
-        // Remember the previous id ? Here it is
         $response->addCommand(new ReplaceCommand('#modal_example_user_pass', $form));
     } else {
         $response->addCommand(new OpenModalDialogCommand("Success!", 'Further instructions are sent to your email id', ['width' => 800]));
-//    $url = Url::fromRoute('<front>');
-//    $command = new RedirectCommand($url->toString());
-//    $response->addCommand($command);
 
     }
-
     return $response;
 }
 
@@ -473,7 +462,6 @@ function submitModalFormAjaxgetintouch(array $form, FormStateInterface $form_sta
         // Remember the previous id ? Here it is
         $response->addCommand(new ReplaceCommand('#modal_example_get_in_touch', $form));
     } else {
-        //$response->addCommand(new OpenModalDialogCommand("Success!", 'The modal form has been submitted.', ['width' => 800]));
         $url = Url::fromRoute('<front>');
         $command = new RedirectCommand($url->toString());
         $response->addCommand($command);
@@ -492,7 +480,6 @@ function submitModalFormAjaxDeveloperAppEditSave(array $form, FormStateInterface
         // Remember the previous id ? Here it is
         $response->addCommand(new ReplaceCommand('#modal_app_edit_form', $form));
     } else {
-        //$response->addCommand(new OpenModalDialogCommand("Success!", 'The modal form has been submitted.', ['width' => 800]));
         $userId = \Drupal::currentUser()->id();
         $user = User::load($userId);
         $developerId = $user->get('apigee_edge_developer_id')->value;
@@ -549,7 +536,7 @@ function submitModalFormAjaxDeveloperAppEditSave(array $form, FormStateInterface
             }
         }
         $entity->save();
-        drupal_flush_all_caches();
+        //drupal_flush_all_caches();
         drupal_set_message($entity->label() . " has been successfully updated");
         $url = Url::fromRoute('test_restapi.my_developer_apps_list_controller_getListMyApps');
         $command = new RedirectCommand($url->toString());
@@ -595,7 +582,7 @@ function submitModalFormAjaxDeveloperAppSave(array $form, FormStateInterface $fo
             // acceptable by the server (InvalidValueForExpiresIn).
             $dacc->generate($products, $entity->getAttributes(), $entity->getCallbackUrl(), [], $credential_lifetime * 86400000);
         }
-        drupal_flush_all_caches();
+        //drupal_flush_all_caches();
         drupal_set_message($entity->label() . " has been successfully created");
         $url = Url::fromRoute('test_restapi.my_developer_apps_list_controller_getListMyApps');
         $command = new RedirectCommand($url->toString());
@@ -616,11 +603,7 @@ function submitModalFormAjaxDeveloperAppDelete(array $form, FormStateInterface $
         // Remember the previous id ? Here it is
         $response->addCommand(new ReplaceCommand('#modal_delete_app', $form));
     } else {
-        //$response->addCommand(new OpenModalDialogCommand("Success!", 'The modal form has been submitted.', ['width' => 800]));
-        //$userId = \Drupal::currentUser()->id();
-        //$entity = \Drupal::service('request_stack')->getCurrentRequest()->get('app');
-        //$entity->delete();
-        drupal_flush_all_caches();
+       // drupal_flush_all_caches();
         $url = Url::fromRoute('test_restapi.my_developer_apps_list_controller_getListMyApps');
         $command = new RedirectCommand($url->toString());
         $response->addCommand(new CloseModalDialogCommand());
@@ -645,10 +628,6 @@ function open_banking_portal_revised_preprocess_menu_local_task(array &$variable
     $variables['uname'] = $first_name . ' ' . $last_name;
 }
 
-//function open_banking_portal_form_element($vars) {
-//  $original = open_banking_portal_form_element($vars);
-//  return '<div class="something">' . $original . '</div>';
-//}
 /**
  * Implements hook_theme_suggestions_HOOK_alter for blocks.
  */
