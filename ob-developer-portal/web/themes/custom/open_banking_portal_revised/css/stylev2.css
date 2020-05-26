@@ -369,17 +369,7 @@ section#block-views-block-new-get-started-block-1 {
 .home-page-top-bar{
   position: relative;
 }
-.home-page-top-bar:after {
-  content: '';
-  position: absolute;
-  top:0px;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.65);
-}
+
 @media only screen and (max-width: 991px) {
   .home-page-top-bar {
     position: relative;
@@ -390,9 +380,6 @@ section#block-views-block-new-get-started-block-1 {
   .home-page-top-bar img{
     visibility: hidden;
     opacity: 0;
-  }
-  .home-page-top-bar:after { 
-    background: rgba(255, 255, 255, 0.85);
   }
   .contact-us-page {
     min-height: 320px;
@@ -633,9 +620,9 @@ section.open_banking_content_footer .container-fluid {
   padding: 30px;
 }
 .left-side-image {
-  background-size: cover;
+  background-size: 100%;
   background-repeat: no-repeat;
-  background-position: center right;
+  background-position: top right;
 }
 .left-side-image img{
   visibility: hidden;
@@ -994,6 +981,7 @@ h5 {
 .content-header-margin h5 {
   padding: 0px 0px 0px 26px;
   font-size: 19px;
+    color:#fff;
 }
 
 /*#block-newhomepagetopbanner img{
@@ -1080,6 +1068,7 @@ ul.menu.menu--main.nav.navbar-nav {
 }
 .top-banner-body h1 {
   font-size: 62px !important;
+    color:#ffffff;
 }
 .our-api-explore-right-banner-content h1 {
   font-size: 44px;
@@ -1287,6 +1276,9 @@ div#tpp-auth-btn input, div#user-auth-btn input {
 
 
 
+.footer-links {
+    color:#000;
+}
 
 .commerce-checkout-flow-multistep-default,
 .mb-product {
@@ -1621,6 +1613,14 @@ li.pz .radio-inline {
 .ckeditor-accordion-container .accordian-header {
   background: #f5f5f5;
 }
+
+
+#block-contactusheader h2 {
+    color:#141ed2;
+}
+#block-contactusheader p {
+    color:#141ed2;
+}
 @media only screen and (max-width: 1100px) {
   /* .container-fluid {
     padding: 0 20px !important;
@@ -1925,10 +1925,10 @@ li.pz .radio-inline {
 }
 @media only screen and (min-width: 1200px) {
   .contact-us-page .top-banner-body {
-    top: 120px;
+    top: 60px;
   }
   .main-container {
-    min-height: 390px;
+    min-height: auto;
   }
   .our-apis-footer-top-banner-body{
     top: 80px;

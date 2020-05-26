@@ -11,7 +11,7 @@ use Drupal\Core\Url;
 use Drupal\user\Entity\User;
 use Apigee\Edge\Api\Management\Controller\DeveloperAppCredentialController;
 use Drupal\Core\Render\Element\PasswordConfirm;
-
+use Symfony\Component\HttpFoundation\RedirectResponse;
 /**
  * @file
  * Functions to support theming in the open_banking_portal theme.
@@ -201,8 +201,8 @@ function open_banking_portal_revised_form_user_form_alter(&$form, FormStateInter
 function open_banking_portal_revised_process_password_confirm($element, FormStateInterface $form_state, &$complete_form)
 {
     $element = PasswordConfirm::processPasswordConfirm($element, $form_state, $complete_form);
-    $element['pass1']['#title'] = t('New Password');
-    $element['pass2']['#title'] = t('Confirm Password');
+    $element['pass1']['#title'] = t('mật khẩu mới');
+    $element['pass2']['#title'] = t('Xác nhận mật khẩu');
     $element['pass1']['#placeholder'] = t('*****');
     $element['pass2']['#placeholder'] = t('*****');
     return $element;
@@ -242,8 +242,10 @@ function open_banking_portal_revised_form_alter(&$form, FormStateInterface $form
         $form['name']['#attributes']['placeholder'] = t('Nhập tên đăng nhập hoặc địa chỉ email');
         $form['name']['#title'] = t('Tên đăng nhập hoặc địa chỉ email');
         $form['actions']['submit']['#value'] = t('Xác nhận');
+        $form['actions']['submit']['#submit'][] = '::submitForm';
+        $form['actions']['submit']['#submit'][] = 'user_pass_redirect';
     } elseif ($form_id == 'user_form') {
-        $form['actions']['submit']['#value'] = 'Change Password';
+        $form['actions']['submit']['#value'] = 'Đổi mật khẩu';
     } elseif ($form_id == 'webform-submission-get-in-touch') {
         $form['#prefix'] = '<div id="modal_example_get_in_touch">';
         $form['#suffix'] = '</div>';
@@ -269,6 +271,7 @@ function open_banking_portal_revised_form_alter(&$form, FormStateInterface $form
     }
     if (strpos('developer_app_edit_for_developer_form', $form_id) !== false) {
         $developerApp = \Drupal::service('request_stack')->getCurrentRequest()->get('app')->label();
+        $form['description']['widget'][0]['value']['#rows'] = '2';
         $form['#prefix'] = '<div id="modal_app_edit_form"><h2 class="edit-add-form"><strong> Edit ' . $developerApp . '</strong></h2>';
         $form['#suffix'] = '</div>';
         $form['status_messages_register'] = [
@@ -290,6 +293,16 @@ function open_banking_portal_revised_form_alter(&$form, FormStateInterface $form
                 'event' => 'click',
             ],
         ];
+        $form['actions']['cancel'] = [
+        '#type' => 'submit',
+        '#value' => 'hủy bỏ',
+        '#ajax' => [
+          'callback' => 'ajaxDeveloperAppCancelUserRedirect',
+          'event' => 'click',
+        ],
+       ];
+      unset($form['actions']['delete']);
+
     }
     if (strpos('developer_app_add_for_developer_form', $form_id) !== false) {
         $form['#prefix'] = '<div id="modal_app_create_form"><h2 class="create-add-form"><strong> Thêm ứng dụng</strong></h2>';
@@ -302,6 +315,7 @@ function open_banking_portal_revised_form_alter(&$form, FormStateInterface $form
         $form['displayName']['widget'][0]['value']['#title'] = 'Tên ứng dụng';
         $form['callbackUrl']['widget'][0]['value']['#title'] = 'Gọi lại URL';
         $form['description']['widget'][0]['value']['#title'] = 'Mô tả';
+        $form['description']['widget'][0]['value']['#rows'] = '2';
 
         $form['displayname_wrapper']['#attributes']['placeholder'] = t('Enter your application name');
         $form['actions']['submit'] = [
@@ -337,7 +351,7 @@ function open_banking_portal_revised_form_alter(&$form, FormStateInterface $form
 
         $form['delete_action'] = [
             '#prefix' => '<p>',
-            '#markup' => t("Deleting the 'delta-digitalapi' App will also delete all of its data."),
+            '#markup' => t("Deleting the  %developer_app App will also delete all of its data.",['%developer_app' => $internalName]),
             '#suffix' => '</p>',
             "#weight" => -1
         ];
@@ -364,6 +378,14 @@ function open_banking_portal_revised_form_alter(&$form, FormStateInterface $form
                 'event' => 'click',
             ],
         ];
+      $form['actions']['cancel'] = [
+        '#type' => 'submit',
+        '#value' => 'hủy bỏ',
+        '#ajax' => [
+          'callback' => 'ajaxDeveloperAppCancelUserRedirect',
+          'event' => 'click',
+        ],
+      ];
     }
     if (strpos('apigee_edge_developer_app_analytics', $form_id) !== false) {
         $form['controls']['label_container']['label'] = [
@@ -675,5 +697,21 @@ function open_banking_portal_revised_preprocess(&$variables)
     }
 }
 
+/*
+ * Implements of deleteapp callback.
+ */
+
+function ajaxDeveloperAppCancelUserRedirect(array $form, FormStateInterface $form_state)
+{
+  $response = new AjaxResponse();
+  $url = Url::fromRoute('test_restapi.my_developer_apps_list_controller_getListMyApps');
+  $command = new RedirectCommand($url->toString());
+  $response->addCommand($command);
+  return $response;
+}
 
 
+function user_pass_redirect(){
+  $homeResponse = new RedirectResponse(URL::fromUserInput('/')->toString());
+  $homeResponse->send();
+}

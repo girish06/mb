@@ -122,7 +122,7 @@ div.content_footer, div.content_header{
     color: #ffffff;
     border-width: 1px;
     border-style: solid;
-    border-color: #141DD2;
+    border-color: #ffffff;
     border-radius: 24px;
     line-height: normal;
 
@@ -160,7 +160,7 @@ div.content_footer, div.content_header{
     border-color: #fff;
 }
 .sign-up-button a{
-    color: #141DD2;
+    color: #ffffff;
     font-size: 18px;
 }
 .sign-up-button:hover a{
@@ -1594,7 +1594,7 @@ h4.opblock-tag {
     display: none;
 }
 
-.contact-us--back-btn:after {
+.contact-us--back-btn a:after {
     content: '\f190';
     font: normal normal normal 24px/1 FontAwesome;
     color: #141ed2;
@@ -1603,6 +1603,13 @@ h4.opblock-tag {
     margin-top: -12px;
     left: 5px;
 }
+
+
+/*.contact-us--back-btn i.fa.fa-arrow-circle-o-left.fa-1x {*/
+/*    font-size: 24px;*/
+/*    color: #141ed2;*/
+/*}*/
+
 .contact-us--back-btn a {
    text-decoration: none;
    color: black;

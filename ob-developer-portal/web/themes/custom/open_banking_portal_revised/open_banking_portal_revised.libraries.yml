@@ -2,7 +2,7 @@ global-styling:
   css: 
     theme:
       css/boostrap.css: []
-      css/boostrap.min.css: {}
+      css/bootstrap.min.css: {}
       css/style.css: {}
       css/stylev2.css: {}
 
@@ -10,7 +10,7 @@ global-scripts:
   version: 1.x
   js:
     js/boostrap.js: {}
-    js/boostrap.min.js: {}
+    js/bootstrap.min.js: {}
     js/main.js: {}
     https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/hmac-sha256.js: { type: external, minified: true }
     https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/components/enc-base64-min.js: { type: external, minified: true }
