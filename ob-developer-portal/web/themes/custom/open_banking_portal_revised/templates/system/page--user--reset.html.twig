@@ -32,6 +32,13 @@
           </div>
         {% endblock %}
       {% endif %}
+      {% if page.content_header %}
+        {% block content_header %}
+          <div class="col-sm-12" role="heading">
+            {{ page.content_header }}
+          </div>
+        {% endblock %}
+      {% endif %}
       {# Content #}
       {% block content %}
         <a id="main-content"></a>

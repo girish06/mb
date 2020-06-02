@@ -7,6 +7,7 @@ and open the template in the editor.
     Created on : 6 Dec, 2018, 9:28:34 AM
     Author     : kiranchaitanya
 */
+
 @font-face {
 	font-family: 'AvertaStdCY-Regular';
 	src: url('../fonts/AvertaStdCY-Regular/AvertaStdCY-Regular.eot');
@@ -56,6 +57,19 @@ body {
     padding-top: unset !important;
 }
 
+.btn {
+    outline:none !important;
+}
+
+.txt-bold {
+    font-weight: 900;
+    font-size: 26px;
+}
+
+.swagger-ui .auth-container input[type=password], .swagger-ui .auth-container input[type=text] {
+    width: 100%;
+    font-size: 14px;
+}
 /*section.open_banking_content_footer, section.open_banking_header {*/
     /*color: #ffffff;*/
     /*background-image: linear-gradient(141deg, #0e5dd6, #03265b);*/
@@ -294,7 +308,7 @@ section.experience-banking-api-header, section.our-api-signup-block {
     text-decoration: none;
 }
 .get-started-buttons .button-padding .block-btn:hover {
-    border: 2px solid #141CD2;
+    border: 2px solid #141ed2;
 }
 
 section.block-views-blockapi-products-homepage-block-1 h2.block-title, section.block-views-blockapi-products-experience-banking-block-1 h2.block-title, section.block-views-blockdelight-apps-list-with-videos-block-1 h2.block-title {
@@ -736,8 +750,13 @@ div.homepage-api-product-list {
     font-size: 14px !important;
     padding: 12px 0px 0 !important;
     height: auto;
+    display:none;
   }
+    .second-title-slogan {
+        display:none;
+    }
 }
+
 .title-slogan {
     color: #fff;
     font-size: 14px;
@@ -781,6 +800,7 @@ nav#block-open-banking-portal-main-menu {
 
 .api-details {
     padding: 0px;
+    padding-bottom: 15px;
 }
 
 .api-details ul {
@@ -1684,6 +1704,13 @@ iframe#popupvid {
     padding-right: 20px;
     padding-left: 20px;
 }
+/*.modal-body {*/
+/*    position: relative;*/
+/*    padding: 15px;*/
+/*    max-height: 500px ;*/
+/*    !*overflow-y: scroll !important;*!*/
+/*    overflow-x:hidden !important;*/
+/*}*/
 .modal-body div#modal_delete_app {
     padding: 10px 40px;
 }

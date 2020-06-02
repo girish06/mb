@@ -72,6 +72,10 @@ section#block-views-block-api-products-homepage-block-1 .api-product-padding {
   padding-top: 20px;
   padding-bottom: 40px;
 }
+.contact-us-body .row {
+    margin-left: -10px;
+    margin-right: -10px;
+}
 . contact-us-btn.focus {
     color:#ffffff;
 }
@@ -480,13 +484,13 @@ section.open_banking_footer {
     min-height: 290px;
     padding: 20px;
 }
-.block-views-blockapi-products-homepage-block-2 .api-product-section:nth-child(4) .first-half-body,
-.block-views-blockapi-products-homepage-block-2 .api-product-section:nth-child(8) .first-half-body {
-  min-height: 302px;
-}
+/*/.block-views-blockapi-products-homepage-block-2 .api-product-section:nth-child(4) .first-half-body,*/
+/*!*.block-views-blockapi-products-homepage-block-2 .api-product-section:nth-child(8) .first-half-body {*!*/
+/*!*  min-height: 302px;*!*/
+/*!*}*!*/
 
 .button-left-side{
-  margin-top: 150px;
+  margin-top: 100px;
   padding: 0px;
 
 }
@@ -523,7 +527,8 @@ ul.menu.menu--main.nav.navbar-nav li.active-trail a {
   color: #fff !important;
 }
 ul.menu.menu--account.nav.navbar-nav.navbar-right {
-  margin-top: 55px;
+    position: relative;
+    top: 55px;
 }
 
 .user-info {
@@ -576,6 +581,7 @@ section.open_banking_content_footer .container-fluid {
     height: 53px;
 }
 
+
 .login-form h2{
   color: #141DD2;
   font-size: 32px;
@@ -611,6 +617,8 @@ section.open_banking_content_footer .container-fluid {
 .image-right-side {
   float: right;
   padding: 0px;
+    padding-bottom: 15px;
+    padding-right: 15px;
 }
 /* .get-started-buttons .button-padding .block-btn a:after, .api-details a:after {
   content: '\003E';
@@ -769,6 +777,7 @@ nav.tabs {
   top: 30%;
   padding-left: 30px;
   padding-right: 30px;
+    color: #fff
 }
 
 .view-id-contact_us_page{
@@ -781,8 +790,9 @@ nav.tabs {
 
 }
 .contact-forms {
-  padding-left: 0px;
-  padding-right: 0px;
+  padding-left: 10px;
+  padding-right: 10px;
+    margin-bottom: 15px;
 }
 .contact-us-header {
   padding-top: 0px;
@@ -1240,6 +1250,8 @@ div#tpp-auth-btn input, div#user-auth-btn input {
   margin-top: -20px;
   right:11px;
 }
+
+
 @media only screen and (max-width: 767px) {
   .navbar .logo img {
     height: 34px !important;
@@ -1248,7 +1260,11 @@ div#tpp-auth-btn input, div#user-auth-btn input {
     height: 30px;
     margin-top: -13px;
     right: 3px;
+      display: none;
   }
+    .navbar .logo {
+        padding-left:15px !important;
+    }
 }
 /* commerce style  start*/
 .cart-form {
@@ -1281,7 +1297,7 @@ div#tpp-auth-btn input, div#user-auth-btn input {
 }
 
 .commerce-checkout-flow-multistep-default,
-.mb-product {
+.mb-product {.contact-forms
     max-width: 1280px;
     margin: 0 auto;
     background: #fff;
@@ -1650,6 +1666,9 @@ li.pz .radio-inline {
   .navbar {
     height: 78px;
   }
+    .site-branding-wrap .site-logo img {
+        height: 34px;
+    }
   /* .collapse {
     display: none;
   } */
@@ -1742,7 +1761,8 @@ li.pz .radio-inline {
     padding: 20px 20px 0px 20px;
   }
   .button-left-side {
-    margin-top: 20px;
+    margin-top: 0px;
+      padding-bottom: 30px;
   }
   .api-details a {
     font-size: 16px;
@@ -1778,6 +1798,15 @@ li.pz .radio-inline {
   }
 }
 @media only screen and (max-width: 767px) {
+    .mb-header .site-slogan-wrap .site-name {
+        display:none;
+    }
+    .site-slogan-wrap .site-slogan {
+        display:none;
+    }
+    .site-slogan-wrap:before {
+        display:none;
+    }
   .navbar-toggle {
     margin-top: 0;
     right: 0;
@@ -1907,7 +1936,7 @@ li.pz .radio-inline {
   }
   .api-product-section-2, .api-product-section-3 {
     padding-top: 0px !important;
-    padding-bottom: 40px;
+    /*padding-bottom: 40px;*/
   }
 }
 @media only screen and (min-width: 1024px) {

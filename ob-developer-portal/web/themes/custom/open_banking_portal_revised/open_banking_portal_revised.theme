@@ -53,6 +53,14 @@ function open_banking_portal_revised_page_attachments_alter(array &$page)
  */
 function open_banking_portal_revised_preprocess_page(array &$variables)
 {
+    if(\Drupal::currentUser()->isAuthenticated()) {
+      $userid = \Drupal::currentUser()->id();
+        $current_path = \Drupal::service('path.current')->getPath();
+        if ($current_path == "/user/$userid" || $current_path == '/user/password'){
+          $homeResponse = new RedirectResponse(URL::fromUserInput('/')->toString());
+         $homeResponse->send();
+        }
+    }
     //\Drupal::service('page_cache_kill_switch')->trigger();
     $variables['logopath'] = file_url_transform_relative(file_create_url(theme_get_setting('logo.svg')));
 
@@ -180,7 +188,6 @@ function open_banking_portal_revised_theme_suggestions_alter(array &$suggestions
             $suggestions[] = 'form__' . str_replace('-', '_', 'user-pass');
         } elseif (strpos($variables['element']['#id'], 'webform-submission-report-a-bug-add-form') !== false) {
 //       $suggestions[] = 'form__' . str_replace('-', '_','user-pass' );
-            echo "Hereee";
         } else {
             $suggestions[] = 'form__' . str_replace('-', '_', $variables['element']['#id']);
         }
@@ -212,7 +219,6 @@ function open_banking_portal_revised_form_alter(&$form, FormStateInterface $form
 {
     //Adding custom validation for the welcome page type field.
     if ($form_id == 'user_login_form') {
-
         $form['name']['#attributes']['placeholder'] = t('Nhập tên đăng nhập');
         $form['pass']['#attributes']['placeholder'] = t('******');
         $form['name']['#title'] = t('Tên đăng nhập');
@@ -242,11 +248,13 @@ function open_banking_portal_revised_form_alter(&$form, FormStateInterface $form
         $form['name']['#attributes']['placeholder'] = t('Nhập tên đăng nhập hoặc địa chỉ email');
         $form['name']['#title'] = t('Tên đăng nhập hoặc địa chỉ email');
         $form['actions']['submit']['#value'] = t('Xác nhận');
-        $form['actions']['submit']['#submit'][] = '::submitForm';
-        $form['actions']['submit']['#submit'][] = 'user_pass_redirect';
-    } elseif ($form_id == 'user_form') {
+       // $form['actions']['submit']['#submit'][] = '::submitForm';
+       //$form['actions']['submit']['#submit'][] = 'user_pass_redirect';
+    }
+    elseif ($form_id == 'user_form') {
         $form['actions']['submit']['#value'] = 'Đổi mật khẩu';
-    } elseif ($form_id == 'webform-submission-get-in-touch') {
+    }
+    elseif ($form_id == 'webform-submission-get-in-touch') {
         $form['#prefix'] = '<div id="modal_example_get_in_touch">';
         $form['#suffix'] = '</div>';
         // The status messages that will contain any form errors.
@@ -294,7 +302,7 @@ function open_banking_portal_revised_form_alter(&$form, FormStateInterface $form
             ],
         ];
         $form['actions']['cancel'] = [
-        '#type' => 'submit',
+        '#type' => 'button',
         '#value' => 'hủy bỏ',
         '#ajax' => [
           'callback' => 'ajaxDeveloperAppCancelUserRedirect',
@@ -379,7 +387,7 @@ function open_banking_portal_revised_form_alter(&$form, FormStateInterface $form
             ],
         ];
       $form['actions']['cancel'] = [
-        '#type' => 'submit',
+        '#type' => 'button',
         '#value' => 'hủy bỏ',
         '#ajax' => [
           'callback' => 'ajaxDeveloperAppCancelUserRedirect',
@@ -391,7 +399,7 @@ function open_banking_portal_revised_form_alter(&$form, FormStateInterface $form
         $form['controls']['label_container']['label'] = [
             '#markup' => t('Display:'),
         ];
-        $form['controls']['submit']['#value'] = Submit;
+        $form['controls']['submit']['#value'] = 'Xác nhận';
         $form['controls']['submit']['#attributes']['class'] = ['sign-up-button'];
     }
 }
@@ -712,6 +720,7 @@ function ajaxDeveloperAppCancelUserRedirect(array $form, FormStateInterface $for
 
 
 function user_pass_redirect(){
-  $homeResponse = new RedirectResponse(URL::fromUserInput('/')->toString());
-  $homeResponse->send();
+  \Drupal::messenger()->addMessage('Your Order is successfully placed. Please check your subscriptions');
+  $homeResponse = new RedirectResponse(URL::fromUserInput('/user/login')->toString());
+  return $homeResponse->send();
 }

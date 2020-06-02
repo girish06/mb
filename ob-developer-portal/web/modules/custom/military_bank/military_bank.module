@@ -49,7 +49,6 @@ function military_bank_menu_links_discovered_alter(&$links) {
  *  Implements hook_form_alter().
  */
 function military_bank_form_alter(array &$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
-
     if ($form_id = "developer_app_add_for_developer_form") {
         $form['displayName']['widget'][0]['value']['#title'] = 'Tên ứng dụng';
         $form['callbackUrl']['widget'][0]['value']['#title'] = 'Gọi lại URL';
