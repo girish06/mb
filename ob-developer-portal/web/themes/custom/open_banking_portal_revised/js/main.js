@@ -125,6 +125,9 @@
   Drupal.behaviors.LotusBehavior = {
 
     attach: function (context, settings) {
+      jQuery(".panel-title").text(function () {
+        return jQuery(this).text().replace("Credential", " ");
+      });
       var jwssecretkey = drupalSettings.mymoduleComputedData;
       // alert(jwssecretkey);
       $("#block-jwssignatureblock").hide();

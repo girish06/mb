@@ -201,6 +201,7 @@ function open_banking_portal_revised_theme_suggestions_alter(array &$suggestions
 
 function open_banking_portal_revised_form_user_form_alter(&$form, FormStateInterface $form_state, $form_id)
 {
+    //$form['account']['pass']['#required'] = TRUE;
     $form['account']['pass']['#process'][] = 'open_banking_portal_revised_process_password_confirm';
 
 }
@@ -248,11 +249,12 @@ function open_banking_portal_revised_form_alter(&$form, FormStateInterface $form
         $form['name']['#attributes']['placeholder'] = t('Nhập tên đăng nhập hoặc địa chỉ email');
         $form['name']['#title'] = t('Tên đăng nhập hoặc địa chỉ email');
         $form['actions']['submit']['#value'] = t('Xác nhận');
-       // $form['actions']['submit']['#submit'][] = '::submitForm';
-       //$form['actions']['submit']['#submit'][] = 'user_pass_redirect';
     }
     elseif ($form_id == 'user_form') {
+//        $form['pass1']['#required'] = TRUE;
+//        $form['pass2']['#required'] = TRUE;
         $form['actions']['submit']['#value'] = 'Đổi mật khẩu';
+        $form['actions']['submit']['#submit'][] = 'user_pass_redirect';
     }
     elseif ($form_id == 'webform-submission-get-in-touch') {
         $form['#prefix'] = '<div id="modal_example_get_in_touch">';
@@ -720,7 +722,12 @@ function ajaxDeveloperAppCancelUserRedirect(array $form, FormStateInterface $for
 
 
 function user_pass_redirect(){
-  \Drupal::messenger()->addMessage('Your Order is successfully placed. Please check your subscriptions');
-  $homeResponse = new RedirectResponse(URL::fromUserInput('/user/login')->toString());
+  $homeResponse = new RedirectResponse(URL::fromUserInput('/')->toString());
   return $homeResponse->send();
 }
+
+
+
+//function open_banking_portal_revised_form_user_form_alter(&$form, &$form_state, $form_id) {
+//  $form['actions']['submit']['#attributes']['class'][] = 'mdc-button mdc-button--unelevated';
+//}
