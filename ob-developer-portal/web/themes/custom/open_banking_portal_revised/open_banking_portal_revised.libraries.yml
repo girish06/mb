@@ -3,34 +3,18 @@ global-styling:
     theme:
       css/boostrap.css: []
       css/bootstrap.min.css: {}
+      css/font-awesome.min.css: {}
       css/style.css: {}
       css/stylev2.css: {}
-
 global-scripts:
   version: 1.x
   js:
     js/boostrap.js: {}
     js/bootstrap.min.js: {}
+#    js/enc-base64-min.js: {}
+#    js/hmac-sha256.js: {}
     js/main.js: {}
-    https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/hmac-sha256.js: { type: external, minified: true }
-    https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/components/enc-base64-min.js: { type: external, minified: true }
   dependencies:
-    - core/drupal
     - core/jquery
     - core/jquery.once
-      
-fonts:
-  css:
-    theme:
-      '//fonts.googleapis.com/css?family=Montserrat': {type: external}     
-
-fontawesome:
-  version: 4.6.3
-  remote: //maxcdn.bootstrapcdn.com/font-awesome/4.6.3/
-  css:
-    theme:
-      //cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css: {}
-  license:
-    name: MIT
-    url: //opensource.org/licenses/mit-license.html
-    gpl-compatible: true
+    - core/drupal

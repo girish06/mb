@@ -6,16 +6,19 @@
 
 (function ($, Drupal) {
   $(document).ready(function () {
+    setTimeout(function() {
+      $(".home-page-top-bar img").each(function() {
+        var imageUrl = $(this).attr("src");
+        $(this).closest(".home-page-top-bar").css("background-image", "url(" + imageUrl + ")");
+      });
+    }, 1500);
+
     $('.navbar-toggle').click(function (e) {
       if($('body').hasClass('mn-active')) {
         $('body').removeClass('mn-active')
       }else {
         $('body').addClass('mn-active');
       }
-    });
-    $(".home-page-top-bar img").each(function() {
-      var imageUrl = $(this).attr("src");
-      $(this).closest(".home-page-top-bar").css("background-image", "url(" + imageUrl + ")")
     });
 
     $(".left-side-image img").each(function(){
@@ -125,6 +128,13 @@
   Drupal.behaviors.LotusBehavior = {
 
     attach: function (context, settings) {
+      setTimeout(function() {
+        $(".home-page-top-bar img").each(function() {
+          var imageUrl = $(this).attr("src");
+          $(this).closest(".home-page-top-bar").css("background-image", "url(" + imageUrl + ")");
+        });
+      }, 1200);
+
       jQuery(".panel-title").text(function () {
         return jQuery(this).text().replace("Credential", " ");
       });

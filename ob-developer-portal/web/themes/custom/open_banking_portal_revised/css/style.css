@@ -7,7 +7,6 @@ and open the template in the editor.
     Created on : 6 Dec, 2018, 9:28:34 AM
     Author     : kiranchaitanya
 */
-
 @font-face {
 	font-family: 'AvertaStdCY-Regular';
 	src: url('../fonts/AvertaStdCY-Regular/AvertaStdCY-Regular.eot');
@@ -82,7 +81,23 @@ section.open_banking_content_footer, section.open_banking_header {
 
 }
 
-
+#drupal-modal #drupal-modal--content {
+    max-height:500px !important;
+    overflow-y:scroll;
+    overflow-x:hidden;
+    display: block !important;
+    flex-direction: inherit !important;
+}
+body.not-user-logged-in.path-user {
+    padding-top: 0px !important;
+}
+#drupal-modal {
+    overflow:hidden;
+}
+#drupal-modal--body {
+    overflow: hidden !important;
+    /*overflow-y: auto !important;*/
+}
 section.open_banking_header {
     background-color: #f2f2f2;
 }
@@ -275,7 +290,7 @@ section.experience-banking-api-header, section.our-api-signup-block {
     padding: 0px;
     color: #333;
     margin-top: 20px;
-    letter-spacing: 0.9px;
+    /*letter-spacing: 0.9px;*/
 }
 .get-started-buttons .button-padding {
     padding: 83px 0px 0px 0px;
@@ -419,7 +434,7 @@ div.homepage-api-product-list {
 }
 
 .public-api a {
-    float: left;
+    /*float: left;*/
     font-size: 22px;
     font-weight: 500;
     text-transform: capitalize;
@@ -644,7 +659,7 @@ div.homepage-api-product-list {
 }
 .path-webform .ui-dialog.ui-corner-all.ui-widget.ui-widget-content.ui-front {
     width: 70% !important;
-    left: 50px !important;
+    /*left: 50px !important;*/
 }
 .api-header-icon{
     height: 200px;
@@ -746,6 +761,9 @@ div.homepage-api-product-list {
     
 }
 @media only screen and (max-width: 767px) {
+    .my-app-analytics .contact-us--back-btn {
+        top:0px !important;
+    }
   .open_banking_header .navbar-brand{
     font-size: 14px !important;
     padding: 12px 0px 0 !important;
@@ -1944,7 +1962,7 @@ a.contact-us{
     font-weight: 700;
 }
 .my-app-list-details .my-app-api-products .table > tbody > tr > td.last-right > span {
-    width: 17%;
+    min-width: 100px;
     text-align: center;
     text-transform: capitalize;
     float: right;

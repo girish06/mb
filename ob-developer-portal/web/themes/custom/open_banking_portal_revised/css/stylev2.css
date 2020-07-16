@@ -90,6 +90,7 @@ section#block-views-block-api-products-homepage-block-1 .api-product-padding {
   background-color: #141DD2;
   position: relative;
   padding-right: 40px;
+    margin-top:20px
 }
 .contact-forms a img {
   display: none;
@@ -350,10 +351,12 @@ section#block-views-block-new-get-started-block-1 {
     z-index: 10;
     position: relative;
     text-decoration: none;
+    display: block;
+    padding-right: 30px;
 }
 
 #block-views-block-new-get-started-block-1 .ckeditor-accordion-container > dl dd {
-    padding: 10px 30pxs;
+    padding: 10px 30px;
 }
 
 #block-views-block-new-get-started-block-1 .ckeditor-accordion-container > dl dd > ul {
@@ -377,9 +380,11 @@ section#block-views-block-new-get-started-block-1 {
 @media only screen and (max-width: 991px) {
   .home-page-top-bar {
     position: relative;
-    min-height: 460px;
+    min-height: 500px;
     background-size: cover;
     margin: 0 -15px;
+      background-repeat: no-repeat;
+      background-position: top center;
   }
   .home-page-top-bar img{
     visibility: hidden;
@@ -505,6 +510,9 @@ section.open_banking_footer {
     height: 70px;
     box-shadow: 1px 3px 5px #dedada;
   }
+    .contact-us-inner-part {
+        top:20% !important;
+    }
 }
 /*ul.menu.menu--main.nav.navbar-nav {*/
   /*height: 124px;*/
@@ -1656,6 +1664,9 @@ li.pz .radio-inline {
   }
 }
 @media only screen and (max-width: 1023px) {
+    ul.menu.menu--account.nav.navbar-nav.navbar-right {
+        top:30px;
+    }
   .navbar .logo img {
     height: 40px;
   }
@@ -1711,6 +1722,7 @@ li.pz .radio-inline {
   }
   .contact-forms {
     margin: 0;
+      margin-bottom: 15px;
   }
 }
 @media only screen and (max-width: 991px) {
@@ -1723,7 +1735,7 @@ li.pz .radio-inline {
   }
   .top-banner-body {
     top: 0;
-    padding: 30px;
+    padding: 20px;
   }
   .top-banner-body h1 {
     font-size: 42px !important;
